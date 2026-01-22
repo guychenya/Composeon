@@ -1,0 +1,94 @@
+{
+  "name": "composeon",
+  "version": "1.0.0",
+  "description": "Smart Icon Repository & LinkedIn Post Generator - MCP Server for Lobe Icons",
+  "main": "mcp-server.js",
+  "bin": {
+    "composeon": "./mcp-server.js"
+  },
+  "scripts": {
+    "start": "node mcp-server.js",
+    "dev": "node mcp-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"No build step required\"",
+    "serve": "python -m http.server 3000",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [
+    "icons",
+    "lobe-icons",
+    "linkedin",
+    "post-generator",
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "tools",
+    "tech-stack",
+    "svg",
+    "repository"
+  ],
+  "author": {
+    "name": "Guy Chenya",
+    "url": "https://github.com/guychenya"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guychenya/Composeon.git"
+  },
+  "homepage": "https://github.com/guychenya/Composeon",
+  "bugs": {
+    "url": "https://github.com/guychenya/Composeon/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "files": [
+    "mcp-server.js",
+    "icons-loader.js",
+    "index.html",
+    "lobe-icons/",
+    "public/",
+    "README.md"
+  ],
+  "mcp": {
+    "server": {
+      "command": "node",
+      "args": ["mcp-server.js"],
+      "description": "Composeon - Smart Icon Repository & LinkedIn Post Generator"
+    }
+  },
+  "composeon": {
+    "features": {
+      "iconSearch": true,
+      "postGeneration": true,
+      "categoryFiltering": true,
+      "downloadSupport": true,
+      "mcpIntegration": true
+    },
+    "categories": [
+      "ai",
+      "cloud",
+      "database",
+      "design",
+      "dev",
+      "social",
+      "analytics",
+      "ecommerce",
+      "productivity",
+      "communication"
+    ],
+    "postTemplates": [
+      "tools-spotlight",
+      "tech-stack",
+      "comparison",
+      "trend-analysis"
+    ]
+  }
+}

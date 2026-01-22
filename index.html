@@ -1,110 +1,935 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <!-- Test commit for GitHub sync -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Lobe Icons Showcase</title>
+        <title>
+            Composeon - Smart Icon Repository & LinkedIn Post Generator
+        </title>
+        <script src="icons-loader.js"></script>
         <style>
-            body {
-                font-family: sans-serif;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                min-height: 100vh;
+            * {
                 margin: 0;
-                background-color: #f0f2f5;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
                 color: #333;
             }
-            .container {
-                background-color: #fff;
-                padding: 40px;
-                border-radius: 12px;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-                text-align: center;
+
+            .header {
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                padding: 1rem 2rem;
+                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+                position: sticky;
+                top: 0;
+                z-index: 1000;
             }
-            h1 {
-                color: #1a202c;
-                margin-bottom: 30px;
-            }
-            .icon-grid {
+
+            .header-content {
+                max-width: 1200px;
+                margin: 0 auto;
                 display: flex;
-                gap: 30px;
-                flex-wrap: wrap;
-                justify-content: center;
+                justify-content: space-between;
+                align-items: center;
             }
-            .icon-item {
+
+            .logo {
+                font-size: 2rem;
+                font-weight: bold;
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .nav {
+                display: flex;
+                gap: 2rem;
+            }
+
+            .nav-btn {
+                padding: 0.5rem 1rem;
+                border: 2px solid #667eea;
+                background: transparent;
+                color: #667eea;
+                border-radius: 25px;
+                cursor: pointer;
+                font-weight: 600;
+                transition: all 0.3s ease;
+            }
+
+            .nav-btn:hover,
+            .nav-btn.active {
+                background: #667eea;
+                color: white;
+                transform: translateY(-2px);
+            }
+
+            .main-container {
+                max-width: 1200px;
+                margin: 2rem auto;
+                padding: 0 2rem;
+            }
+
+            .search-section {
+                background: white;
+                border-radius: 20px;
+                padding: 2rem;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                margin-bottom: 2rem;
+            }
+
+            .search-container {
+                position: relative;
+                margin-bottom: 1rem;
+            }
+
+            .search-input {
+                width: 100%;
+                padding: 1rem 1rem 1rem 3rem;
+                border: 2px solid #e2e8f0;
+                border-radius: 15px;
+                font-size: 1.1rem;
+                outline: none;
+                transition: all 0.3s ease;
+            }
+
+            .search-input:focus {
+                border-color: #667eea;
+                box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            }
+
+            .search-icon {
+                position: absolute;
+                left: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #64748b;
+                font-size: 1.2rem;
+            }
+
+            .filters {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+                margin-top: 1rem;
+            }
+
+            .filter-tag {
+                padding: 0.5rem 1rem;
+                background: #f1f5f9;
+                border: 1px solid #e2e8f0;
+                border-radius: 20px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                font-size: 0.9rem;
+            }
+
+            .filter-tag:hover,
+            .filter-tag.active {
+                background: #667eea;
+                color: white;
+                border-color: #667eea;
+            }
+
+            .content-area {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .icons-section {
+                background: white;
+                border-radius: 20px;
+                padding: 2rem;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 1.5rem;
+                color: #1e293b;
+            }
+
+            .icons-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 1.5rem;
+                max-height: 60vh;
+                overflow-y: auto;
+                padding-right: 1rem;
+            }
+
+            .icon-card {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                text-decoration: none;
-                color: #555;
-                transition:
-                    transform 0.2s ease-in-out,
-                    color 0.2s ease-in-out;
+                padding: 1rem;
+                border: 2px solid transparent;
+                border-radius: 15px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+                background: #f8fafc;
             }
-            .icon-item:hover {
+
+            .icon-card:hover {
                 transform: translateY(-5px);
-                color: #007bff;
+                border-color: #667eea;
+                box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+                background: white;
             }
-            .icon-item img {
-                width: 80px;
-                height: 80px;
-                margin-bottom: 10px;
+
+            .icon-card.selected {
+                border-color: #667eea;
+                background: #f0f4ff;
+                transform: scale(1.05);
             }
-            .icon-item span {
-                font-size: 1.1em;
+
+            .icon-card img {
+                width: 48px;
+                height: 48px;
+                margin-bottom: 0.5rem;
+                filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+            }
+
+            .icon-name {
+                font-size: 0.8rem;
+                font-weight: 600;
+                text-align: center;
+                color: #475569;
+                text-transform: capitalize;
+            }
+
+            .selected-count {
+                position: absolute;
+                top: -5px;
+                right: -5px;
+                background: #ef4444;
+                color: white;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.7rem;
                 font-weight: bold;
+            }
+
+            .generator-section {
+                background: white;
+                border-radius: 20px;
+                padding: 2rem;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                display: none;
+            }
+
+            .generator-section.active {
+                display: block;
+            }
+
+            .post-templates {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .template-card {
+                padding: 1.5rem;
+                border: 2px solid #e2e8f0;
+                border-radius: 15px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .template-card:hover,
+            .template-card.active {
+                border-color: #667eea;
+                background: #f0f4ff;
+            }
+
+            .template-title {
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+                color: #1e293b;
+            }
+
+            .template-desc {
+                font-size: 0.9rem;
+                color: #64748b;
+            }
+
+            .post-preview {
+                background: #f8fafc;
+                border: 2px solid #e2e8f0;
+                border-radius: 15px;
+                padding: 2rem;
+                margin: 2rem 0;
+                min-height: 300px;
+                white-space: pre-wrap;
+                font-family: inherit;
+            }
+
+            .action-buttons {
+                display: flex;
+                gap: 1rem;
+                justify-content: flex-end;
+                margin-top: 2rem;
+            }
+
+            .btn {
+                padding: 0.75rem 2rem;
+                border: none;
+                border-radius: 25px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .btn-primary {
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                color: white;
+            }
+
+            .btn-primary:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            }
+
+            .btn-secondary {
+                background: white;
+                color: #667eea;
+                border: 2px solid #667eea;
+            }
+
+            .btn-secondary:hover {
+                background: #667eea;
+                color: white;
+            }
+
+            .stats-bar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 15px;
+                margin-bottom: 2rem;
+            }
+
+            .stat-item {
+                text-align: center;
+            }
+
+            .stat-number {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 0.25rem;
+            }
+
+            .stat-label {
+                font-size: 0.9rem;
+                opacity: 0.9;
+            }
+
+            .loading {
+                display: none;
+                text-align: center;
+                padding: 2rem;
+            }
+
+            .spinner {
+                width: 40px;
+                height: 40px;
+                border: 4px solid #f3f4f6;
+                border-top: 4px solid #667eea;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+                margin: 0 auto 1rem;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .hidden {
+                display: none !important;
+            }
+
+            @media (max-width: 768px) {
+                .header-content {
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+
+                .nav {
+                    gap: 1rem;
+                }
+
+                .main-container {
+                    padding: 0 1rem;
+                }
+
+                .icons-grid {
+                    grid-template-columns: repeat(
+                        auto-fill,
+                        minmax(100px, 1fr)
+                    );
+                }
+
+                .post-templates {
+                    grid-template-columns: 1fr;
+                }
+
+                .stats-bar {
+                    flex-direction: column;
+                    gap: 1rem;
+                }
             }
         </style>
     </head>
     <body>
-        <div class="container">
-            <h1>Stunning Linking Posts with Lobe Icons</h1>
-            <div class="icon-grid">
-                <a
-                    href="https://github.com/lobehub/lobe-icons"
-                    class="icon-item"
-                >
-                    <img
-                        src="lobe-icons/packages/static-svg/icons/github.svg"
-                        alt="GitHub"
-                    />
-                    <span>GitHub</span>
-                </a>
-                <a href="https://www.figma.com/" class="icon-item">
-                    <img
-                        src="lobe-icons/packages/static-svg/icons/figma.svg"
-                        alt="Figma"
-                    />
-                    <span>Figma</span>
-                </a>
-                <a href="https://www.google.com/" class="icon-item">
-                    <img
-                        src="lobe-icons/packages/static-svg/icons/google.svg"
-                        alt="Google"
-                    />
-                    <span>Google</span>
-                </a>
-                <a href="https://www.google.com/" class="icon-item">
-                    <img
-                        src="lobe-icons/packages/static-svg/icons/google.svg"
-                        alt="Google"
-                    />
-                    <span>Google</span>
-                </a>
-                <a
-                    href="https://www.microsoft.com/en-us/windows/microsoft-edge"
-                    class="icon-item"
-                >
-                    <img
-                        src="lobe-icons/packages/static-svg/icons/microsoft.svg"
-                        alt="Microsoft"
-                    />
-                    <span>Microsoft</span>
-                </a>
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">Composeon</div>
+                <nav class="nav">
+                    <button
+                        class="nav-btn active"
+                        onclick="showSection('icons')"
+                    >
+                        🔍 Browse Icons
+                    </button>
+                    <button class="nav-btn" onclick="showSection('generator')">
+                        ✍️ Generate Post
+                    </button>
+                    <button class="nav-btn" onclick="showSection('api')">
+                        🔌 API Docs
+                    </button>
+                </nav>
             </div>
-        </div>
+        </header>
+
+        <main class="main-container">
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalIcons">760</div>
+                    <div class="stat-label">Total Icons</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="selectedIcons">0</div>
+                    <div class="stat-label">Selected</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="searchResults">760</div>
+                    <div class="stat-label">Search Results</div>
+                </div>
+            </div>
+
+            <section class="search-section">
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input
+                        type="text"
+                        class="search-input"
+                        placeholder="Search for icons (e.g., 'openai', 'github', 'google')..."
+                        id="searchInput"
+                    />
+                </div>
+                <div class="filters">
+                    <span class="filter-tag active" data-filter="all">All</span>
+                    <span class="filter-tag" data-filter="ai">🤖 AI</span>
+                    <span class="filter-tag" data-filter="cloud">☁️ Cloud</span>
+                    <span class="filter-tag" data-filter="database"
+                        >🗄️ Database</span
+                    >
+                    <span class="filter-tag" data-filter="design"
+                        >🎨 Design</span
+                    >
+                    <span class="filter-tag" data-filter="dev"
+                        >👩‍💻 Development</span
+                    >
+                    <span class="filter-tag" data-filter="social"
+                        >📱 Social</span
+                    >
+                </div>
+            </section>
+
+            <div class="content-area">
+                <section class="icons-section" id="iconsSection">
+                    <h2 class="section-title">Icon Repository</h2>
+                    <div class="loading" id="loading">
+                        <div class="spinner"></div>
+                        <p>Loading icons...</p>
+                    </div>
+                    <div class="icons-grid" id="iconsGrid">
+                        <!-- Icons will be loaded dynamically -->
+                    </div>
+                </section>
+
+                <section class="generator-section" id="generatorSection">
+                    <h2 class="section-title">LinkedIn Post Generator</h2>
+
+                    <div class="post-templates">
+                        <div
+                            class="template-card active"
+                            data-template="tools-spotlight"
+                        >
+                            <div class="template-title">🌟 Tools Spotlight</div>
+                            <div class="template-desc">
+                                Highlight amazing tools and technologies
+                            </div>
+                        </div>
+                        <div class="template-card" data-template="tech-stack">
+                            <div class="template-title">🛠️ Tech Stack</div>
+                            <div class="template-desc">
+                                Showcase your development stack
+                            </div>
+                        </div>
+                        <div class="template-card" data-template="comparison">
+                            <div class="template-title">⚖️ Tool Comparison</div>
+                            <div class="template-desc">
+                                Compare different solutions
+                            </div>
+                        </div>
+                        <div
+                            class="template-card"
+                            data-template="trend-analysis"
+                        >
+                            <div class="template-title">📈 Trend Analysis</div>
+                            <div class="template-desc">
+                                Analyze technology trends
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post-preview" id="postPreview">
+                        Select some icons and choose a template to generate your
+                        LinkedIn post!
+                    </div>
+
+                    <div class="action-buttons">
+                        <button
+                            class="btn btn-secondary"
+                            onclick="copyToClipboard()"
+                        >
+                            📋 Copy Post
+                        </button>
+                        <button
+                            class="btn btn-primary"
+                            onclick="generatePost()"
+                        >
+                            ✨ Generate Post
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <script>
+            // Global state
+            let allIcons = [];
+            let filteredIcons = [];
+            let selectedIcons = new Set();
+            let currentTemplate = "tools-spotlight";
+            let iconsLoader = null;
+
+            // Initialize app
+            document.addEventListener("DOMContentLoaded", function () {
+                initializeApp();
+                setupEventListeners();
+            });
+
+            async function initializeApp() {
+                // Show loading
+                document.getElementById("loading").style.display = "block";
+                document.getElementById("iconsGrid").style.display = "none";
+
+                try {
+                    // Initialize icons loader
+                    iconsLoader = new IconsLoader();
+                    allIcons = await iconsLoader.initialize();
+                    filteredIcons = [...allIcons];
+
+                    // Hide loading and show icons
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("iconsGrid").style.display = "grid";
+
+                    renderIcons();
+                    updateStats();
+
+                    console.log(
+                        `Loaded ${allIcons.length} icons successfully!`,
+                    );
+                } catch (error) {
+                    console.error("Failed to initialize app:", error);
+                    document.getElementById("loading").innerHTML = `
+                        <div style="color: #ef4444; text-align: center;">
+                            <p>⚠️ Failed to load icons</p>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">Using fallback icons instead</p>
+                        </div>
+                    `;
+
+                    // Use fallback
+                    setTimeout(() => {
+                        document.getElementById("loading").style.display =
+                            "none";
+                        document.getElementById("iconsGrid").style.display =
+                            "grid";
+                        renderIcons();
+                        updateStats();
+                    }, 2000);
+                }
+            }
+
+            function setupEventListeners() {
+                // Search input
+                document
+                    .getElementById("searchInput")
+                    .addEventListener("input", handleSearch);
+
+                // Filter tags
+                document.querySelectorAll(".filter-tag").forEach((tag) => {
+                    tag.addEventListener("click", () => handleFilter(tag));
+                });
+
+                // Template selection
+                document.querySelectorAll(".template-card").forEach((card) => {
+                    card.addEventListener("click", () => selectTemplate(card));
+                });
+            }
+
+            function handleSearch(e) {
+                const query = e.target.value.trim();
+                if (iconsLoader && query) {
+                    filteredIcons = iconsLoader.search(query);
+                } else if (query) {
+                    filteredIcons = allIcons.filter(
+                        (icon) =>
+                            icon.name
+                                .toLowerCase()
+                                .includes(query.toLowerCase()) ||
+                            icon.searchable?.includes(query.toLowerCase()),
+                    );
+                } else {
+                    filteredIcons = [...allIcons];
+                }
+                renderIcons();
+                updateStats();
+            }
+
+            function handleFilter(clickedTag) {
+                // Update active filter
+                document.querySelectorAll(".filter-tag").forEach((tag) => {
+                    tag.classList.remove("active");
+                });
+                clickedTag.classList.add("active");
+
+                const filter = clickedTag.dataset.filter;
+                if (iconsLoader) {
+                    filteredIcons = iconsLoader.filterByCategory(filter);
+                } else {
+                    if (filter === "all") {
+                        filteredIcons = [...allIcons];
+                    } else {
+                        filteredIcons = allIcons.filter(
+                            (icon) => icon.category === filter,
+                        );
+                    }
+                }
+
+                // Apply search if active
+                const searchQuery = document
+                    .getElementById("searchInput")
+                    .value.toLowerCase();
+                if (searchQuery) {
+                    filteredIcons = filteredIcons.filter((icon) =>
+                        icon.name.toLowerCase().includes(searchQuery),
+                    );
+                }
+
+                renderIcons();
+                updateStats();
+            }
+
+            function renderIcons() {
+                const grid = document.getElementById("iconsGrid");
+                grid.innerHTML = "";
+
+                filteredIcons.forEach((icon) => {
+                    const iconCard = createIconCard(icon);
+                    grid.appendChild(iconCard);
+                });
+            }
+
+            function createIconCard(icon) {
+                const card = document.createElement("div");
+                card.className = "icon-card";
+                card.dataset.iconName = icon.name;
+
+                const displayName = icon.displayName || icon.name;
+                const iconPath =
+                    icon.path ||
+                    icon.paths?.default ||
+                    `lobe-icons/packages/static-svg/icons/${icon.name}.svg`;
+
+                card.innerHTML = `
+                    <img src="${iconPath}" alt="${icon.name}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjQiIGZpbGw9IiNGM0Y0RjYiLz4KPHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIxMiIgeT0iMTIiPgo8cGF0aCBkPSJNMTIgMkM2LjQ3NzE1IDIgMiA2LjQ3NzE1IDIgMTJDMiAxNy41MjI4IDYuNDc3MTUgMjIgMTIgMjJDMTcuNTIyOCAyMiAyMiAxNy41MjI4IDIyIDEyQzIyIDYuNDc3MTUgMTcuNTIyOCAyIDEyIDJaTTEyIDEwQzEzLjEwNDYgMTAgMTQgMTAuODk1NCAxNCA5QzE0IDguNDQ3NzIgMTMuNTUyMyA4IDEzIDhIMTFDMTAuNDQ3NyA4IDEwIDguNDQ3NzIgMTAgOUM5IDkuNTUyMjggOSAxMCAxMCAxMEwxMiAxMFoiIGZpbGw9IiM5Q0EzQUYiLz4KPC9zdmc+Cjwvc3ZnPgo='"/>
+                    <div class="icon-name">${displayName}</div>
+                `;
+
+                card.addEventListener("click", () =>
+                    toggleIconSelection(icon, card),
+                );
+
+                if (selectedIcons.has(icon.name)) {
+                    card.classList.add("selected");
+                }
+
+                return card;
+            }
+
+            function toggleIconSelection(icon, card) {
+                if (selectedIcons.has(icon.name)) {
+                    selectedIcons.delete(icon.name);
+                    card.classList.remove("selected");
+                } else {
+                    selectedIcons.add(icon.name);
+                    card.classList.add("selected");
+                }
+                updateStats();
+                if (selectedIcons.size > 0 && currentTemplate) {
+                    generatePost();
+                }
+            }
+
+            function selectTemplate(clickedCard) {
+                document.querySelectorAll(".template-card").forEach((card) => {
+                    card.classList.remove("active");
+                });
+                clickedCard.classList.add("active");
+                currentTemplate = clickedCard.dataset.template;
+                if (selectedIcons.size > 0) {
+                    generatePost();
+                }
+            }
+
+            function generatePost() {
+                if (selectedIcons.size === 0) {
+                    document.getElementById("postPreview").textContent =
+                        "Select some icons to generate your LinkedIn post!";
+                    return;
+                }
+
+                const selectedIconsArray = Array.from(selectedIcons);
+                const post = generatePostContent(
+                    currentTemplate,
+                    selectedIconsArray,
+                );
+                document.getElementById("postPreview").textContent = post;
+            }
+
+            function generatePostContent(template, icons) {
+                const iconList = icons
+                    .map((name) => {
+                        const icon = iconsLoader
+                            ? iconsLoader.getIcon(name)
+                            : null;
+                        const displayName = icon
+                            ? icon.displayName
+                            : capitalizeFirst(name);
+                        return `• ${displayName}`;
+                    })
+                    .join("\n");
+                const iconEmojis = icons
+                    .map((name) => getIconEmoji(name))
+                    .join(" ");
+
+                switch (template) {
+                    case "tools-spotlight":
+                        return `🌟 Amazing tools that are transforming how we work:
+
+${iconList}
+
+These tools have revolutionized productivity and creativity in their respective domains. Each one brings unique capabilities that help teams and individuals achieve more.
+
+What's your favorite tool from this list? Share your experience in the comments! 👇
+
+${iconEmojis}
+
+#TechTools #Innovation #Productivity #TechStack`;
+
+                    case "tech-stack":
+                        return `🛠️ My current tech stack:
+
+${iconList}
+
+This combination has been incredibly powerful for building scalable, maintainable solutions. Each tool plays a crucial role in the development lifecycle.
+
+The synergy between these technologies enables rapid development while maintaining high quality standards.
+
+What does your tech stack look like? Drop it in the comments! 💻
+
+${iconEmojis}
+
+#TechStack #Development #Engineering #SoftwareDevelopment`;
+
+                    case "comparison":
+                        return `⚖️ Comparing some popular tools in the market:
+
+${iconList}
+
+Each of these tools has its strengths and ideal use cases. The choice often depends on:
+• Team size and expertise
+• Project requirements
+• Budget considerations
+• Integration needs
+• Long-term scalability
+
+Have you used any of these? What's been your experience? 🤔
+
+${iconEmojis}
+
+#TechComparison #ToolSelection #TechDecisions`;
+
+                    case "trend-analysis":
+                        return `📈 Trending technologies worth watching:
+
+${iconList}
+
+These tools are gaining significant traction in the tech community. Here's why they're trending:
+
+✨ Innovation in user experience
+🚀 Improved performance and efficiency
+🔧 Better developer experience
+🌐 Strong community adoption
+💡 Solving real-world problems
+
+Which one are you most excited about? Let me know! 🎯
+
+${iconEmojis}
+
+#TechTrends #Innovation #FutureTech #Technology`;
+
+                    default:
+                        return `Check out these amazing tools: ${icons.join(", ")}!`;
+                }
+            }
+
+            function capitalizeFirst(str) {
+                return str.charAt(0).toUpperCase() + str.slice(1);
+            }
+
+            function getIconEmoji(name) {
+                const emojiMap = {
+                    openai: "🤖",
+                    claude: "🧠",
+                    github: "🐙",
+                    figma: "🎨",
+                    google: "🔍",
+                    microsoft: "🪟",
+                    aws: "☁️",
+                    azure: "🔵",
+                    docker: "🐳",
+                    kubernetes: "⚓",
+                    mongodb: "🍃",
+                    postgresql: "🐘",
+                    linkedin: "💼",
+                    twitter: "🐦",
+                    gemini: "♊",
+                    anthropic: "🔬",
+                };
+                return emojiMap[name] || "⭐";
+            }
+
+            function updateStats() {
+                document.getElementById("selectedIcons").textContent =
+                    selectedIcons.size;
+                document.getElementById("searchResults").textContent =
+                    filteredIcons.length;
+                document.getElementById("totalIcons").textContent =
+                    allIcons.length;
+            }
+
+            function showSection(section) {
+                // Update nav buttons
+                document.querySelectorAll(".nav-btn").forEach((btn) => {
+                    btn.classList.remove("active");
+                });
+                event.target.classList.add("active");
+
+                // Show/hide sections
+                document.getElementById("iconsSection").style.display =
+                    section === "icons" ? "block" : "none";
+                document
+                    .getElementById("generatorSection")
+                    .classList.toggle("active", section === "generator");
+
+                if (section === "api") {
+                    showAPIDocumentation();
+                }
+            }
+
+            function showAPIDocumentation() {
+                const stats = iconsLoader
+                    ? iconsLoader.getStats()
+                    : { total: allIcons.length };
+
+                alert(`🔌 Composeon MCP Server API
+
+Current Stats:
+• Total Icons: ${stats.total}
+• Categories: ${Object.keys(stats.categories || {}).length}
+
+Planned Endpoints:
+• GET /api/icons - List all icons
+• GET /api/icons/search?q={query} - Search icons
+• GET /api/icons/categories - Get all categories
+• GET /api/icons/popular - Get popular icons
+• GET /api/icons/trending - Get trending icons
+• POST /api/generate-post - Generate LinkedIn post
+• GET /api/icons/{name}/download - Download icon
+• GET /api/stats - Get usage statistics
+
+Coming soon! This will be a full MCP server that can integrate with Claude Desktop and other applications.`);
+            }
+
+            function copyToClipboard() {
+                const postContent =
+                    document.getElementById("postPreview").textContent;
+                navigator.clipboard.writeText(postContent).then(() => {
+                    // Show success message
+                    const btn = event.target;
+                    const originalText = btn.textContent;
+                    btn.textContent = "✅ Copied!";
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                    }, 2000);
+                });
+            }
+
+            // Auto-generate post when template or selection changes
+            document.addEventListener("DOMContentLoaded", function () {
+                generatePost();
+            });
+        </script>
     </body>
 </html>
