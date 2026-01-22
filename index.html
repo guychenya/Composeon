@@ -6,229 +6,594 @@
         <title>
             Composeon - Smart Icon Repository & LinkedIn Post Generator
         </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            rel="stylesheet"
+        />
         <script src="icons-loader.js"></script>
         <style>
+            :root {
+                /* Colors - Dark Theme */
+                --bg-primary: #0a0a0f;
+                --bg-secondary: #151521;
+                --bg-tertiary: #1e1e2e;
+                --bg-glass: rgba(21, 21, 33, 0.8);
+                --bg-glass-hover: rgba(30, 30, 46, 0.9);
+                --bg-card: rgba(255, 255, 255, 0.05);
+                --bg-card-hover: rgba(255, 255, 255, 0.08);
+
+                /* Text Colors */
+                --text-primary: #ffffff;
+                --text-secondary: #b4b4c7;
+                --text-tertiary: #7c7c8a;
+                --text-accent: #6366f1;
+
+                /* Accent Colors */
+                --accent-primary: #6366f1;
+                --accent-secondary: #8b5cf6;
+                --accent-success: #10b981;
+                --accent-warning: #f59e0b;
+                --accent-error: #ef4444;
+
+                /* Gradients */
+                --gradient-primary: linear-gradient(
+                    135deg,
+                    #6366f1 0%,
+                    #8b5cf6 50%,
+                    #ec4899 100%
+                );
+                --gradient-secondary: linear-gradient(
+                    135deg,
+                    #1e293b 0%,
+                    #334155 100%
+                );
+                --gradient-bg:
+                    radial-gradient(
+                        ellipse at top,
+                        rgba(99, 102, 241, 0.1) 0%,
+                        transparent 60%
+                    ),
+                    radial-gradient(
+                        ellipse at bottom,
+                        rgba(139, 92, 246, 0.1) 0%,
+                        transparent 60%
+                    );
+
+                /* Shadows */
+                --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+                --shadow-md:
+                    0 4px 6px -1px rgba(0, 0, 0, 0.4),
+                    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+                --shadow-lg:
+                    0 10px 15px -3px rgba(0, 0, 0, 0.4),
+                    0 4px 6px -2px rgba(0, 0, 0, 0.3);
+                --shadow-xl:
+                    0 20px 25px -5px rgba(0, 0, 0, 0.4),
+                    0 10px 10px -5px rgba(0, 0, 0, 0.3);
+                --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.3);
+
+                /* Border Radius */
+                --radius-sm: 8px;
+                --radius-md: 12px;
+                --radius-lg: 16px;
+                --radius-xl: 24px;
+
+                /* Spacing */
+                --spacing-xs: 0.5rem;
+                --spacing-sm: 0.75rem;
+                --spacing-md: 1rem;
+                --spacing-lg: 1.5rem;
+                --spacing-xl: 2rem;
+                --spacing-2xl: 3rem;
+
+                /* Typography */
+                --font-primary:
+                    "Inter", -apple-system, BlinkMacSystemFont, system-ui,
+                    sans-serif;
+                --font-mono: "JetBrains Mono", "Fira Code", Consolas, monospace;
+            }
+
             * {
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
             }
 
-            body {
-                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                min-height: 100vh;
-                color: #333;
+            *::before,
+            *::after {
+                box-sizing: border-box;
             }
 
+            html {
+                scroll-behavior: smooth;
+                font-size: 16px;
+            }
+
+            body {
+                font-family: var(--font-primary);
+                background: var(--bg-primary);
+                background-image: var(--gradient-bg);
+                color: var(--text-primary);
+                line-height: 1.6;
+                overflow-x: hidden;
+                min-height: 100vh;
+                font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            /* Scrollbar Styling */
+            ::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: var(--bg-secondary);
+                border-radius: 4px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: var(--accent-primary);
+                border-radius: 4px;
+                transition: background 0.3s ease;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: var(--accent-secondary);
+            }
+
+            /* Header */
             .header {
-                background: rgba(255, 255, 255, 0.95);
-                backdrop-filter: blur(10px);
-                padding: 1rem 2rem;
-                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
                 position: sticky;
                 top: 0;
                 z-index: 1000;
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                background: var(--bg-glass);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                padding: var(--spacing-md) 0;
             }
 
             .header-content {
-                max-width: 1200px;
+                max-width: 1400px;
                 margin: 0 auto;
+                padding: 0 var(--spacing-xl);
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
             }
 
             .logo {
-                font-size: 2rem;
-                font-weight: bold;
-                background: linear-gradient(135deg, #667eea, #764ba2);
+                display: flex;
+                align-items: center;
+                gap: var(--spacing-sm);
+                font-size: 1.5rem;
+                font-weight: 800;
+                background: var(--gradient-primary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-decoration: none;
+            }
+
+            .logo i {
+                font-size: 1.8rem;
+                color: var(--accent-primary);
+                -webkit-text-fill-color: initial;
+            }
+
+            .nav {
+                display: flex;
+                gap: var(--spacing-sm);
+                align-items: center;
+            }
+
+            .nav-btn {
+                position: relative;
+                padding: var(--spacing-sm) var(--spacing-lg);
+                background: var(--bg-card);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: var(--radius-lg);
+                color: var(--text-secondary);
+                font-weight: 500;
+                font-size: 0.875rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                display: flex;
+                align-items: center;
+                gap: var(--spacing-xs);
+                text-decoration: none;
+                overflow: hidden;
+            }
+
+            .nav-btn::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: var(--gradient-primary);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                z-index: -1;
+            }
+
+            .nav-btn:hover,
+            .nav-btn.active {
+                color: var(--text-primary);
+                border-color: var(--accent-primary);
+                transform: translateY(-1px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .nav-btn:hover::before,
+            .nav-btn.active::before {
+                opacity: 0.1;
+            }
+
+            .nav-btn i {
+                font-size: 0.875rem;
+            }
+
+            .theme-toggle {
+                background: var(--bg-card);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: var(--radius-md);
+                color: var(--text-secondary);
+                padding: var(--spacing-sm);
+                cursor: pointer;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .theme-toggle:hover {
+                color: var(--text-primary);
+                background: var(--bg-card-hover);
+            }
+
+            /* Main Container */
+            .main-container {
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: var(--spacing-2xl) var(--spacing-xl);
+            }
+
+            /* Hero Section */
+            .hero-section {
+                text-align: center;
+                margin-bottom: var(--spacing-2xl);
+                padding: var(--spacing-2xl) 0;
+            }
+
+            .hero-title {
+                font-size: clamp(2.5rem, 5vw, 4rem);
+                font-weight: 800;
+                line-height: 1.1;
+                margin-bottom: var(--spacing-lg);
+                background: var(--gradient-primary);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
             }
 
-            .nav {
+            .hero-subtitle {
+                font-size: 1.25rem;
+                color: var(--text-secondary);
+                margin-bottom: var(--spacing-xl);
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-stats {
                 display: flex;
-                gap: 2rem;
+                justify-content: center;
+                gap: var(--spacing-xl);
+                margin-top: var(--spacing-xl);
+                flex-wrap: wrap;
             }
 
-            .nav-btn {
-                padding: 0.5rem 1rem;
-                border: 2px solid #667eea;
-                background: transparent;
-                color: #667eea;
-                border-radius: 25px;
-                cursor: pointer;
-                font-weight: 600;
-                transition: all 0.3s ease;
+            .stat-item {
+                text-align: center;
+                background: var(--bg-card);
+                padding: var(--spacing-lg);
+                border-radius: var(--radius-lg);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                min-width: 120px;
             }
 
-            .nav-btn:hover,
-            .nav-btn.active {
-                background: #667eea;
-                color: white;
-                transform: translateY(-2px);
+            .stat-number {
+                font-size: 2rem;
+                font-weight: 700;
+                color: var(--accent-primary);
+                display: block;
             }
 
-            .main-container {
-                max-width: 1200px;
-                margin: 2rem auto;
-                padding: 0 2rem;
+            .stat-label {
+                font-size: 0.875rem;
+                color: var(--text-tertiary);
+                margin-top: var(--spacing-xs);
             }
 
+            /* Search Section */
             .search-section {
-                background: white;
-                border-radius: 20px;
-                padding: 2rem;
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-                margin-bottom: 2rem;
+                background: var(--bg-card);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: var(--radius-xl);
+                padding: var(--spacing-xl);
+                margin-bottom: var(--spacing-xl);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                box-shadow: var(--shadow-lg);
             }
 
             .search-container {
                 position: relative;
-                margin-bottom: 1rem;
+                margin-bottom: var(--spacing-lg);
             }
 
             .search-input {
                 width: 100%;
-                padding: 1rem 1rem 1rem 3rem;
-                border: 2px solid #e2e8f0;
-                border-radius: 15px;
-                font-size: 1.1rem;
+                padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-lg)
+                    3.5rem;
+                background: var(--bg-secondary);
+                border: 2px solid rgba(255, 255, 255, 0.1);
+                border-radius: var(--radius-lg);
+                color: var(--text-primary);
+                font-size: 1rem;
+                font-weight: 500;
                 outline: none;
                 transition: all 0.3s ease;
+                font-family: var(--font-primary);
+            }
+
+            .search-input::placeholder {
+                color: var(--text-tertiary);
             }
 
             .search-input:focus {
-                border-color: #667eea;
-                box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+                border-color: var(--accent-primary);
+                box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+                background: var(--bg-tertiary);
             }
 
             .search-icon {
                 position: absolute;
-                left: 1rem;
+                left: var(--spacing-lg);
                 top: 50%;
                 transform: translateY(-50%);
-                color: #64748b;
-                font-size: 1.2rem;
+                color: var(--text-tertiary);
+                font-size: 1.125rem;
+                transition: color 0.3s ease;
             }
 
-            .filters {
+            .search-input:focus + .search-icon {
+                color: var(--accent-primary);
+            }
+
+            .search-filters {
                 display: flex;
-                gap: 1rem;
+                gap: var(--spacing-sm);
                 flex-wrap: wrap;
-                margin-top: 1rem;
+                margin-top: var(--spacing-lg);
             }
 
-            .filter-tag {
-                padding: 0.5rem 1rem;
-                background: #f1f5f9;
-                border: 1px solid #e2e8f0;
-                border-radius: 20px;
+            .filter-chip {
+                position: relative;
+                padding: var(--spacing-sm) var(--spacing-md);
+                background: var(--bg-secondary);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: var(--radius-lg);
+                color: var(--text-secondary);
+                font-size: 0.875rem;
+                font-weight: 500;
                 cursor: pointer;
                 transition: all 0.3s ease;
-                font-size: 0.9rem;
+                user-select: none;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                gap: var(--spacing-xs);
             }
 
-            .filter-tag:hover,
-            .filter-tag.active {
-                background: #667eea;
-                color: white;
-                border-color: #667eea;
+            .filter-chip::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: var(--gradient-primary);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                z-index: -1;
             }
 
-            .content-area {
+            .filter-chip:hover {
+                transform: translateY(-1px);
+                box-shadow: var(--shadow-md);
+            }
+
+            .filter-chip.active {
+                color: var(--text-primary);
+                border-color: var(--accent-primary);
+                box-shadow: var(--shadow-glow);
+            }
+
+            .filter-chip.active::before {
+                opacity: 0.1;
+            }
+
+            /* Content Grid */
+            .content-grid {
                 display: grid;
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: var(--spacing-xl);
             }
 
-            .icons-section {
-                background: white;
-                border-radius: 20px;
-                padding: 2rem;
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            .section-card {
+                background: var(--bg-card);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: var(--radius-xl);
+                padding: var(--spacing-xl);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                box-shadow: var(--shadow-lg);
+                transition: all 0.3s ease;
+            }
+
+            .section-card:hover {
+                border-color: rgba(255, 255, 255, 0.2);
+                box-shadow: var(--shadow-xl);
             }
 
             .section-title {
+                display: flex;
+                align-items: center;
+                gap: var(--spacing-sm);
                 font-size: 1.5rem;
-                font-weight: bold;
-                margin-bottom: 1.5rem;
-                color: #1e293b;
+                font-weight: 700;
+                margin-bottom: var(--spacing-lg);
+                color: var(--text-primary);
+            }
+
+            .section-title i {
+                color: var(--accent-primary);
+            }
+
+            /* Icons Grid */
+            .icons-grid-container {
+                position: relative;
+                max-height: 70vh;
+                overflow: hidden;
+                border-radius: var(--radius-lg);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                background: var(--bg-secondary);
             }
 
             .icons-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-                gap: 1.5rem;
-                max-height: 60vh;
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: var(--spacing-md);
+                padding: var(--spacing-lg);
+                max-height: 70vh;
                 overflow-y: auto;
-                padding-right: 1rem;
+                scrollbar-width: thin;
+                scrollbar-color: var(--accent-primary) var(--bg-secondary);
             }
 
             .icon-card {
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding: 1rem;
-                border: 2px solid transparent;
-                border-radius: 15px;
+                padding: var(--spacing-lg);
+                background: var(--bg-card);
+                border: 2px solid rgba(255, 255, 255, 0.1);
+                border-radius: var(--radius-lg);
                 cursor: pointer;
-                transition: all 0.3s ease;
-                position: relative;
-                background: #f8fafc;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                user-select: none;
+                aspect-ratio: 1;
+                justify-content: center;
+                overflow: hidden;
+                group: icon;
+            }
+
+            .icon-card::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: var(--gradient-primary);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                z-index: -1;
             }
 
             .icon-card:hover {
-                transform: translateY(-5px);
-                border-color: #667eea;
-                box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
-                background: white;
+                transform: translateY(-4px) scale(1.02);
+                border-color: var(--accent-primary);
+                box-shadow: var(--shadow-xl), var(--shadow-glow);
+            }
+
+            .icon-card:hover::before {
+                opacity: 0.05;
             }
 
             .icon-card.selected {
-                border-color: #667eea;
-                background: #f0f4ff;
+                border-color: var(--accent-primary);
+                background: var(--bg-card-hover);
                 transform: scale(1.05);
+                box-shadow: var(--shadow-glow);
+            }
+
+            .icon-card.selected::before {
+                opacity: 0.1;
             }
 
             .icon-card img {
                 width: 48px;
                 height: 48px;
-                margin-bottom: 0.5rem;
-                filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+                margin-bottom: var(--spacing-sm);
+                filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+                transition: all 0.3s ease;
+            }
+
+            .icon-card:hover img {
+                transform: scale(1.1);
+                filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
             }
 
             .icon-name {
-                font-size: 0.8rem;
+                font-size: 0.75rem;
                 font-weight: 600;
                 text-align: center;
-                color: #475569;
+                color: var(--text-secondary);
                 text-transform: capitalize;
+                line-height: 1.2;
+                transition: color 0.3s ease;
             }
 
-            .selected-count {
+            .icon-card:hover .icon-name,
+            .icon-card.selected .icon-name {
+                color: var(--text-primary);
+            }
+
+            .selection-badge {
                 position: absolute;
-                top: -5px;
-                right: -5px;
-                background: #ef4444;
+                top: -6px;
+                right: -6px;
+                background: var(--accent-primary);
                 color: white;
                 border-radius: 50%;
-                width: 20px;
-                height: 20px;
+                width: 24px;
+                height: 24px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 0.7rem;
-                font-weight: bold;
+                font-size: 0.75rem;
+                font-weight: 700;
+                opacity: 0;
+                transform: scale(0);
+                transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                box-shadow: var(--shadow-md);
             }
 
+            .icon-card.selected .selection-badge {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            /* Generator Section */
             .generator-section {
-                background: white;
-                border-radius: 20px;
-                padding: 2rem;
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
                 display: none;
             }
 
@@ -236,130 +601,170 @@
                 display: block;
             }
 
-            .post-templates {
+            .template-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                gap: 1rem;
-                margin-bottom: 2rem;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: var(--spacing-lg);
+                margin-bottom: var(--spacing-xl);
             }
 
             .template-card {
-                padding: 1.5rem;
-                border: 2px solid #e2e8f0;
-                border-radius: 15px;
+                background: var(--bg-secondary);
+                border: 2px solid rgba(255, 255, 255, 0.1);
+                border-radius: var(--radius-lg);
+                padding: var(--spacing-lg);
                 cursor: pointer;
                 transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
             }
 
-            .template-card:hover,
+            .template-card::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: var(--gradient-primary);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                z-index: -1;
+            }
+
+            .template-card:hover {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-lg);
+                border-color: var(--accent-primary);
+            }
+
+            .template-card:hover::before,
+            .template-card.active::before {
+                opacity: 0.05;
+            }
+
             .template-card.active {
-                border-color: #667eea;
-                background: #f0f4ff;
+                border-color: var(--accent-primary);
+                box-shadow: var(--shadow-glow);
+            }
+
+            .template-header {
+                display: flex;
+                align-items: center;
+                gap: var(--spacing-sm);
+                margin-bottom: var(--spacing-sm);
+            }
+
+            .template-icon {
+                font-size: 1.5rem;
             }
 
             .template-title {
-                font-weight: bold;
-                margin-bottom: 0.5rem;
-                color: #1e293b;
+                font-size: 1.125rem;
+                font-weight: 600;
+                color: var(--text-primary);
             }
 
-            .template-desc {
-                font-size: 0.9rem;
-                color: #64748b;
+            .template-description {
+                color: var(--text-secondary);
+                font-size: 0.875rem;
+                line-height: 1.5;
             }
 
             .post-preview {
-                background: #f8fafc;
-                border: 2px solid #e2e8f0;
-                border-radius: 15px;
-                padding: 2rem;
-                margin: 2rem 0;
+                background: var(--bg-secondary);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: var(--radius-lg);
+                padding: var(--spacing-xl);
+                margin: var(--spacing-xl) 0;
                 min-height: 300px;
                 white-space: pre-wrap;
-                font-family: inherit;
+                font-family: var(--font-primary);
+                color: var(--text-primary);
+                line-height: 1.7;
+                position: relative;
+                overflow-y: auto;
+                font-size: 0.9rem;
             }
 
-            .action-buttons {
+            .post-preview:empty::before {
+                content: "Select icons and choose a template to generate your LinkedIn post...";
+                color: var(--text-tertiary);
+                font-style: italic;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            .action-bar {
                 display: flex;
-                gap: 1rem;
+                gap: var(--spacing-sm);
                 justify-content: flex-end;
-                margin-top: 2rem;
+                align-items: center;
+                margin-top: var(--spacing-xl);
+                flex-wrap: wrap;
             }
 
             .btn {
-                padding: 0.75rem 2rem;
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                gap: var(--spacing-xs);
+                padding: var(--spacing-md) var(--spacing-xl);
                 border: none;
-                border-radius: 25px;
+                border-radius: var(--radius-lg);
                 font-weight: 600;
+                font-size: 0.875rem;
                 cursor: pointer;
                 transition: all 0.3s ease;
                 text-decoration: none;
-                display: inline-flex;
-                align-items: center;
-                gap: 0.5rem;
+                user-select: none;
+                overflow: hidden;
             }
 
             .btn-primary {
-                background: linear-gradient(135deg, #667eea, #764ba2);
+                background: var(--gradient-primary);
                 color: white;
+                box-shadow: var(--shadow-md);
             }
 
             .btn-primary:hover {
                 transform: translateY(-2px);
-                box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+                box-shadow: var(--shadow-lg), var(--shadow-glow);
             }
 
             .btn-secondary {
-                background: white;
-                color: #667eea;
-                border: 2px solid #667eea;
+                background: var(--bg-secondary);
+                color: var(--text-primary);
+                border: 1px solid rgba(255, 255, 255, 0.2);
             }
 
             .btn-secondary:hover {
-                background: #667eea;
-                color: white;
+                background: var(--bg-tertiary);
+                border-color: var(--accent-primary);
+                transform: translateY(-1px);
             }
 
-            .stats-bar {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background: linear-gradient(135deg, #667eea, #764ba2);
-                color: white;
-                padding: 1rem 2rem;
-                border-radius: 15px;
-                margin-bottom: 2rem;
+            .btn:active {
+                transform: translateY(0);
             }
 
-            .stat-item {
-                text-align: center;
-            }
-
-            .stat-number {
-                font-size: 1.5rem;
-                font-weight: bold;
-                margin-bottom: 0.25rem;
-            }
-
-            .stat-label {
-                font-size: 0.9rem;
-                opacity: 0.9;
-            }
-
-            .loading {
+            /* Loading States */
+            .loading-spinner {
                 display: none;
-                text-align: center;
-                padding: 2rem;
+                justify-content: center;
+                align-items: center;
+                padding: var(--spacing-2xl);
+                flex-direction: column;
+                gap: var(--spacing-lg);
             }
 
             .spinner {
                 width: 40px;
                 height: 40px;
-                border: 4px solid #f3f4f6;
-                border-top: 4px solid #667eea;
+                border: 3px solid rgba(99, 102, 241, 0.2);
+                border-top: 3px solid var(--accent-primary);
                 border-radius: 50%;
                 animation: spin 1s linear infinite;
-                margin: 0 auto 1rem;
             }
 
             @keyframes spin {
@@ -371,22 +776,104 @@
                 }
             }
 
-            .hidden {
-                display: none !important;
+            .loading-text {
+                color: var(--text-secondary);
+                font-weight: 500;
             }
 
+            /* Toast Notifications */
+            .toast {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: var(--bg-glass);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: var(--radius-lg);
+                padding: var(--spacing-lg);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                box-shadow: var(--shadow-xl);
+                z-index: 10000;
+                transform: translateX(400px);
+                transition: transform 0.3s
+                    cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                display: flex;
+                align-items: center;
+                gap: var(--spacing-sm);
+                max-width: 350px;
+            }
+
+            .toast.show {
+                transform: translateX(0);
+            }
+
+            .toast-icon {
+                color: var(--accent-success);
+                font-size: 1.125rem;
+            }
+
+            .toast-message {
+                color: var(--text-primary);
+                font-weight: 500;
+                font-size: 0.875rem;
+            }
+
+            /* Empty States */
+            .empty-state {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: var(--spacing-2xl);
+                text-align: center;
+                color: var(--text-tertiary);
+            }
+
+            .empty-state i {
+                font-size: 3rem;
+                margin-bottom: var(--spacing-lg);
+                opacity: 0.5;
+            }
+
+            .empty-state-title {
+                font-size: 1.125rem;
+                font-weight: 600;
+                color: var(--text-secondary);
+                margin-bottom: var(--spacing-sm);
+            }
+
+            .empty-state-description {
+                font-size: 0.875rem;
+                max-width: 300px;
+            }
+
+            /* Responsive Design */
             @media (max-width: 768px) {
                 .header-content {
+                    padding: 0 var(--spacing-lg);
                     flex-direction: column;
-                    gap: 1rem;
+                    gap: var(--spacing-lg);
                 }
 
                 .nav {
-                    gap: 1rem;
+                    gap: var(--spacing-xs);
+                }
+
+                .nav-btn {
+                    padding: var(--spacing-xs) var(--spacing-sm);
+                    font-size: 0.75rem;
                 }
 
                 .main-container {
-                    padding: 0 1rem;
+                    padding: var(--spacing-lg);
+                }
+
+                .hero-title {
+                    font-size: 2.5rem;
+                }
+
+                .hero-stats {
+                    gap: var(--spacing-lg);
                 }
 
                 .icons-grid {
@@ -394,156 +881,344 @@
                         auto-fill,
                         minmax(100px, 1fr)
                     );
+                    gap: var(--spacing-sm);
+                    padding: var(--spacing-md);
                 }
 
-                .post-templates {
+                .template-grid {
                     grid-template-columns: 1fr;
                 }
 
-                .stats-bar {
+                .action-bar {
+                    justify-content: center;
+                }
+
+                .toast {
+                    right: var(--spacing-md);
+                    left: var(--spacing-md);
+                    max-width: none;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .hero-stats {
                     flex-direction: column;
-                    gap: 1rem;
+                    gap: var(--spacing-sm);
+                }
+
+                .search-filters {
+                    justify-content: center;
+                }
+
+                .filter-chip {
+                    font-size: 0.75rem;
+                    padding: var(--spacing-xs) var(--spacing-sm);
+                }
+            }
+
+            /* Animation Classes */
+            .fade-in {
+                animation: fadeIn 0.5s ease-in-out;
+            }
+
+            .slide-up {
+                animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes slideUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Focus styles for accessibility */
+            .nav-btn:focus-visible,
+            .filter-chip:focus-visible,
+            .icon-card:focus-visible,
+            .template-card:focus-visible,
+            .btn:focus-visible {
+                outline: 2px solid var(--accent-primary);
+                outline-offset: 2px;
+            }
+
+            .search-input:focus-visible {
+                outline: none;
+            }
+
+            /* High contrast mode support */
+            @media (prefers-contrast: high) {
+                :root {
+                    --bg-card: rgba(255, 255, 255, 0.1);
+                    --bg-card-hover: rgba(255, 255, 255, 0.15);
+                    --text-secondary: #ffffff;
+                    --text-tertiary: #e5e5e5;
+                }
+            }
+
+            /* Reduced motion support */
+            @media (prefers-reduced-motion: reduce) {
+                * {
+                    animation-duration: 0.01ms !important;
+                    animation-iteration-count: 1 !important;
+                    transition-duration: 0.01ms !important;
                 }
             }
         </style>
     </head>
     <body>
+        <!-- Header -->
         <header class="header">
             <div class="header-content">
-                <div class="logo">Composeon</div>
+                <div class="logo">
+                    <i class="fas fa-cube"></i>
+                    Composeon
+                </div>
                 <nav class="nav">
                     <button
                         class="nav-btn active"
                         onclick="showSection('icons')"
+                        aria-label="Browse Icons"
                     >
-                        🔍 Browse Icons
+                        <i class="fas fa-search"></i>
+                        Browse
                     </button>
-                    <button class="nav-btn" onclick="showSection('generator')">
-                        ✍️ Generate Post
+                    <button
+                        class="nav-btn"
+                        onclick="showSection('generator')"
+                        aria-label="Generate LinkedIn Post"
+                    >
+                        <i class="fas fa-edit"></i>
+                        Generate
                     </button>
-                    <button class="nav-btn" onclick="showSection('api')">
-                        🔌 API Docs
+                    <button
+                        class="nav-btn"
+                        onclick="showSection('api')"
+                        aria-label="API Documentation"
+                    >
+                        <i class="fas fa-plug"></i>
+                        API
+                    </button>
+                    <button
+                        class="theme-toggle"
+                        onclick="toggleTheme()"
+                        aria-label="Toggle Theme"
+                    >
+                        <i class="fas fa-moon"></i>
                     </button>
                 </nav>
             </div>
         </header>
 
+        <!-- Main Content -->
         <main class="main-container">
-            <div class="stats-bar">
-                <div class="stat-item">
-                    <div class="stat-number" id="totalIcons">760</div>
-                    <div class="stat-label">Total Icons</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" id="selectedIcons">0</div>
-                    <div class="stat-label">Selected</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" id="searchResults">760</div>
-                    <div class="stat-label">Search Results</div>
-                </div>
-            </div>
-
-            <section class="search-section">
-                <div class="search-container">
-                    <span class="search-icon">🔍</span>
-                    <input
-                        type="text"
-                        class="search-input"
-                        placeholder="Search for icons (e.g., 'openai', 'github', 'google')..."
-                        id="searchInput"
-                    />
-                </div>
-                <div class="filters">
-                    <span class="filter-tag active" data-filter="all">All</span>
-                    <span class="filter-tag" data-filter="ai">🤖 AI</span>
-                    <span class="filter-tag" data-filter="cloud">☁️ Cloud</span>
-                    <span class="filter-tag" data-filter="database"
-                        >🗄️ Database</span
-                    >
-                    <span class="filter-tag" data-filter="design"
-                        >🎨 Design</span
-                    >
-                    <span class="filter-tag" data-filter="dev"
-                        >👩‍💻 Development</span
-                    >
-                    <span class="filter-tag" data-filter="social"
-                        >📱 Social</span
-                    >
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <h1 class="hero-title">Smart Icon Repository</h1>
+                <p class="hero-subtitle">
+                    Discover, search, and generate LinkedIn posts with 760+
+                    premium tech icons
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="totalIcons">760</span>
+                        <span class="stat-label">Total Icons</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="selectedIcons">0</span>
+                        <span class="stat-label">Selected</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="searchResults">760</span>
+                        <span class="stat-label">Results</span>
+                    </div>
                 </div>
             </section>
 
-            <div class="content-area">
-                <section class="icons-section" id="iconsSection">
-                    <h2 class="section-title">Icon Repository</h2>
-                    <div class="loading" id="loading">
-                        <div class="spinner"></div>
-                        <p>Loading icons...</p>
+            <!-- Search Section -->
+            <section class="search-section slide-up">
+                <div class="search-container">
+                    <input
+                        type="text"
+                        class="search-input"
+                        placeholder="Search icons... (OpenAI, GitHub, Figma, AWS)"
+                        id="searchInput"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="search-filters">
+                    <div class="filter-chip active" data-filter="all">
+                        <i class="fas fa-th"></i>
+                        All
                     </div>
-                    <div class="icons-grid" id="iconsGrid">
-                        <!-- Icons will be loaded dynamically -->
+                    <div class="filter-chip" data-filter="ai">
+                        <i class="fas fa-robot"></i>
+                        AI
+                    </div>
+                    <div class="filter-chip" data-filter="cloud">
+                        <i class="fas fa-cloud"></i>
+                        Cloud
+                    </div>
+                    <div class="filter-chip" data-filter="database">
+                        <i class="fas fa-database"></i>
+                        Database
+                    </div>
+                    <div class="filter-chip" data-filter="design">
+                        <i class="fas fa-palette"></i>
+                        Design
+                    </div>
+                    <div class="filter-chip" data-filter="dev">
+                        <i class="fas fa-code"></i>
+                        Dev
+                    </div>
+                    <div class="filter-chip" data-filter="social">
+                        <i class="fas fa-users"></i>
+                        Social
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Grid -->
+            <div class="content-grid">
+                <!-- Icons Section -->
+                <section class="section-card fade-in" id="iconsSection">
+                    <h2 class="section-title">
+                        <i class="fas fa-th-large"></i>
+                        Icon Repository
+                    </h2>
+
+                    <div class="loading-spinner" id="loadingSpinner">
+                        <div class="spinner"></div>
+                        <div class="loading-text">Loading awesome icons...</div>
+                    </div>
+
+                    <div class="icons-grid-container">
+                        <div class="icons-grid" id="iconsGrid">
+                            <!-- Icons will be loaded dynamically -->
+                        </div>
+                        <div
+                            class="empty-state"
+                            id="emptyState"
+                            style="display: none"
+                        >
+                            <i class="fas fa-search"></i>
+                            <div class="empty-state-title">No icons found</div>
+                            <div class="empty-state-description">
+                                Try adjusting your search or filters
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-                <section class="generator-section" id="generatorSection">
-                    <h2 class="section-title">LinkedIn Post Generator</h2>
+                <!-- Generator Section -->
+                <section
+                    class="section-card generator-section"
+                    id="generatorSection"
+                >
+                    <h2 class="section-title">
+                        <i class="fas fa-magic"></i>
+                        LinkedIn Post Generator
+                    </h2>
 
-                    <div class="post-templates">
+                    <div class="template-grid">
                         <div
                             class="template-card active"
                             data-template="tools-spotlight"
                         >
-                            <div class="template-title">🌟 Tools Spotlight</div>
-                            <div class="template-desc">
-                                Highlight amazing tools and technologies
+                            <div class="template-header">
+                                <div class="template-icon">🌟</div>
+                                <div class="template-title">
+                                    Tools Spotlight
+                                </div>
+                            </div>
+                            <div class="template-description">
+                                Highlight amazing tools and technologies that
+                                are transforming workflows
                             </div>
                         </div>
                         <div class="template-card" data-template="tech-stack">
-                            <div class="template-title">🛠️ Tech Stack</div>
-                            <div class="template-desc">
-                                Showcase your development stack
+                            <div class="template-header">
+                                <div class="template-icon">🛠️</div>
+                                <div class="template-title">Tech Stack</div>
+                            </div>
+                            <div class="template-description">
+                                Showcase your development stack and the tools
+                                you use daily
                             </div>
                         </div>
                         <div class="template-card" data-template="comparison">
-                            <div class="template-title">⚖️ Tool Comparison</div>
-                            <div class="template-desc">
-                                Compare different solutions
+                            <div class="template-header">
+                                <div class="template-icon">⚖️</div>
+                                <div class="template-title">
+                                    Tool Comparison
+                                </div>
+                            </div>
+                            <div class="template-description">
+                                Compare different solutions and their unique
+                                strengths
                             </div>
                         </div>
                         <div
                             class="template-card"
                             data-template="trend-analysis"
                         >
-                            <div class="template-title">📈 Trend Analysis</div>
-                            <div class="template-desc">
-                                Analyze technology trends
+                            <div class="template-header">
+                                <div class="template-icon">📈</div>
+                                <div class="template-title">Trend Analysis</div>
+                            </div>
+                            <div class="template-description">
+                                Analyze trending technologies and emerging tools
                             </div>
                         </div>
                     </div>
 
-                    <div class="post-preview" id="postPreview">
-                        Select some icons and choose a template to generate your
-                        LinkedIn post!
-                    </div>
+                    <div class="post-preview" id="postPreview"></div>
 
-                    <div class="action-buttons">
+                    <div class="action-bar">
                         <button
                             class="btn btn-secondary"
                             onclick="copyToClipboard()"
+                            id="copyBtn"
                         >
-                            📋 Copy Post
+                            <i class="fas fa-copy"></i>
+                            Copy Post
                         </button>
                         <button
                             class="btn btn-primary"
                             onclick="generatePost()"
                         >
-                            ✨ Generate Post
+                            <i class="fas fa-sparkles"></i>
+                            Generate Post
                         </button>
                     </div>
                 </section>
             </div>
         </main>
 
+        <!-- Toast Notifications -->
+        <div class="toast" id="toast">
+            <i class="fas fa-check-circle toast-icon"></i>
+            <span class="toast-message" id="toastMessage"></span>
+        </div>
+
+        <!-- JavaScript -->
         <script>
             // Global state
             let allIcons = [];
@@ -551,70 +1226,97 @@
             let selectedIcons = new Set();
             let currentTemplate = "tools-spotlight";
             let iconsLoader = null;
+            let isDarkMode = true;
 
             // Initialize app
             document.addEventListener("DOMContentLoaded", function () {
                 initializeApp();
                 setupEventListeners();
+                setupIntersectionObserver();
             });
 
             async function initializeApp() {
-                // Show loading
-                document.getElementById("loading").style.display = "block";
-                document.getElementById("iconsGrid").style.display = "none";
+                showLoadingSpinner(true);
 
                 try {
-                    // Initialize icons loader
                     iconsLoader = new IconsLoader();
                     allIcons = await iconsLoader.initialize();
                     filteredIcons = [...allIcons];
 
-                    // Hide loading and show icons
-                    document.getElementById("loading").style.display = "none";
-                    document.getElementById("iconsGrid").style.display = "grid";
-
+                    showLoadingSpinner(false);
                     renderIcons();
                     updateStats();
 
                     console.log(
-                        `Loaded ${allIcons.length} icons successfully!`,
+                        `🚀 Loaded ${allIcons.length} icons successfully!`,
                     );
                 } catch (error) {
                     console.error("Failed to initialize app:", error);
-                    document.getElementById("loading").innerHTML = `
-                        <div style="color: #ef4444; text-align: center;">
-                            <p>⚠️ Failed to load icons</p>
-                            <p style="font-size: 0.9rem; opacity: 0.8;">Using fallback icons instead</p>
-                        </div>
-                    `;
-
-                    // Use fallback
-                    setTimeout(() => {
-                        document.getElementById("loading").style.display =
-                            "none";
-                        document.getElementById("iconsGrid").style.display =
-                            "grid";
-                        renderIcons();
-                        updateStats();
-                    }, 2000);
+                    showLoadingSpinner(false);
+                    showEmptyState(
+                        true,
+                        "Failed to load icons",
+                        "Please refresh the page to try again",
+                    );
                 }
             }
 
             function setupEventListeners() {
-                // Search input
+                // Search input with debouncing
+                let searchTimeout;
                 document
                     .getElementById("searchInput")
-                    .addEventListener("input", handleSearch);
+                    .addEventListener("input", (e) => {
+                        clearTimeout(searchTimeout);
+                        searchTimeout = setTimeout(() => handleSearch(e), 300);
+                    });
 
-                // Filter tags
-                document.querySelectorAll(".filter-tag").forEach((tag) => {
-                    tag.addEventListener("click", () => handleFilter(tag));
+                // Filter chips
+                document.querySelectorAll(".filter-chip").forEach((chip) => {
+                    chip.addEventListener("click", () => handleFilter(chip));
                 });
 
-                // Template selection
+                // Template cards
                 document.querySelectorAll(".template-card").forEach((card) => {
                     card.addEventListener("click", () => selectTemplate(card));
                 });
+
+                // Keyboard shortcuts
+                document.addEventListener("keydown", handleKeyboardShortcuts);
+            }
+
+            function setupIntersectionObserver() {
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("fade-in");
+                            }
+                        });
+                    },
+                    { threshold: 0.1 },
+                );
+
+                document.querySelectorAll(".section-card").forEach((card) => {
+                    observer.observe(card);
+                });
+            }
+
+            function handleKeyboardShortcuts(e) {
+                if (e.ctrlKey || e.metaKey) {
+                    switch (e.key) {
+                        case "k":
+                            e.preventDefault();
+                            document.getElementById("searchInput").focus();
+                            break;
+                        case "c":
+                            if (selectedIcons.size > 0) {
+                                e.preventDefault();
+                                copyToClipboard();
+                            }
+                            break;
+                    }
+                }
             }
 
             function handleSearch(e) {
@@ -632,28 +1334,27 @@
                 } else {
                     filteredIcons = [...allIcons];
                 }
+
                 renderIcons();
                 updateStats();
             }
 
-            function handleFilter(clickedTag) {
-                // Update active filter
-                document.querySelectorAll(".filter-tag").forEach((tag) => {
-                    tag.classList.remove("active");
+            function handleFilter(clickedChip) {
+                document.querySelectorAll(".filter-chip").forEach((chip) => {
+                    chip.classList.remove("active");
                 });
-                clickedTag.classList.add("active");
+                clickedChip.classList.add("active");
 
-                const filter = clickedTag.dataset.filter;
+                const filter = clickedChip.dataset.filter;
                 if (iconsLoader) {
                     filteredIcons = iconsLoader.filterByCategory(filter);
                 } else {
-                    if (filter === "all") {
-                        filteredIcons = [...allIcons];
-                    } else {
-                        filteredIcons = allIcons.filter(
-                            (icon) => icon.category === filter,
-                        );
-                    }
+                    filteredIcons =
+                        filter === "all"
+                            ? [...allIcons]
+                            : allIcons.filter(
+                                  (icon) => icon.category === filter,
+                              );
                 }
 
                 // Apply search if active
@@ -672,28 +1373,39 @@
 
             function renderIcons() {
                 const grid = document.getElementById("iconsGrid");
+                const emptyState = document.getElementById("emptyState");
+
+                if (filteredIcons.length === 0) {
+                    grid.style.display = "none";
+                    showEmptyState(true);
+                    return;
+                }
+
+                showEmptyState(false);
+                grid.style.display = "grid";
                 grid.innerHTML = "";
 
-                filteredIcons.forEach((icon) => {
-                    const iconCard = createIconCard(icon);
+                filteredIcons.forEach((icon, index) => {
+                    const iconCard = createIconCard(icon, index);
                     grid.appendChild(iconCard);
                 });
             }
 
-            function createIconCard(icon) {
+            function createIconCard(icon, index) {
                 const card = document.createElement("div");
                 card.className = "icon-card";
                 card.dataset.iconName = icon.name;
+                card.style.animationDelay = `${index * 50}ms`;
 
                 const displayName = icon.displayName || icon.name;
                 const iconPath =
                     icon.path ||
-                    icon.paths?.default ||
                     `lobe-icons/packages/static-svg/icons/${icon.name}.svg`;
 
                 card.innerHTML = `
-                    <img src="${iconPath}" alt="${icon.name}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjQiIGZpbGw9IiNGM0Y0RjYiLz4KPHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIxMiIgeT0iMTIiPgo8cGF0aCBkPSJNMTIgMkM2LjQ3NzE1IDIgMiA2LjQ3NzE1IDIgMTJDMiAxNy41MjI4IDYuNDc3MTUgMjIgMTIgMjJDMTcuNTIyOCAyMiAyMiAxNy41MjI4IDIyIDEyQzIyIDYuNDc3MTUgMTcuNTIyOCAyIDEyIDJaTTEyIDEwQzEzLjEwNDYgMTAgMTQgMTAuODk1NCAxNCA5QzE0IDguNDQ3NzIgMTMuNTUyMyA4IDEzIDhIMTFDMTAuNDQ3NyA4IDEwIDguNDQ3NzIgMTAgOUM5IDkuNTUyMjggOSAxMCAxMCAxMEwxMiAxMFoiIGZpbGw9IiM5Q0EzQUYiLz4KPC9zdmc+Cjwvc3ZnPgo='"/>
+                    <img src="${iconPath}" alt="${icon.name}" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjQiIGZpbGw9InZhcigtLWJnLXNlY29uZGFyeSkiLz4KPHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIxMiIgeT0iMTIiPgo8cGF0aCBkPSJNMTIgMkM2LjQ3NzE1IDIgMiA2LjQ3NzE1IDIgMTJDMiAxNy41MjI4IDYuNDc3MTUgMjIgMTIgMjJDMTcuNTIyOCAyMiAyMiAxNy41MjI4IDIyIDEyQzIyIDYuNDc3MTUgMTcuNTIyOCAyIDEyIDJaIiBmaWxsPSJ2YXIoLS10ZXh0LXRlcnRpYXJ5KSIvPgo8L3N2Zz4KPC9zdmc+'" />
                     <div class="icon-name">${displayName}</div>
+                    <div class="selection-badge">✓</div>
                 `;
 
                 card.addEventListener("click", () =>
@@ -715,8 +1427,9 @@
                     selectedIcons.add(icon.name);
                     card.classList.add("selected");
                 }
+
                 updateStats();
-                if (selectedIcons.size > 0 && currentTemplate) {
+                if (selectedIcons.size > 0) {
                     generatePost();
                 }
             }
@@ -727,6 +1440,7 @@
                 });
                 clickedCard.classList.add("active");
                 currentTemplate = clickedCard.dataset.template;
+
                 if (selectedIcons.size > 0) {
                     generatePost();
                 }
@@ -734,8 +1448,13 @@
 
             function generatePost() {
                 if (selectedIcons.size === 0) {
-                    document.getElementById("postPreview").textContent =
-                        "Select some icons to generate your LinkedIn post!";
+                    document.getElementById("postPreview").innerHTML = `
+                        <div class="empty-state">
+                            <i class="fas fa-icons"></i>
+                            <div class="empty-state-title">Select icons first</div>
+                            <div class="empty-state-description">Choose some icons to generate your LinkedIn post</div>
+                        </div>
+                    `;
                     return;
                 }
 
@@ -748,24 +1467,27 @@
             }
 
             function generatePostContent(template, icons) {
-                const iconList = icons
-                    .map((name) => {
-                        const icon = iconsLoader
+                const iconObjects = icons
+                    .map((name) =>
+                        iconsLoader
                             ? iconsLoader.getIcon(name)
-                            : null;
-                        const displayName = icon
-                            ? icon.displayName
-                            : capitalizeFirst(name);
-                        return `• ${displayName}`;
-                    })
+                            : { name, displayName: capitalizeFirst(name) },
+                    )
+                    .filter(Boolean);
+
+                const iconList = iconObjects
+                    .map(
+                        (icon) =>
+                            `• ${icon.displayName || capitalizeFirst(icon.name)}`,
+                    )
                     .join("\n");
-                const iconEmojis = icons
-                    .map((name) => getIconEmoji(name))
+
+                const iconEmojis = iconObjects
+                    .map((icon) => getIconEmoji(icon.name))
                     .join(" ");
 
-                switch (template) {
-                    case "tools-spotlight":
-                        return `🌟 Amazing tools that are transforming how we work:
+                const templates = {
+                    "tools-spotlight": `🌟 Amazing tools that are transforming how we work:
 
 ${iconList}
 
@@ -775,10 +1497,9 @@ What's your favorite tool from this list? Share your experience in the comments!
 
 ${iconEmojis}
 
-#TechTools #Innovation #Productivity #TechStack`;
+#TechTools #Innovation #Productivity #TechStack`,
 
-                    case "tech-stack":
-                        return `🛠️ My current tech stack:
+                    "tech-stack": `🛠️ My current tech stack:
 
 ${iconList}
 
@@ -790,10 +1511,9 @@ What does your tech stack look like? Drop it in the comments! 💻
 
 ${iconEmojis}
 
-#TechStack #Development #Engineering #SoftwareDevelopment`;
+#TechStack #Development #Engineering #SoftwareDevelopment`,
 
-                    case "comparison":
-                        return `⚖️ Comparing some popular tools in the market:
+                    comparison: `⚖️ Comparing some popular tools in the market:
 
 ${iconList}
 
@@ -808,10 +1528,9 @@ Have you used any of these? What's been your experience? 🤔
 
 ${iconEmojis}
 
-#TechComparison #ToolSelection #TechDecisions`;
+#TechComparison #ToolSelection #TechDecisions`,
 
-                    case "trend-analysis":
-                        return `📈 Trending technologies worth watching:
+                    "trend-analysis": `📈 Trending technologies worth watching:
 
 ${iconList}
 
@@ -827,11 +1546,13 @@ Which one are you most excited about? Let me know! 🎯
 
 ${iconEmojis}
 
-#TechTrends #Innovation #FutureTech #Technology`;
+#TechTrends #Innovation #FutureTech #Technology`,
+                };
 
-                    default:
-                        return `Check out these amazing tools: ${icons.join(", ")}!`;
-                }
+                return (
+                    templates[template] ||
+                    `Check out these amazing tools: ${iconObjects.map((i) => i.displayName).join(", ")}!`
+                );
             }
 
             function capitalizeFirst(str) {
@@ -870,20 +1591,22 @@ ${iconEmojis}
             }
 
             function showSection(section) {
-                // Update nav buttons
                 document.querySelectorAll(".nav-btn").forEach((btn) => {
                     btn.classList.remove("active");
                 });
                 event.target.classList.add("active");
 
-                // Show/hide sections
-                document.getElementById("iconsSection").style.display =
-                    section === "icons" ? "block" : "none";
-                document
-                    .getElementById("generatorSection")
-                    .classList.toggle("active", section === "generator");
+                const iconsSection = document.getElementById("iconsSection");
+                const generatorSection =
+                    document.getElementById("generatorSection");
 
-                if (section === "api") {
+                if (section === "icons") {
+                    iconsSection.style.display = "block";
+                    generatorSection.classList.remove("active");
+                } else if (section === "generator") {
+                    iconsSection.style.display = "block";
+                    generatorSection.classList.add("active");
+                } else if (section === "api") {
                     showAPIDocumentation();
                 }
             }
@@ -893,43 +1616,95 @@ ${iconEmojis}
                     ? iconsLoader.getStats()
                     : { total: allIcons.length };
 
-                alert(`🔌 Composeon MCP Server API
+                showToast(
+                    `🔌 Composeon MCP Server API
 
 Current Stats:
 • Total Icons: ${stats.total}
 • Categories: ${Object.keys(stats.categories || {}).length}
 
-Planned Endpoints:
-• GET /api/icons - List all icons
-• GET /api/icons/search?q={query} - Search icons
-• GET /api/icons/categories - Get all categories
-• GET /api/icons/popular - Get popular icons
-• GET /api/icons/trending - Get trending icons
-• POST /api/generate-post - Generate LinkedIn post
-• GET /api/icons/{name}/download - Download icon
-• GET /api/stats - Get usage statistics
+Available Tools:
+• search_icons - Search by name/category
+• get_icon - Retrieve specific icon
+• generate_linkedin_post - Create posts
+• get_categories - List all categories
+• get_popular_icons - Get trending icons
 
-Coming soon! This will be a full MCP server that can integrate with Claude Desktop and other applications.`);
+Setup: See MCP_SETUP.md for Claude Desktop integration`,
+                    5000,
+                );
             }
 
             function copyToClipboard() {
                 const postContent =
                     document.getElementById("postPreview").textContent;
+                if (!postContent || postContent.includes("Select icons")) {
+                    showToast("⚠️ Generate a post first!", 3000);
+                    return;
+                }
+
                 navigator.clipboard.writeText(postContent).then(() => {
-                    // Show success message
-                    const btn = event.target;
-                    const originalText = btn.textContent;
-                    btn.textContent = "✅ Copied!";
+                    showToast("✅ Post copied to clipboard!", 3000);
+
+                    const btn = document.getElementById("copyBtn");
+                    const originalContent = btn.innerHTML;
+                    btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
                     setTimeout(() => {
-                        btn.textContent = originalText;
+                        btn.innerHTML = originalContent;
                     }, 2000);
                 });
             }
 
-            // Auto-generate post when template or selection changes
-            document.addEventListener("DOMContentLoaded", function () {
-                generatePost();
-            });
+            function showToast(message, duration = 3000) {
+                const toast = document.getElementById("toast");
+                const toastMessage = document.getElementById("toastMessage");
+
+                toastMessage.textContent = message;
+                toast.classList.add("show");
+
+                setTimeout(() => {
+                    toast.classList.remove("show");
+                }, duration);
+            }
+
+            function showLoadingSpinner(show) {
+                const spinner = document.getElementById("loadingSpinner");
+                const grid = document.getElementById("iconsGrid");
+
+                if (show) {
+                    spinner.style.display = "flex";
+                    grid.style.display = "none";
+                } else {
+                    spinner.style.display = "none";
+                    grid.style.display = "grid";
+                }
+            }
+
+            function showEmptyState(
+                show,
+                title = "No icons found",
+                description = "Try adjusting your search or filters",
+            ) {
+                const emptyState = document.getElementById("emptyState");
+                if (show) {
+                    emptyState.querySelector(".empty-state-title").textContent =
+                        title;
+                    emptyState.querySelector(
+                        ".empty-state-description",
+                    ).textContent = description;
+                    emptyState.style.display = "flex";
+                } else {
+                    emptyState.style.display = "none";
+                }
+            }
+
+            function toggleTheme() {
+                // Future enhancement: toggle between dark/light themes
+                showToast(
+                    "🌙 Dark theme is active (light theme coming soon!)",
+                    2000,
+                );
+            }
         </script>
     </body>
 </html>
