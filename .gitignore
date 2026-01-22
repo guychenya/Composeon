@@ -1,0 +1,4 @@
+# Local Netlify folder
+.netlify
+lobe-icons/
+.DS_Store
