@@ -822,7 +822,7 @@
         async function initializeApp() {
             showToast('🚀 Loading icons...', 2000);
 
-            // Load initial batch of icons
+            // Load initial batch of icons from server API
             await loadIconsList();
             loadMoreIcons();
 
@@ -831,23 +831,34 @@
 
         async function loadIconsList() {
             try {
-                // Try to load from directory scan or manifest
-                const response = await fetch('./icons-manifest.json').catch(() => null);
+                // First try the local server API
+                const response = await fetch('http://localhost:3000/api/icons?page=0&limit=1000');
 
                 if (response && response.ok) {
                     const data = await response.json();
                     icons = data.icons || [];
+                    updateStats();
+                    showToast(`✅ ${icons.length} icons loaded from server`, 3000);
                 } else {
-                    // Fallback to known icons list
-                    icons = generateKnownIconsList();
+                    // Fallback to manifest file
+                    const manifestResponse = await fetch('./icons-manifest.json').catch(() => null);
+                    if (manifestResponse && manifestResponse.ok) {
+                        const manifestData = await manifestResponse.json();
+                        icons = manifestData.icons || [];
+                        updateStats();
+                        showToast(`✅ ${icons.length} icons loaded from manifest`, 3000);
+                    } else {
+                        // Final fallback to hardcoded list
+                        icons = generateKnownIconsList();
+                        updateStats();
+                        showToast('⚠️ Using fallback icon set', 3000);
+                    }
                 }
-
-                updateStats();
-                showToast(`✅ ${icons.length} icons ready to explore`, 3000);
             } catch (error) {
                 console.error('Failed to load icons:', error);
                 icons = generateFallbackIcons();
-                showToast('⚠️ Using fallback icon set', 3000);
+                updateStats();
+                showToast('❌ Failed to load icons, using minimal set', 3000);
             }
         }
 
@@ -1031,7 +1042,8 @@
 
         async function queryOllama(query) {
             try {
-                const response = await fetch('http://localhost:11434/api/generate', {
+                // Use the proxy endpoint to avoid CORS issues
+                const response = await fetch('http://localhost:3000/api/ollama', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -1047,7 +1059,10 @@ Response format: Start with a brief explanation, then list the most relevant too
                     })
                 });
 
-                if (!response.ok) throw new Error('Ollama request failed');
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
+                    throw new Error(errorData.error || 'Ollama request failed');
+                }
 
                 const data = await response.json();
                 return data.response;
@@ -1090,19 +1105,26 @@ Response format: Start with a brief explanation, then list the most relevant too
 
         async function checkOllamaConnection() {
             try {
-                const response = await fetch('http://localhost:11434/api/tags', {
+                // Use the health check endpoint
+                const response = await fetch('http://localhost:3000/api/health', {
                     method: 'GET',
                     signal: AbortSignal.timeout(3000)
                 });
 
                 if (response.ok) {
-                    ollamaConnected = true;
-                    updateOllamaStatus(true, 'Connected to Ollama');
+                    const data = await response.json();
+                    ollamaConnected = data.ollama;
+                    if (data.ollama) {
+                        updateOllamaStatus(true, 'Connected to Ollama');
+                    } else {
+                        updateOllamaStatus(false, 'Ollama not responding');
+                    }
                 } else {
-                    updateOllamaStatus(false, 'Ollama not responding');
+                    updateOllamaStatus(false, 'Server not available');
                 }
             } catch (error) {
-                updateOllamaStatus(false, 'Ollama not available');
+                updateOllamaStatus(false, 'Connection failed');
+                console.log('💡 Start the server with: node icon-scanner.js');
             }
         }
 
@@ -1216,9 +1238,11 @@ Response format: Start with a brief explanation, then list the most relevant too
             card.dataset.iconName = icon.name;
             card.style.animationDelay = `${(index % 24) * 50}ms`;
 
+            const iconPath = icon.path || icon.paths?.default || `http://localhost:3000/lobe-icons/packages/static-svg/icons/${icon.name}.svg`;
+
             card.innerHTML = `
-                <img src="${icon.path}" alt="${icon.name}" loading="lazy"
-                     onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjQiIGZpbGw9IiMyMTI2MmQiLz4KPHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIxMiIgeT0iMTIiPgo8cGF0aCBkPSJNMTIgMkM2LjQ3NzE1IDIgMiA2LjQ3NzE1IDIgMTJDMiAxNy41MjI4IDYuNDc3MTUgMjIgMTIgMjJDMTcuNTIyOCAyMiAyMiAxNy41MjI4IDIyIDEyQzIyIDYuNDc3MTUgMTcuNTIyOCAyIDEyIDJaIiBmaWxsPSIjN2Q4NTkwIi8+Cjwvc3ZnPgo8L3N2Zz4K'">
+                <img src="${iconPath}" alt="${icon.name}" loading="lazy"
+                     onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjQiIGZpbGw9IiMyMTI2MmQiLz4KPHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIxMiIgeT0iMTIiPgo8cGF0aCBkPSJNMTIgMkM2LjQ3NzE1IDIgMiA2LjQ3NzE1IDIgMTJDMiAxNy41MjI4IDYuNDc3MTUgMjIgMTIgMjJDMTcuNTIyOCAyMiAyMiAxNy41MjI4IDIyIDEyQzIyIDYuNDc3MTUgMTcuNTIyOCAyIDEyIDJaIiBmaWxsPSIjN2Q4NTkwIi8+Cjwvc3ZnPgo8L3N2Zz4K'; console.log('Failed to load icon:', '${icon.name}', 'trying path:', '${iconPath}');">
                 <div class="icon-name">${icon.displayName}</div>
                 <div class="selection-badge">✓</div>
             `;

@@ -1,0 +1,6307 @@
+{
+  "version": "2.0.0",
+  "generated": "2026-01-22T14:13:09.650Z",
+  "total": 298,
+  "categories": {
+    "design": 5,
+    "ai": 39,
+    "other": 202,
+    "cloud": 37,
+    "dev": 12,
+    "crypto": 1,
+    "productivity": 1,
+    "database": 1
+  },
+  "icons": [
+    {
+      "name": "adobe",
+      "fileName": "adobe-color.svg",
+      "variation": "color",
+      "displayName": "Adobe",
+      "category": "design",
+      "path": "lobe-icons/packages/static-svg/icons/adobe-color.svg",
+      "tags": [
+        "adobe",
+        "design"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/adobe-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/adobe-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/adobe.svg"
+      }
+    },
+    {
+      "name": "anthropic",
+      "fileName": "anthropic-text.svg",
+      "variation": "text",
+      "displayName": "Anthropic",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/anthropic-text.svg",
+      "tags": [
+        "anthropic",
+        "ai"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/anthropic-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/anthropic.svg"
+      }
+    },
+    {
+      "name": "apple",
+      "fileName": "apple-text.svg",
+      "variation": "text",
+      "displayName": "Apple",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/apple-text.svg",
+      "tags": [
+        "apple",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/apple-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/apple.svg"
+      }
+    },
+    {
+      "name": "aws",
+      "fileName": "aws-brand.svg",
+      "variation": "brand",
+      "displayName": "AWS",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/aws-brand.svg",
+      "tags": [
+        "aws",
+        "cloud"
+      ],
+      "variations": [
+        "brand",
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/aws-brand.svg",
+        "color": "lobe-icons/packages/static-svg/icons/aws-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/aws-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/aws.svg"
+      }
+    },
+    {
+      "name": "azure",
+      "fileName": "azure-color.svg",
+      "variation": "color",
+      "displayName": "Azure",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/azure-color.svg",
+      "tags": [
+        "azure",
+        "cloud"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/azure-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/azure-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/azure.svg"
+      }
+    },
+    {
+      "name": "claude",
+      "fileName": "claude-color.svg",
+      "variation": "color",
+      "displayName": "Claude",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/claude-color.svg",
+      "tags": [
+        "claude",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/claude-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/claude-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/claude.svg"
+      }
+    },
+    {
+      "name": "figma",
+      "fileName": "figma-color.svg",
+      "variation": "color",
+      "displayName": "Figma",
+      "category": "design",
+      "path": "lobe-icons/packages/static-svg/icons/figma-color.svg",
+      "tags": [
+        "figma",
+        "design"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/figma-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/figma-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/figma.svg"
+      }
+    },
+    {
+      "name": "gemini",
+      "fileName": "gemini-color.svg",
+      "variation": "color",
+      "displayName": "Gemini",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/gemini-color.svg",
+      "tags": [
+        "gemini",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/gemini-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/gemini-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/gemini.svg"
+      }
+    },
+    {
+      "name": "github",
+      "fileName": "github-text.svg",
+      "variation": "text",
+      "displayName": "GitHub",
+      "category": "dev",
+      "path": "lobe-icons/packages/static-svg/icons/github-text.svg",
+      "tags": [
+        "github",
+        "dev",
+        "git",
+        "version control"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/github-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/github.svg"
+      }
+    },
+    {
+      "name": "google",
+      "fileName": "google-brand.svg",
+      "variation": "brand",
+      "displayName": "Google",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/google-brand.svg",
+      "tags": [
+        "google",
+        "cloud"
+      ],
+      "variations": [
+        "brand",
+        "color",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/google-brand.svg",
+        "color": "lobe-icons/packages/static-svg/icons/google-color.svg",
+        "default": "lobe-icons/packages/static-svg/icons/google.svg"
+      }
+    },
+    {
+      "name": "googlecloud",
+      "fileName": "googlecloud-brand.svg",
+      "variation": "brand",
+      "displayName": "Googlecloud",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/googlecloud-brand.svg",
+      "tags": [
+        "googlecloud",
+        "cloud"
+      ],
+      "variations": [
+        "brand",
+        "color",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/googlecloud-brand.svg",
+        "color": "lobe-icons/packages/static-svg/icons/googlecloud-color.svg",
+        "default": "lobe-icons/packages/static-svg/icons/googlecloud.svg"
+      }
+    },
+    {
+      "name": "meta",
+      "fileName": "meta-brand.svg",
+      "variation": "brand",
+      "displayName": "Meta",
+      "category": "crypto",
+      "path": "lobe-icons/packages/static-svg/icons/meta-brand.svg",
+      "tags": [
+        "meta",
+        "crypto"
+      ],
+      "variations": [
+        "brand",
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/meta-brand.svg",
+        "color": "lobe-icons/packages/static-svg/icons/meta-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/meta-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/meta.svg"
+      }
+    },
+    {
+      "name": "microsoft",
+      "fileName": "microsoft-color.svg",
+      "variation": "color",
+      "displayName": "Microsoft",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/microsoft-color.svg",
+      "tags": [
+        "microsoft",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/microsoft-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/microsoft-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/microsoft.svg"
+      }
+    },
+    {
+      "name": "openai",
+      "fileName": "openai-text.svg",
+      "variation": "text",
+      "displayName": "OpenAI",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/openai-text.svg",
+      "tags": [
+        "openai",
+        "ai"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/openai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/openai.svg"
+      }
+    },
+    {
+      "name": "adobefirefly",
+      "fileName": "adobefirefly-color.svg",
+      "variation": "color",
+      "displayName": "Adobefirefly",
+      "category": "design",
+      "path": "lobe-icons/packages/static-svg/icons/adobefirefly-color.svg",
+      "tags": [
+        "adobefirefly",
+        "design"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/adobefirefly-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/adobefirefly-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/adobefirefly.svg"
+      }
+    },
+    {
+      "name": "agui",
+      "fileName": "agui-text.svg",
+      "variation": "text",
+      "displayName": "Agui",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/agui-text.svg",
+      "tags": [
+        "agui",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/agui-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/agui.svg"
+      }
+    },
+    {
+      "name": "ai2",
+      "fileName": "ai2-color.svg",
+      "variation": "color",
+      "displayName": "Ai2",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/ai2-color.svg",
+      "tags": [
+        "ai2",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/ai2-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/ai2-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/ai2.svg"
+      }
+    },
+    {
+      "name": "ai21",
+      "fileName": "ai21-brand.svg",
+      "variation": "brand",
+      "displayName": "Ai21",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/ai21-brand.svg",
+      "tags": [
+        "ai21",
+        "ai"
+      ],
+      "variations": [
+        "brand",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/ai21-brand.svg",
+        "text": "lobe-icons/packages/static-svg/icons/ai21-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/ai21.svg"
+      }
+    },
+    {
+      "name": "ai21-brand",
+      "fileName": "ai21-brand-color.svg",
+      "variation": "color",
+      "displayName": "Ai21 Brand",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/ai21-brand-color.svg",
+      "tags": [
+        "ai21-brand",
+        "ai"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/ai21-brand-color.svg"
+      }
+    },
+    {
+      "name": "ai302",
+      "fileName": "ai302-color.svg",
+      "variation": "color",
+      "displayName": "Ai302",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/ai302-color.svg",
+      "tags": [
+        "ai302",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/ai302-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/ai302-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/ai302.svg"
+      }
+    },
+    {
+      "name": "ai360",
+      "fileName": "ai360-color.svg",
+      "variation": "color",
+      "displayName": "Ai360",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/ai360-color.svg",
+      "tags": [
+        "ai360",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/ai360-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/ai360-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/ai360.svg"
+      }
+    },
+    {
+      "name": "aihubmix",
+      "fileName": "aihubmix-color.svg",
+      "variation": "color",
+      "displayName": "Aihubmix",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/aihubmix-color.svg",
+      "tags": [
+        "aihubmix",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/aihubmix-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/aihubmix-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/aihubmix.svg"
+      }
+    },
+    {
+      "name": "aimass",
+      "fileName": "aimass-color.svg",
+      "variation": "color",
+      "displayName": "Aimass",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/aimass-color.svg",
+      "tags": [
+        "aimass",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/aimass-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/aimass-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/aimass.svg"
+      }
+    },
+    {
+      "name": "aionlabs",
+      "fileName": "aionlabs-color.svg",
+      "variation": "color",
+      "displayName": "Aionlabs",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/aionlabs-color.svg",
+      "tags": [
+        "aionlabs",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/aionlabs-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/aionlabs-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/aionlabs.svg"
+      }
+    },
+    {
+      "name": "aistudio",
+      "fileName": "aistudio-text.svg",
+      "variation": "text",
+      "displayName": "Aistudio",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/aistudio-text.svg",
+      "tags": [
+        "aistudio",
+        "ai"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/aistudio-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/aistudio.svg"
+      }
+    },
+    {
+      "name": "akashchat",
+      "fileName": "akashchat-color.svg",
+      "variation": "color",
+      "displayName": "Akashchat",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/akashchat-color.svg",
+      "tags": [
+        "akashchat",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/akashchat-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/akashchat-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/akashchat.svg"
+      }
+    },
+    {
+      "name": "alephalpha",
+      "fileName": "alephalpha-text.svg",
+      "variation": "text",
+      "displayName": "Alephalpha",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/alephalpha-text.svg",
+      "tags": [
+        "alephalpha",
+        "ai"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/alephalpha-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/alephalpha.svg"
+      }
+    },
+    {
+      "name": "alibaba",
+      "fileName": "alibaba-brand.svg",
+      "variation": "brand",
+      "displayName": "Alibaba",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/alibaba-brand.svg",
+      "tags": [
+        "alibaba",
+        "cloud"
+      ],
+      "variations": [
+        "brand",
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/alibaba-brand.svg",
+        "color": "lobe-icons/packages/static-svg/icons/alibaba-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/alibaba-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/alibaba.svg"
+      }
+    },
+    {
+      "name": "alibaba-brand",
+      "fileName": "alibaba-brand-color.svg",
+      "variation": "color",
+      "displayName": "Alibaba Brand",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/alibaba-brand-color.svg",
+      "tags": [
+        "alibaba-brand",
+        "cloud"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/alibaba-brand-color.svg"
+      }
+    },
+    {
+      "name": "alibaba-text-cn",
+      "fileName": "alibaba-text-cn.svg",
+      "variation": "default",
+      "displayName": "Alibaba Text Cn",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/alibaba-text-cn.svg",
+      "tags": [
+        "alibaba-text-cn",
+        "cloud"
+      ],
+      "variations": [
+        "default"
+      ],
+      "paths": {
+        "default": "lobe-icons/packages/static-svg/icons/alibaba-text-cn.svg"
+      }
+    },
+    {
+      "name": "alibabacloud",
+      "fileName": "alibabacloud-color.svg",
+      "variation": "color",
+      "displayName": "Alibabacloud",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/alibabacloud-color.svg",
+      "tags": [
+        "alibabacloud",
+        "cloud"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/alibabacloud-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/alibabacloud-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/alibabacloud.svg"
+      }
+    },
+    {
+      "name": "alibabacloud-text-cn",
+      "fileName": "alibabacloud-text-cn.svg",
+      "variation": "default",
+      "displayName": "Alibabacloud Text Cn",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/alibabacloud-text-cn.svg",
+      "tags": [
+        "alibabacloud-text-cn",
+        "cloud"
+      ],
+      "variations": [
+        "default"
+      ],
+      "paths": {
+        "default": "lobe-icons/packages/static-svg/icons/alibabacloud-text-cn.svg"
+      }
+    },
+    {
+      "name": "antgroup",
+      "fileName": "antgroup-brand.svg",
+      "variation": "brand",
+      "displayName": "Antgroup",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/antgroup-brand.svg",
+      "tags": [
+        "antgroup",
+        "other"
+      ],
+      "variations": [
+        "brand",
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/antgroup-brand.svg",
+        "color": "lobe-icons/packages/static-svg/icons/antgroup-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/antgroup-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/antgroup.svg"
+      }
+    },
+    {
+      "name": "antgroup-brand",
+      "fileName": "antgroup-brand-color.svg",
+      "variation": "color",
+      "displayName": "Antgroup Brand",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/antgroup-brand-color.svg",
+      "tags": [
+        "antgroup-brand",
+        "other"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/antgroup-brand-color.svg"
+      }
+    },
+    {
+      "name": "antgroup-text-cn",
+      "fileName": "antgroup-text-cn.svg",
+      "variation": "default",
+      "displayName": "Antgroup Text Cn",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/antgroup-text-cn.svg",
+      "tags": [
+        "antgroup-text-cn",
+        "other"
+      ],
+      "variations": [
+        "default"
+      ],
+      "paths": {
+        "default": "lobe-icons/packages/static-svg/icons/antgroup-text-cn.svg"
+      }
+    },
+    {
+      "name": "anyscale",
+      "fileName": "anyscale-color.svg",
+      "variation": "color",
+      "displayName": "Anyscale",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/anyscale-color.svg",
+      "tags": [
+        "anyscale",
+        "cloud"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/anyscale-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/anyscale-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/anyscale.svg"
+      }
+    },
+    {
+      "name": "arcee",
+      "fileName": "arcee-color.svg",
+      "variation": "color",
+      "displayName": "Arcee",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/arcee-color.svg",
+      "tags": [
+        "arcee",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/arcee-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/arcee-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/arcee.svg"
+      }
+    },
+    {
+      "name": "assemblyai",
+      "fileName": "assemblyai-color.svg",
+      "variation": "color",
+      "displayName": "Assemblyai",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/assemblyai-color.svg",
+      "tags": [
+        "assemblyai",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/assemblyai-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/assemblyai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/assemblyai.svg"
+      }
+    },
+    {
+      "name": "automatic",
+      "fileName": "automatic-color.svg",
+      "variation": "color",
+      "displayName": "Automatic",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/automatic-color.svg",
+      "tags": [
+        "automatic",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/automatic-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/automatic-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/automatic.svg"
+      }
+    },
+    {
+      "name": "aws-brand",
+      "fileName": "aws-brand-color.svg",
+      "variation": "color",
+      "displayName": "Aws Brand",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/aws-brand-color.svg",
+      "tags": [
+        "aws-brand",
+        "cloud"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/aws-brand-color.svg"
+      }
+    },
+    {
+      "name": "aya",
+      "fileName": "aya-color.svg",
+      "variation": "color",
+      "displayName": "Aya",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/aya-color.svg",
+      "tags": [
+        "aya",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/aya-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/aya-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/aya.svg"
+      }
+    },
+    {
+      "name": "azureai",
+      "fileName": "azureai-color.svg",
+      "variation": "color",
+      "displayName": "Azureai",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/azureai-color.svg",
+      "tags": [
+        "azureai",
+        "cloud"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/azureai-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/azureai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/azureai.svg"
+      }
+    },
+    {
+      "name": "baai",
+      "fileName": "baai-text.svg",
+      "variation": "text",
+      "displayName": "Baai",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/baai-text.svg",
+      "tags": [
+        "baai",
+        "ai"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/baai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/baai.svg"
+      }
+    },
+    {
+      "name": "baichuan",
+      "fileName": "baichuan-color.svg",
+      "variation": "color",
+      "displayName": "Baichuan",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/baichuan-color.svg",
+      "tags": [
+        "baichuan",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/baichuan-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/baichuan-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/baichuan.svg"
+      }
+    },
+    {
+      "name": "baidu",
+      "fileName": "baidu-brand.svg",
+      "variation": "brand",
+      "displayName": "Baidu",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/baidu-brand.svg",
+      "tags": [
+        "baidu",
+        "cloud"
+      ],
+      "variations": [
+        "brand",
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/baidu-brand.svg",
+        "color": "lobe-icons/packages/static-svg/icons/baidu-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/baidu-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/baidu.svg"
+      }
+    },
+    {
+      "name": "baidu-brand",
+      "fileName": "baidu-brand-color.svg",
+      "variation": "color",
+      "displayName": "Baidu Brand",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/baidu-brand-color.svg",
+      "tags": [
+        "baidu-brand",
+        "cloud"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/baidu-brand-color.svg"
+      }
+    },
+    {
+      "name": "baidu-text-cn",
+      "fileName": "baidu-text-cn.svg",
+      "variation": "default",
+      "displayName": "Baidu Text Cn",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/baidu-text-cn.svg",
+      "tags": [
+        "baidu-text-cn",
+        "cloud"
+      ],
+      "variations": [
+        "default"
+      ],
+      "paths": {
+        "default": "lobe-icons/packages/static-svg/icons/baidu-text-cn.svg"
+      }
+    },
+    {
+      "name": "baiducloud",
+      "fileName": "baiducloud-color.svg",
+      "variation": "color",
+      "displayName": "Baiducloud",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/baiducloud-color.svg",
+      "tags": [
+        "baiducloud",
+        "cloud"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/baiducloud-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/baiducloud-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/baiducloud.svg"
+      }
+    },
+    {
+      "name": "bailian",
+      "fileName": "bailian-color.svg",
+      "variation": "color",
+      "displayName": "Bailian",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/bailian-color.svg",
+      "tags": [
+        "bailian",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/bailian-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/bailian-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/bailian.svg"
+      }
+    },
+    {
+      "name": "baseten",
+      "fileName": "baseten-text.svg",
+      "variation": "text",
+      "displayName": "Baseten",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/baseten-text.svg",
+      "tags": [
+        "baseten",
+        "cloud"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/baseten-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/baseten.svg"
+      }
+    },
+    {
+      "name": "bedrock",
+      "fileName": "bedrock-color.svg",
+      "variation": "color",
+      "displayName": "Bedrock",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/bedrock-color.svg",
+      "tags": [
+        "bedrock",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/bedrock-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/bedrock-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/bedrock.svg"
+      }
+    },
+    {
+      "name": "bfl",
+      "fileName": "bfl-text.svg",
+      "variation": "text",
+      "displayName": "Bfl",
+      "category": "design",
+      "path": "lobe-icons/packages/static-svg/icons/bfl-text.svg",
+      "tags": [
+        "bfl",
+        "design"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/bfl-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/bfl.svg"
+      }
+    },
+    {
+      "name": "bilibili",
+      "fileName": "bilibili-color.svg",
+      "variation": "color",
+      "displayName": "Bilibili",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/bilibili-color.svg",
+      "tags": [
+        "bilibili",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/bilibili-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/bilibili-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/bilibili.svg"
+      }
+    },
+    {
+      "name": "bilibiliindex",
+      "fileName": "bilibiliindex-text.svg",
+      "variation": "text",
+      "displayName": "Bilibiliindex",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/bilibiliindex-text.svg",
+      "tags": [
+        "bilibiliindex",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/bilibiliindex-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/bilibiliindex.svg"
+      }
+    },
+    {
+      "name": "bing",
+      "fileName": "bing-color.svg",
+      "variation": "color",
+      "displayName": "Bing",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/bing-color.svg",
+      "tags": [
+        "bing",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/bing-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/bing-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/bing.svg"
+      }
+    },
+    {
+      "name": "burncloud",
+      "fileName": "burncloud-color.svg",
+      "variation": "color",
+      "displayName": "Burncloud",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/burncloud-color.svg",
+      "tags": [
+        "burncloud",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/burncloud-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/burncloud-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/burncloud.svg"
+      }
+    },
+    {
+      "name": "bytedance",
+      "fileName": "bytedance-brand.svg",
+      "variation": "brand",
+      "displayName": "Bytedance",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/bytedance-brand.svg",
+      "tags": [
+        "bytedance",
+        "other"
+      ],
+      "variations": [
+        "brand",
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/bytedance-brand.svg",
+        "color": "lobe-icons/packages/static-svg/icons/bytedance-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/bytedance-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/bytedance.svg"
+      }
+    },
+    {
+      "name": "bytedance-brand",
+      "fileName": "bytedance-brand-color.svg",
+      "variation": "color",
+      "displayName": "Bytedance Brand",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/bytedance-brand-color.svg",
+      "tags": [
+        "bytedance-brand",
+        "other"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/bytedance-brand-color.svg"
+      }
+    },
+    {
+      "name": "bytedance-text-cn",
+      "fileName": "bytedance-text-cn.svg",
+      "variation": "default",
+      "displayName": "Bytedance Text Cn",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/bytedance-text-cn.svg",
+      "tags": [
+        "bytedance-text-cn",
+        "other"
+      ],
+      "variations": [
+        "default"
+      ],
+      "paths": {
+        "default": "lobe-icons/packages/static-svg/icons/bytedance-text-cn.svg"
+      }
+    },
+    {
+      "name": "capcut",
+      "fileName": "capcut-text.svg",
+      "variation": "text",
+      "displayName": "Capcut",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/capcut-text.svg",
+      "tags": [
+        "capcut",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/capcut-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/capcut.svg"
+      }
+    },
+    {
+      "name": "centml",
+      "fileName": "centml-brand.svg",
+      "variation": "brand",
+      "displayName": "Centml",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/centml-brand.svg",
+      "tags": [
+        "centml",
+        "cloud"
+      ],
+      "variations": [
+        "brand",
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/centml-brand.svg",
+        "color": "lobe-icons/packages/static-svg/icons/centml-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/centml-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/centml.svg"
+      }
+    },
+    {
+      "name": "centml-brand",
+      "fileName": "centml-brand-color.svg",
+      "variation": "color",
+      "displayName": "Centml Brand",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/centml-brand-color.svg",
+      "tags": [
+        "centml-brand",
+        "cloud"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/centml-brand-color.svg"
+      }
+    },
+    {
+      "name": "cerebras",
+      "fileName": "cerebras-brand.svg",
+      "variation": "brand",
+      "displayName": "Cerebras",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/cerebras-brand.svg",
+      "tags": [
+        "cerebras",
+        "other"
+      ],
+      "variations": [
+        "brand",
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/cerebras-brand.svg",
+        "color": "lobe-icons/packages/static-svg/icons/cerebras-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/cerebras-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/cerebras.svg"
+      }
+    },
+    {
+      "name": "cerebras-brand",
+      "fileName": "cerebras-brand-color.svg",
+      "variation": "color",
+      "displayName": "Cerebras Brand",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/cerebras-brand-color.svg",
+      "tags": [
+        "cerebras-brand",
+        "other"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/cerebras-brand-color.svg"
+      }
+    },
+    {
+      "name": "chatglm",
+      "fileName": "chatglm-color.svg",
+      "variation": "color",
+      "displayName": "Chatglm",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/chatglm-color.svg",
+      "tags": [
+        "chatglm",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/chatglm-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/chatglm-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/chatglm.svg"
+      }
+    },
+    {
+      "name": "civitai",
+      "fileName": "civitai-color.svg",
+      "variation": "color",
+      "displayName": "Civitai",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/civitai-color.svg",
+      "tags": [
+        "civitai",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/civitai-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/civitai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/civitai.svg"
+      }
+    },
+    {
+      "name": "civitai-text",
+      "fileName": "civitai-text-color.svg",
+      "variation": "color",
+      "displayName": "Civitai Text",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/civitai-text-color.svg",
+      "tags": [
+        "civitai-text",
+        "other"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/civitai-text-color.svg"
+      }
+    },
+    {
+      "name": "cline",
+      "fileName": "cline-text.svg",
+      "variation": "text",
+      "displayName": "Cline",
+      "category": "dev",
+      "path": "lobe-icons/packages/static-svg/icons/cline-text.svg",
+      "tags": [
+        "cline",
+        "dev"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/cline-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/cline.svg"
+      }
+    },
+    {
+      "name": "clipdrop",
+      "fileName": "clipdrop-text.svg",
+      "variation": "text",
+      "displayName": "Clipdrop",
+      "category": "design",
+      "path": "lobe-icons/packages/static-svg/icons/clipdrop-text.svg",
+      "tags": [
+        "clipdrop",
+        "design"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/clipdrop-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/clipdrop.svg"
+      }
+    },
+    {
+      "name": "cloudflare",
+      "fileName": "cloudflare-color.svg",
+      "variation": "color",
+      "displayName": "Cloudflare",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/cloudflare-color.svg",
+      "tags": [
+        "cloudflare",
+        "cloud"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/cloudflare-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/cloudflare-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/cloudflare.svg"
+      }
+    },
+    {
+      "name": "codeflicker",
+      "fileName": "codeflicker-color.svg",
+      "variation": "color",
+      "displayName": "Codeflicker",
+      "category": "dev",
+      "path": "lobe-icons/packages/static-svg/icons/codeflicker-color.svg",
+      "tags": [
+        "codeflicker",
+        "dev"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/codeflicker-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/codeflicker-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/codeflicker.svg"
+      }
+    },
+    {
+      "name": "codegeex",
+      "fileName": "codegeex-color.svg",
+      "variation": "color",
+      "displayName": "Codegeex",
+      "category": "dev",
+      "path": "lobe-icons/packages/static-svg/icons/codegeex-color.svg",
+      "tags": [
+        "codegeex",
+        "dev"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/codegeex-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/codegeex-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/codegeex.svg"
+      }
+    },
+    {
+      "name": "cogvideo",
+      "fileName": "cogvideo-color.svg",
+      "variation": "color",
+      "displayName": "Cogvideo",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/cogvideo-color.svg",
+      "tags": [
+        "cogvideo",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/cogvideo-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/cogvideo-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/cogvideo.svg"
+      }
+    },
+    {
+      "name": "cogview",
+      "fileName": "cogview-color.svg",
+      "variation": "color",
+      "displayName": "Cogview",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/cogview-color.svg",
+      "tags": [
+        "cogview",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/cogview-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/cogview-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/cogview.svg"
+      }
+    },
+    {
+      "name": "cohere",
+      "fileName": "cohere-color.svg",
+      "variation": "color",
+      "displayName": "Cohere",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/cohere-color.svg",
+      "tags": [
+        "cohere",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/cohere-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/cohere-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/cohere.svg"
+      }
+    },
+    {
+      "name": "colab",
+      "fileName": "colab-color.svg",
+      "variation": "color",
+      "displayName": "Colab",
+      "category": "dev",
+      "path": "lobe-icons/packages/static-svg/icons/colab-color.svg",
+      "tags": [
+        "colab",
+        "dev"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/colab-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/colab-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/colab.svg"
+      }
+    },
+    {
+      "name": "cometapi",
+      "fileName": "cometapi-color.svg",
+      "variation": "color",
+      "displayName": "Cometapi",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/cometapi-color.svg",
+      "tags": [
+        "cometapi",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/cometapi-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/cometapi-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/cometapi.svg"
+      }
+    },
+    {
+      "name": "comfyui",
+      "fileName": "comfyui-color.svg",
+      "variation": "color",
+      "displayName": "Comfyui",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/comfyui-color.svg",
+      "tags": [
+        "comfyui",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/comfyui-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/comfyui-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/comfyui.svg"
+      }
+    },
+    {
+      "name": "commanda",
+      "fileName": "commanda-color.svg",
+      "variation": "color",
+      "displayName": "Commanda",
+      "category": "dev",
+      "path": "lobe-icons/packages/static-svg/icons/commanda-color.svg",
+      "tags": [
+        "commanda",
+        "dev"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/commanda-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/commanda-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/commanda.svg"
+      }
+    },
+    {
+      "name": "copilot",
+      "fileName": "copilot-color.svg",
+      "variation": "color",
+      "displayName": "Copilot",
+      "category": "dev",
+      "path": "lobe-icons/packages/static-svg/icons/copilot-color.svg",
+      "tags": [
+        "copilot",
+        "dev"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/copilot-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/copilot-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/copilot.svg"
+      }
+    },
+    {
+      "name": "copilotkit",
+      "fileName": "copilotkit-color.svg",
+      "variation": "color",
+      "displayName": "Copilotkit",
+      "category": "dev",
+      "path": "lobe-icons/packages/static-svg/icons/copilotkit-color.svg",
+      "tags": [
+        "copilotkit",
+        "dev"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/copilotkit-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/copilotkit-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/copilotkit.svg"
+      }
+    },
+    {
+      "name": "coqui",
+      "fileName": "coqui-color.svg",
+      "variation": "color",
+      "displayName": "Coqui",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/coqui-color.svg",
+      "tags": [
+        "coqui",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/coqui-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/coqui-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/coqui.svg"
+      }
+    },
+    {
+      "name": "coze",
+      "fileName": "coze-text.svg",
+      "variation": "text",
+      "displayName": "Coze",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/coze-text.svg",
+      "tags": [
+        "coze",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/coze-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/coze.svg"
+      }
+    },
+    {
+      "name": "crewai",
+      "fileName": "crewai-brand.svg",
+      "variation": "brand",
+      "displayName": "Crewai",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/crewai-brand.svg",
+      "tags": [
+        "crewai",
+        "other"
+      ],
+      "variations": [
+        "brand",
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/crewai-brand.svg",
+        "color": "lobe-icons/packages/static-svg/icons/crewai-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/crewai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/crewai.svg"
+      }
+    },
+    {
+      "name": "crewai-brand",
+      "fileName": "crewai-brand-color.svg",
+      "variation": "color",
+      "displayName": "Crewai Brand",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/crewai-brand-color.svg",
+      "tags": [
+        "crewai-brand",
+        "other"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/crewai-brand-color.svg"
+      }
+    },
+    {
+      "name": "crusoe",
+      "fileName": "crusoe-color.svg",
+      "variation": "color",
+      "displayName": "Crusoe",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/crusoe-color.svg",
+      "tags": [
+        "crusoe",
+        "cloud"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/crusoe-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/crusoe-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/crusoe.svg"
+      }
+    },
+    {
+      "name": "cursor",
+      "fileName": "cursor-text.svg",
+      "variation": "text",
+      "displayName": "Cursor",
+      "category": "dev",
+      "path": "lobe-icons/packages/static-svg/icons/cursor-text.svg",
+      "tags": [
+        "cursor",
+        "dev"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/cursor-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/cursor.svg"
+      }
+    },
+    {
+      "name": "cybercut",
+      "fileName": "cybercut-text.svg",
+      "variation": "text",
+      "displayName": "Cybercut",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/cybercut-text.svg",
+      "tags": [
+        "cybercut",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/cybercut-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/cybercut.svg"
+      }
+    },
+    {
+      "name": "dalle",
+      "fileName": "dalle-color.svg",
+      "variation": "color",
+      "displayName": "Dalle",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/dalle-color.svg",
+      "tags": [
+        "dalle",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/dalle-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/dalle-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/dalle.svg"
+      }
+    },
+    {
+      "name": "dbrx",
+      "fileName": "dbrx-brand.svg",
+      "variation": "brand",
+      "displayName": "Dbrx",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/dbrx-brand.svg",
+      "tags": [
+        "dbrx",
+        "other"
+      ],
+      "variations": [
+        "brand",
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/dbrx-brand.svg",
+        "color": "lobe-icons/packages/static-svg/icons/dbrx-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/dbrx-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/dbrx.svg"
+      }
+    },
+    {
+      "name": "dbrx-brand",
+      "fileName": "dbrx-brand-color.svg",
+      "variation": "color",
+      "displayName": "Dbrx Brand",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/dbrx-brand-color.svg",
+      "tags": [
+        "dbrx-brand",
+        "other"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/dbrx-brand-color.svg"
+      }
+    },
+    {
+      "name": "deepai",
+      "fileName": "deepai-text.svg",
+      "variation": "text",
+      "displayName": "Deepai",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/deepai-text.svg",
+      "tags": [
+        "deepai",
+        "ai"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/deepai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/deepai.svg"
+      }
+    },
+    {
+      "name": "deepcogito",
+      "fileName": "deepcogito-color.svg",
+      "variation": "color",
+      "displayName": "Deepcogito",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/deepcogito-color.svg",
+      "tags": [
+        "deepcogito",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/deepcogito-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/deepcogito-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/deepcogito.svg"
+      }
+    },
+    {
+      "name": "deepinfra",
+      "fileName": "deepinfra-color.svg",
+      "variation": "color",
+      "displayName": "Deepinfra",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/deepinfra-color.svg",
+      "tags": [
+        "deepinfra",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/deepinfra-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/deepinfra-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/deepinfra.svg"
+      }
+    },
+    {
+      "name": "deepl",
+      "fileName": "deepl-color.svg",
+      "variation": "color",
+      "displayName": "Deepl",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/deepl-color.svg",
+      "tags": [
+        "deepl",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/deepl-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/deepl-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/deepl.svg"
+      }
+    },
+    {
+      "name": "deepmind",
+      "fileName": "deepmind-color.svg",
+      "variation": "color",
+      "displayName": "Deepmind",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/deepmind-color.svg",
+      "tags": [
+        "deepmind",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/deepmind-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/deepmind-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/deepmind.svg"
+      }
+    },
+    {
+      "name": "deepseek",
+      "fileName": "deepseek-color.svg",
+      "variation": "color",
+      "displayName": "Deepseek",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/deepseek-color.svg",
+      "tags": [
+        "deepseek",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/deepseek-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/deepseek-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/deepseek.svg"
+      }
+    },
+    {
+      "name": "dify",
+      "fileName": "dify-color.svg",
+      "variation": "color",
+      "displayName": "Dify",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/dify-color.svg",
+      "tags": [
+        "dify",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/dify-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/dify-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/dify.svg"
+      }
+    },
+    {
+      "name": "doc2x",
+      "fileName": "doc2x-color.svg",
+      "variation": "color",
+      "displayName": "Doc2x",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/doc2x-color.svg",
+      "tags": [
+        "doc2x",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/doc2x-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/doc2x-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/doc2x.svg"
+      }
+    },
+    {
+      "name": "docsearch",
+      "fileName": "docsearch-color.svg",
+      "variation": "color",
+      "displayName": "Docsearch",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/docsearch-color.svg",
+      "tags": [
+        "docsearch",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/docsearch-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/docsearch-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/docsearch.svg"
+      }
+    },
+    {
+      "name": "dolphin",
+      "fileName": "dolphin-text.svg",
+      "variation": "text",
+      "displayName": "Dolphin",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/dolphin-text.svg",
+      "tags": [
+        "dolphin",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/dolphin-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/dolphin.svg"
+      }
+    },
+    {
+      "name": "doubao",
+      "fileName": "doubao-color.svg",
+      "variation": "color",
+      "displayName": "Doubao",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/doubao-color.svg",
+      "tags": [
+        "doubao",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/doubao-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/doubao-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/doubao.svg"
+      }
+    },
+    {
+      "name": "dreammachine",
+      "fileName": "dreammachine-text.svg",
+      "variation": "text",
+      "displayName": "Dreammachine",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/dreammachine-text.svg",
+      "tags": [
+        "dreammachine",
+        "ai"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/dreammachine-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/dreammachine.svg"
+      }
+    },
+    {
+      "name": "elevenlabs",
+      "fileName": "elevenlabs-text.svg",
+      "variation": "text",
+      "displayName": "Elevenlabs",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/elevenlabs-text.svg",
+      "tags": [
+        "elevenlabs",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/elevenlabs-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/elevenlabs.svg"
+      }
+    },
+    {
+      "name": "elevenx",
+      "fileName": "elevenx-text.svg",
+      "variation": "text",
+      "displayName": "Elevenx",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/elevenx-text.svg",
+      "tags": [
+        "elevenx",
+        "ai"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/elevenx-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/elevenx.svg"
+      }
+    },
+    {
+      "name": "essentialai",
+      "fileName": "essentialai-color.svg",
+      "variation": "color",
+      "displayName": "Essentialai",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/essentialai-color.svg",
+      "tags": [
+        "essentialai",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/essentialai-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/essentialai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/essentialai.svg"
+      }
+    },
+    {
+      "name": "exa",
+      "fileName": "exa-color.svg",
+      "variation": "color",
+      "displayName": "Exa",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/exa-color.svg",
+      "tags": [
+        "exa",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/exa-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/exa-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/exa.svg"
+      }
+    },
+    {
+      "name": "fal",
+      "fileName": "fal-color.svg",
+      "variation": "color",
+      "displayName": "Fal",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/fal-color.svg",
+      "tags": [
+        "fal",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/fal-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/fal-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/fal.svg"
+      }
+    },
+    {
+      "name": "fastgpt",
+      "fileName": "fastgpt-color.svg",
+      "variation": "color",
+      "displayName": "Fastgpt",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/fastgpt-color.svg",
+      "tags": [
+        "fastgpt",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/fastgpt-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/fastgpt-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/fastgpt.svg"
+      }
+    },
+    {
+      "name": "featherless",
+      "fileName": "featherless-color.svg",
+      "variation": "color",
+      "displayName": "Featherless",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/featherless-color.svg",
+      "tags": [
+        "featherless",
+        "cloud"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/featherless-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/featherless-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/featherless.svg"
+      }
+    },
+    {
+      "name": "fireworks",
+      "fileName": "fireworks-color.svg",
+      "variation": "color",
+      "displayName": "Fireworks",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/fireworks-color.svg",
+      "tags": [
+        "fireworks",
+        "cloud"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/fireworks-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/fireworks-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/fireworks.svg"
+      }
+    },
+    {
+      "name": "fishaudio",
+      "fileName": "fishaudio-text.svg",
+      "variation": "text",
+      "displayName": "Fishaudio",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/fishaudio-text.svg",
+      "tags": [
+        "fishaudio",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/fishaudio-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/fishaudio.svg"
+      }
+    },
+    {
+      "name": "flora",
+      "fileName": "flora-text.svg",
+      "variation": "text",
+      "displayName": "Flora",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/flora-text.svg",
+      "tags": [
+        "flora",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/flora-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/flora.svg"
+      }
+    },
+    {
+      "name": "flowith",
+      "fileName": "flowith-text.svg",
+      "variation": "text",
+      "displayName": "Flowith",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/flowith-text.svg",
+      "tags": [
+        "flowith",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/flowith-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/flowith.svg"
+      }
+    },
+    {
+      "name": "flux",
+      "fileName": "flux-text.svg",
+      "variation": "text",
+      "displayName": "Flux",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/flux-text.svg",
+      "tags": [
+        "flux",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/flux-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/flux.svg"
+      }
+    },
+    {
+      "name": "friendli",
+      "fileName": "friendli-text.svg",
+      "variation": "text",
+      "displayName": "Friendli",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/friendli-text.svg",
+      "tags": [
+        "friendli",
+        "cloud"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/friendli-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/friendli.svg"
+      }
+    },
+    {
+      "name": "gemma",
+      "fileName": "gemma-color.svg",
+      "variation": "color",
+      "displayName": "Gemma",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/gemma-color.svg",
+      "tags": [
+        "gemma",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/gemma-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/gemma-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/gemma.svg"
+      }
+    },
+    {
+      "name": "giteeai",
+      "fileName": "giteeai-text.svg",
+      "variation": "text",
+      "displayName": "Giteeai",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/giteeai-text.svg",
+      "tags": [
+        "giteeai",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/giteeai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/giteeai.svg"
+      }
+    },
+    {
+      "name": "githubcopilot",
+      "fileName": "githubcopilot-text.svg",
+      "variation": "text",
+      "displayName": "Githubcopilot",
+      "category": "dev",
+      "path": "lobe-icons/packages/static-svg/icons/githubcopilot-text.svg",
+      "tags": [
+        "githubcopilot",
+        "dev"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/githubcopilot-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/githubcopilot.svg"
+      }
+    },
+    {
+      "name": "glama",
+      "fileName": "glama-text.svg",
+      "variation": "text",
+      "displayName": "Glama",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/glama-text.svg",
+      "tags": [
+        "glama",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/glama-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/glama.svg"
+      }
+    },
+    {
+      "name": "glif",
+      "fileName": "glif-text.svg",
+      "variation": "text",
+      "displayName": "Glif",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/glif-text.svg",
+      "tags": [
+        "glif",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/glif-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/glif.svg"
+      }
+    },
+    {
+      "name": "glmv",
+      "fileName": "glmv-color.svg",
+      "variation": "color",
+      "displayName": "Glmv",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/glmv-color.svg",
+      "tags": [
+        "glmv",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/glmv-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/glmv-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/glmv.svg"
+      }
+    },
+    {
+      "name": "google-brand",
+      "fileName": "google-brand-color.svg",
+      "variation": "color",
+      "displayName": "Google Brand",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/google-brand-color.svg",
+      "tags": [
+        "google-brand",
+        "cloud"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/google-brand-color.svg"
+      }
+    },
+    {
+      "name": "googlecloud-brand",
+      "fileName": "googlecloud-brand-color.svg",
+      "variation": "color",
+      "displayName": "Googlecloud Brand",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/googlecloud-brand-color.svg",
+      "tags": [
+        "googlecloud-brand",
+        "cloud"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/googlecloud-brand-color.svg"
+      }
+    },
+    {
+      "name": "goose",
+      "fileName": "goose-text.svg",
+      "variation": "text",
+      "displayName": "Goose",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/goose-text.svg",
+      "tags": [
+        "goose",
+        "ai"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/goose-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/goose.svg"
+      }
+    },
+    {
+      "name": "gradio",
+      "fileName": "gradio-color.svg",
+      "variation": "color",
+      "displayName": "Gradio",
+      "category": "dev",
+      "path": "lobe-icons/packages/static-svg/icons/gradio-color.svg",
+      "tags": [
+        "gradio",
+        "dev"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/gradio-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/gradio-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/gradio.svg"
+      }
+    },
+    {
+      "name": "greptile",
+      "fileName": "greptile-color.svg",
+      "variation": "color",
+      "displayName": "Greptile",
+      "category": "dev",
+      "path": "lobe-icons/packages/static-svg/icons/greptile-color.svg",
+      "tags": [
+        "greptile",
+        "dev"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/greptile-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/greptile-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/greptile.svg"
+      }
+    },
+    {
+      "name": "grok",
+      "fileName": "grok-text.svg",
+      "variation": "text",
+      "displayName": "Grok",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/grok-text.svg",
+      "tags": [
+        "grok",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/grok-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/grok.svg"
+      }
+    },
+    {
+      "name": "groq",
+      "fileName": "groq-text.svg",
+      "variation": "text",
+      "displayName": "Groq",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/groq-text.svg",
+      "tags": [
+        "groq",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/groq-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/groq.svg"
+      }
+    },
+    {
+      "name": "hailuo",
+      "fileName": "hailuo-color.svg",
+      "variation": "color",
+      "displayName": "Hailuo",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/hailuo-color.svg",
+      "tags": [
+        "hailuo",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/hailuo-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/hailuo-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/hailuo.svg"
+      }
+    },
+    {
+      "name": "haiper",
+      "fileName": "haiper-text.svg",
+      "variation": "text",
+      "displayName": "Haiper",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/haiper-text.svg",
+      "tags": [
+        "haiper",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/haiper-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/haiper.svg"
+      }
+    },
+    {
+      "name": "hedra",
+      "fileName": "hedra-text.svg",
+      "variation": "text",
+      "displayName": "Hedra",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/hedra-text.svg",
+      "tags": [
+        "hedra",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/hedra-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/hedra.svg"
+      }
+    },
+    {
+      "name": "higress",
+      "fileName": "higress-color.svg",
+      "variation": "color",
+      "displayName": "Higress",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/higress-color.svg",
+      "tags": [
+        "higress",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/higress-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/higress-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/higress.svg"
+      }
+    },
+    {
+      "name": "huawei",
+      "fileName": "huawei-color.svg",
+      "variation": "color",
+      "displayName": "Huawei",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/huawei-color.svg",
+      "tags": [
+        "huawei",
+        "cloud"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/huawei-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/huawei-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/huawei.svg"
+      }
+    },
+    {
+      "name": "huawei-text-cn",
+      "fileName": "huawei-text-cn.svg",
+      "variation": "default",
+      "displayName": "Huawei Text Cn",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/huawei-text-cn.svg",
+      "tags": [
+        "huawei-text-cn",
+        "cloud"
+      ],
+      "variations": [
+        "default"
+      ],
+      "paths": {
+        "default": "lobe-icons/packages/static-svg/icons/huawei-text-cn.svg"
+      }
+    },
+    {
+      "name": "huaweicloud",
+      "fileName": "huaweicloud-color.svg",
+      "variation": "color",
+      "displayName": "Huaweicloud",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/huaweicloud-color.svg",
+      "tags": [
+        "huaweicloud",
+        "cloud"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/huaweicloud-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/huaweicloud-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/huaweicloud.svg"
+      }
+    },
+    {
+      "name": "huaweicloud-text-cn",
+      "fileName": "huaweicloud-text-cn.svg",
+      "variation": "default",
+      "displayName": "Huaweicloud Text Cn",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/huaweicloud-text-cn.svg",
+      "tags": [
+        "huaweicloud-text-cn",
+        "cloud"
+      ],
+      "variations": [
+        "default"
+      ],
+      "paths": {
+        "default": "lobe-icons/packages/static-svg/icons/huaweicloud-text-cn.svg"
+      }
+    },
+    {
+      "name": "huggingface",
+      "fileName": "huggingface-color.svg",
+      "variation": "color",
+      "displayName": "Huggingface",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/huggingface-color.svg",
+      "tags": [
+        "huggingface",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/huggingface-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/huggingface-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/huggingface.svg"
+      }
+    },
+    {
+      "name": "hunyuan",
+      "fileName": "hunyuan-color.svg",
+      "variation": "color",
+      "displayName": "Hunyuan",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/hunyuan-color.svg",
+      "tags": [
+        "hunyuan",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/hunyuan-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/hunyuan-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/hunyuan.svg"
+      }
+    },
+    {
+      "name": "hyperbolic",
+      "fileName": "hyperbolic-color.svg",
+      "variation": "color",
+      "displayName": "Hyperbolic",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/hyperbolic-color.svg",
+      "tags": [
+        "hyperbolic",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/hyperbolic-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/hyperbolic-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/hyperbolic.svg"
+      }
+    },
+    {
+      "name": "ibm",
+      "fileName": "ibm-text.svg",
+      "variation": "text",
+      "displayName": "Ibm",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/ibm-text.svg",
+      "tags": [
+        "ibm",
+        "cloud"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/ibm-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/ibm.svg"
+      }
+    },
+    {
+      "name": "ideogram",
+      "fileName": "ideogram-text.svg",
+      "variation": "text",
+      "displayName": "Ideogram",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/ideogram-text.svg",
+      "tags": [
+        "ideogram",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/ideogram-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/ideogram.svg"
+      }
+    },
+    {
+      "name": "iflytekcloud",
+      "fileName": "iflytekcloud-color.svg",
+      "variation": "color",
+      "displayName": "Iflytekcloud",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/iflytekcloud-color.svg",
+      "tags": [
+        "iflytekcloud",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/iflytekcloud-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/iflytekcloud-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/iflytekcloud.svg"
+      }
+    },
+    {
+      "name": "inception",
+      "fileName": "inception-text.svg",
+      "variation": "text",
+      "displayName": "Inception",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/inception-text.svg",
+      "tags": [
+        "inception",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/inception-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/inception.svg"
+      }
+    },
+    {
+      "name": "inference",
+      "fileName": "inference-text.svg",
+      "variation": "text",
+      "displayName": "Inference",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/inference-text.svg",
+      "tags": [
+        "inference",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/inference-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/inference.svg"
+      }
+    },
+    {
+      "name": "infermatic",
+      "fileName": "infermatic-color.svg",
+      "variation": "color",
+      "displayName": "Infermatic",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/infermatic-color.svg",
+      "tags": [
+        "infermatic",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/infermatic-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/infermatic-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/infermatic.svg"
+      }
+    },
+    {
+      "name": "infinigence",
+      "fileName": "infinigence-color.svg",
+      "variation": "color",
+      "displayName": "Infinigence",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/infinigence-color.svg",
+      "tags": [
+        "infinigence",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/infinigence-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/infinigence-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/infinigence.svg"
+      }
+    },
+    {
+      "name": "infinigence-text-cn",
+      "fileName": "infinigence-text-cn.svg",
+      "variation": "default",
+      "displayName": "Infinigence Text Cn",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/infinigence-text-cn.svg",
+      "tags": [
+        "infinigence-text-cn",
+        "other"
+      ],
+      "variations": [
+        "default"
+      ],
+      "paths": {
+        "default": "lobe-icons/packages/static-svg/icons/infinigence-text-cn.svg"
+      }
+    },
+    {
+      "name": "inflection",
+      "fileName": "inflection-text.svg",
+      "variation": "text",
+      "displayName": "Inflection",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/inflection-text.svg",
+      "tags": [
+        "inflection",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/inflection-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/inflection.svg"
+      }
+    },
+    {
+      "name": "internlm",
+      "fileName": "internlm-color.svg",
+      "variation": "color",
+      "displayName": "Internlm",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/internlm-color.svg",
+      "tags": [
+        "internlm",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/internlm-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/internlm-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/internlm.svg"
+      }
+    },
+    {
+      "name": "jimeng",
+      "fileName": "jimeng-color.svg",
+      "variation": "color",
+      "displayName": "Jimeng",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/jimeng-color.svg",
+      "tags": [
+        "jimeng",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/jimeng-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/jimeng-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/jimeng.svg"
+      }
+    },
+    {
+      "name": "jina",
+      "fileName": "jina-text.svg",
+      "variation": "text",
+      "displayName": "Jina",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/jina-text.svg",
+      "tags": [
+        "jina",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/jina-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/jina.svg"
+      }
+    },
+    {
+      "name": "kimi",
+      "fileName": "kimi-color.svg",
+      "variation": "color",
+      "displayName": "Kimi",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/kimi-color.svg",
+      "tags": [
+        "kimi",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/kimi-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/kimi-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/kimi.svg"
+      }
+    },
+    {
+      "name": "kling",
+      "fileName": "kling-color.svg",
+      "variation": "color",
+      "displayName": "Kling",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/kling-color.svg",
+      "tags": [
+        "kling",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/kling-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/kling-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/kling.svg"
+      }
+    },
+    {
+      "name": "kluster",
+      "fileName": "kluster-color.svg",
+      "variation": "color",
+      "displayName": "Kluster",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/kluster-color.svg",
+      "tags": [
+        "kluster",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/kluster-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/kluster-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/kluster.svg"
+      }
+    },
+    {
+      "name": "kolors",
+      "fileName": "kolors-color.svg",
+      "variation": "color",
+      "displayName": "Kolors",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/kolors-color.svg",
+      "tags": [
+        "kolors",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/kolors-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/kolors-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/kolors.svg"
+      }
+    },
+    {
+      "name": "krea",
+      "fileName": "krea-text.svg",
+      "variation": "text",
+      "displayName": "Krea",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/krea-text.svg",
+      "tags": [
+        "krea",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/krea-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/krea.svg"
+      }
+    },
+    {
+      "name": "kwaikat",
+      "fileName": "kwaikat-text.svg",
+      "variation": "text",
+      "displayName": "Kwaikat",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/kwaikat-text.svg",
+      "tags": [
+        "kwaikat",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/kwaikat-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/kwaikat.svg"
+      }
+    },
+    {
+      "name": "kwaikat-text",
+      "fileName": "kwaikat-text-color.svg",
+      "variation": "color",
+      "displayName": "Kwaikat Text",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/kwaikat-text-color.svg",
+      "tags": [
+        "kwaikat-text",
+        "other"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/kwaikat-text-color.svg"
+      }
+    },
+    {
+      "name": "kwaipilot",
+      "fileName": "kwaipilot-color.svg",
+      "variation": "color",
+      "displayName": "Kwaipilot",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/kwaipilot-color.svg",
+      "tags": [
+        "kwaipilot",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/kwaipilot-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/kwaipilot-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/kwaipilot.svg"
+      }
+    },
+    {
+      "name": "lambda",
+      "fileName": "lambda-text.svg",
+      "variation": "text",
+      "displayName": "Lambda",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/lambda-text.svg",
+      "tags": [
+        "lambda",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/lambda-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/lambda.svg"
+      }
+    },
+    {
+      "name": "langchain",
+      "fileName": "langchain-color.svg",
+      "variation": "color",
+      "displayName": "Langchain",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/langchain-color.svg",
+      "tags": [
+        "langchain",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/langchain-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/langchain-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/langchain.svg"
+      }
+    },
+    {
+      "name": "langfuse",
+      "fileName": "langfuse-color.svg",
+      "variation": "color",
+      "displayName": "Langfuse",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/langfuse-color.svg",
+      "tags": [
+        "langfuse",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/langfuse-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/langfuse-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/langfuse.svg"
+      }
+    },
+    {
+      "name": "langgraph",
+      "fileName": "langgraph-color.svg",
+      "variation": "color",
+      "displayName": "Langgraph",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/langgraph-color.svg",
+      "tags": [
+        "langgraph",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/langgraph-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/langgraph-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/langgraph.svg"
+      }
+    },
+    {
+      "name": "langsmith",
+      "fileName": "langsmith-color.svg",
+      "variation": "color",
+      "displayName": "Langsmith",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/langsmith-color.svg",
+      "tags": [
+        "langsmith",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/langsmith-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/langsmith-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/langsmith.svg"
+      }
+    },
+    {
+      "name": "leptonai",
+      "fileName": "leptonai-color.svg",
+      "variation": "color",
+      "displayName": "Leptonai",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/leptonai-color.svg",
+      "tags": [
+        "leptonai",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/leptonai-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/leptonai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/leptonai.svg"
+      }
+    },
+    {
+      "name": "lg",
+      "fileName": "lg-color.svg",
+      "variation": "color",
+      "displayName": "Lg",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/lg-color.svg",
+      "tags": [
+        "lg",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/lg-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/lg-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/lg.svg"
+      }
+    },
+    {
+      "name": "lightricks",
+      "fileName": "lightricks-text.svg",
+      "variation": "text",
+      "displayName": "Lightricks",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/lightricks-text.svg",
+      "tags": [
+        "lightricks",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/lightricks-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/lightricks.svg"
+      }
+    },
+    {
+      "name": "liquid",
+      "fileName": "liquid-text.svg",
+      "variation": "text",
+      "displayName": "Liquid",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/liquid-text.svg",
+      "tags": [
+        "liquid",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/liquid-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/liquid.svg"
+      }
+    },
+    {
+      "name": "livekit",
+      "fileName": "livekit-color.svg",
+      "variation": "color",
+      "displayName": "Livekit",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/livekit-color.svg",
+      "tags": [
+        "livekit",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/livekit-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/livekit-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/livekit.svg"
+      }
+    },
+    {
+      "name": "llamaindex",
+      "fileName": "llamaindex-color.svg",
+      "variation": "color",
+      "displayName": "Llamaindex",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/llamaindex-color.svg",
+      "tags": [
+        "llamaindex",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/llamaindex-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/llamaindex-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/llamaindex.svg"
+      }
+    },
+    {
+      "name": "llava",
+      "fileName": "llava-color.svg",
+      "variation": "color",
+      "displayName": "Llava",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/llava-color.svg",
+      "tags": [
+        "llava",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/llava-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/llava-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/llava.svg"
+      }
+    },
+    {
+      "name": "lmstudio",
+      "fileName": "lmstudio-text.svg",
+      "variation": "text",
+      "displayName": "Lmstudio",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/lmstudio-text.svg",
+      "tags": [
+        "lmstudio",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/lmstudio-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/lmstudio.svg"
+      }
+    },
+    {
+      "name": "lobehub",
+      "fileName": "lobehub-color.svg",
+      "variation": "color",
+      "displayName": "Lobehub",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/lobehub-color.svg",
+      "tags": [
+        "lobehub",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/lobehub-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/lobehub-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/lobehub.svg"
+      }
+    },
+    {
+      "name": "longcat",
+      "fileName": "longcat-color.svg",
+      "variation": "color",
+      "displayName": "Longcat",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/longcat-color.svg",
+      "tags": [
+        "longcat",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/longcat-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/longcat-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/longcat.svg"
+      }
+    },
+    {
+      "name": "lovable",
+      "fileName": "lovable-color.svg",
+      "variation": "color",
+      "displayName": "Lovable",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/lovable-color.svg",
+      "tags": [
+        "lovable",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/lovable-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/lovable-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/lovable.svg"
+      }
+    },
+    {
+      "name": "luma",
+      "fileName": "luma-color.svg",
+      "variation": "color",
+      "displayName": "Luma",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/luma-color.svg",
+      "tags": [
+        "luma",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/luma-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/luma-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/luma.svg"
+      }
+    },
+    {
+      "name": "magic",
+      "fileName": "magic-text.svg",
+      "variation": "text",
+      "displayName": "Magic",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/magic-text.svg",
+      "tags": [
+        "magic",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/magic-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/magic.svg"
+      }
+    },
+    {
+      "name": "make",
+      "fileName": "make-color.svg",
+      "variation": "color",
+      "displayName": "Make",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/make-color.svg",
+      "tags": [
+        "make",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/make-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/make-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/make.svg"
+      }
+    },
+    {
+      "name": "manus",
+      "fileName": "manus-text.svg",
+      "variation": "text",
+      "displayName": "Manus",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/manus-text.svg",
+      "tags": [
+        "manus",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/manus-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/manus.svg"
+      }
+    },
+    {
+      "name": "mastra",
+      "fileName": "mastra-text.svg",
+      "variation": "text",
+      "displayName": "Mastra",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/mastra-text.svg",
+      "tags": [
+        "mastra",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/mastra-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/mastra.svg"
+      }
+    },
+    {
+      "name": "mcp",
+      "fileName": "mcp-text.svg",
+      "variation": "text",
+      "displayName": "Mcp",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/mcp-text.svg",
+      "tags": [
+        "mcp",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/mcp-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/mcp.svg"
+      }
+    },
+    {
+      "name": "mcpso",
+      "fileName": "mcpso-color.svg",
+      "variation": "color",
+      "displayName": "Mcpso",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/mcpso-color.svg",
+      "tags": [
+        "mcpso",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/mcpso-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/mcpso-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/mcpso.svg"
+      }
+    },
+    {
+      "name": "menlo",
+      "fileName": "menlo-text.svg",
+      "variation": "text",
+      "displayName": "Menlo",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/menlo-text.svg",
+      "tags": [
+        "menlo",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/menlo-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/menlo.svg"
+      }
+    },
+    {
+      "name": "meta-brand",
+      "fileName": "meta-brand-color.svg",
+      "variation": "color",
+      "displayName": "Meta Brand",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/meta-brand-color.svg",
+      "tags": [
+        "meta-brand",
+        "other"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/meta-brand-color.svg"
+      }
+    },
+    {
+      "name": "metaai",
+      "fileName": "metaai-color.svg",
+      "variation": "color",
+      "displayName": "Metaai",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/metaai-color.svg",
+      "tags": [
+        "metaai",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/metaai-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/metaai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/metaai.svg"
+      }
+    },
+    {
+      "name": "metagpt",
+      "fileName": "metagpt-text.svg",
+      "variation": "text",
+      "displayName": "Metagpt",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/metagpt-text.svg",
+      "tags": [
+        "metagpt",
+        "ai"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/metagpt-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/metagpt.svg"
+      }
+    },
+    {
+      "name": "midjourney",
+      "fileName": "midjourney-text.svg",
+      "variation": "text",
+      "displayName": "Midjourney",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/midjourney-text.svg",
+      "tags": [
+        "midjourney",
+        "ai"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/midjourney-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/midjourney.svg"
+      }
+    },
+    {
+      "name": "minimax",
+      "fileName": "minimax-color.svg",
+      "variation": "color",
+      "displayName": "Minimax",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/minimax-color.svg",
+      "tags": [
+        "minimax",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/minimax-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/minimax-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/minimax.svg"
+      }
+    },
+    {
+      "name": "mistral",
+      "fileName": "mistral-color.svg",
+      "variation": "color",
+      "displayName": "Mistral",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/mistral-color.svg",
+      "tags": [
+        "mistral",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/mistral-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/mistral-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/mistral.svg"
+      }
+    },
+    {
+      "name": "modelscope",
+      "fileName": "modelscope-color.svg",
+      "variation": "color",
+      "displayName": "Modelscope",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/modelscope-color.svg",
+      "tags": [
+        "modelscope",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/modelscope-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/modelscope-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/modelscope.svg"
+      }
+    },
+    {
+      "name": "monica",
+      "fileName": "monica-color.svg",
+      "variation": "color",
+      "displayName": "Monica",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/monica-color.svg",
+      "tags": [
+        "monica",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/monica-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/monica-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/monica.svg"
+      }
+    },
+    {
+      "name": "moonshot",
+      "fileName": "moonshot-text.svg",
+      "variation": "text",
+      "displayName": "Moonshot",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/moonshot-text.svg",
+      "tags": [
+        "moonshot",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/moonshot-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/moonshot.svg"
+      }
+    },
+    {
+      "name": "morph",
+      "fileName": "morph-color.svg",
+      "variation": "color",
+      "displayName": "Morph",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/morph-color.svg",
+      "tags": [
+        "morph",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/morph-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/morph-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/morph.svg"
+      }
+    },
+    {
+      "name": "myshell",
+      "fileName": "myshell-color.svg",
+      "variation": "color",
+      "displayName": "Myshell",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/myshell-color.svg",
+      "tags": [
+        "myshell",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/myshell-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/myshell-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/myshell.svg"
+      }
+    },
+    {
+      "name": "n8n",
+      "fileName": "n8n-color.svg",
+      "variation": "color",
+      "displayName": "N8n",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/n8n-color.svg",
+      "tags": [
+        "n8n",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/n8n-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/n8n-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/n8n.svg"
+      }
+    },
+    {
+      "name": "nebius",
+      "fileName": "nebius-text.svg",
+      "variation": "text",
+      "displayName": "Nebius",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/nebius-text.svg",
+      "tags": [
+        "nebius",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/nebius-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/nebius.svg"
+      }
+    },
+    {
+      "name": "newapi",
+      "fileName": "newapi-color.svg",
+      "variation": "color",
+      "displayName": "Newapi",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/newapi-color.svg",
+      "tags": [
+        "newapi",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/newapi-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/newapi-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/newapi.svg"
+      }
+    },
+    {
+      "name": "notebooklm",
+      "fileName": "notebooklm-text.svg",
+      "variation": "text",
+      "displayName": "Notebooklm",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/notebooklm-text.svg",
+      "tags": [
+        "notebooklm",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/notebooklm-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/notebooklm.svg"
+      }
+    },
+    {
+      "name": "notion",
+      "fileName": "notion-text.svg",
+      "variation": "text",
+      "displayName": "Notion",
+      "category": "productivity",
+      "path": "lobe-icons/packages/static-svg/icons/notion-text.svg",
+      "tags": [
+        "notion",
+        "productivity"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/notion-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/notion.svg"
+      }
+    },
+    {
+      "name": "nousresearch",
+      "fileName": "nousresearch-text.svg",
+      "variation": "text",
+      "displayName": "Nousresearch",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/nousresearch-text.svg",
+      "tags": [
+        "nousresearch",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/nousresearch-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/nousresearch.svg"
+      }
+    },
+    {
+      "name": "nova",
+      "fileName": "nova-color.svg",
+      "variation": "color",
+      "displayName": "Nova",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/nova-color.svg",
+      "tags": [
+        "nova",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/nova-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/nova-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/nova.svg"
+      }
+    },
+    {
+      "name": "novelai",
+      "fileName": "novelai-text.svg",
+      "variation": "text",
+      "displayName": "Novelai",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/novelai-text.svg",
+      "tags": [
+        "novelai",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/novelai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/novelai.svg"
+      }
+    },
+    {
+      "name": "novita",
+      "fileName": "novita-color.svg",
+      "variation": "color",
+      "displayName": "Novita",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/novita-color.svg",
+      "tags": [
+        "novita",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/novita-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/novita-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/novita.svg"
+      }
+    },
+    {
+      "name": "nplcloud",
+      "fileName": "nplcloud-color.svg",
+      "variation": "color",
+      "displayName": "Nplcloud",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/nplcloud-color.svg",
+      "tags": [
+        "nplcloud",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/nplcloud-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/nplcloud-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/nplcloud.svg"
+      }
+    },
+    {
+      "name": "nvidia",
+      "fileName": "nvidia-color.svg",
+      "variation": "color",
+      "displayName": "Nvidia",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/nvidia-color.svg",
+      "tags": [
+        "nvidia",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/nvidia-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/nvidia-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/nvidia.svg"
+      }
+    },
+    {
+      "name": "ollama",
+      "fileName": "ollama-text.svg",
+      "variation": "text",
+      "displayName": "Ollama",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/ollama-text.svg",
+      "tags": [
+        "ollama",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/ollama-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/ollama.svg"
+      }
+    },
+    {
+      "name": "openchat",
+      "fileName": "openchat-color.svg",
+      "variation": "color",
+      "displayName": "Openchat",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/openchat-color.svg",
+      "tags": [
+        "openchat",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/openchat-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/openchat-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/openchat.svg"
+      }
+    },
+    {
+      "name": "openrouter",
+      "fileName": "openrouter-text.svg",
+      "variation": "text",
+      "displayName": "Openrouter",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/openrouter-text.svg",
+      "tags": [
+        "openrouter",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/openrouter-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/openrouter.svg"
+      }
+    },
+    {
+      "name": "openwebui",
+      "fileName": "openwebui-text.svg",
+      "variation": "text",
+      "displayName": "Openwebui",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/openwebui-text.svg",
+      "tags": [
+        "openwebui",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/openwebui-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/openwebui.svg"
+      }
+    },
+    {
+      "name": "palm",
+      "fileName": "palm-color.svg",
+      "variation": "color",
+      "displayName": "Palm",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/palm-color.svg",
+      "tags": [
+        "palm",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/palm-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/palm-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/palm.svg"
+      }
+    },
+    {
+      "name": "parasail",
+      "fileName": "parasail-text.svg",
+      "variation": "text",
+      "displayName": "Parasail",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/parasail-text.svg",
+      "tags": [
+        "parasail",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/parasail-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/parasail.svg"
+      }
+    },
+    {
+      "name": "perplexity",
+      "fileName": "perplexity-color.svg",
+      "variation": "color",
+      "displayName": "Perplexity",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/perplexity-color.svg",
+      "tags": [
+        "perplexity",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/perplexity-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/perplexity-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/perplexity.svg"
+      }
+    },
+    {
+      "name": "phidata",
+      "fileName": "phidata-color.svg",
+      "variation": "color",
+      "displayName": "Phidata",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/phidata-color.svg",
+      "tags": [
+        "phidata",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/phidata-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/phidata-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/phidata.svg"
+      }
+    },
+    {
+      "name": "phind",
+      "fileName": "phind-text.svg",
+      "variation": "text",
+      "displayName": "Phind",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/phind-text.svg",
+      "tags": [
+        "phind",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/phind-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/phind.svg"
+      }
+    },
+    {
+      "name": "pika",
+      "fileName": "pika-text.svg",
+      "variation": "text",
+      "displayName": "Pika",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/pika-text.svg",
+      "tags": [
+        "pika",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/pika-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/pika.svg"
+      }
+    },
+    {
+      "name": "pixverse",
+      "fileName": "pixverse-color.svg",
+      "variation": "color",
+      "displayName": "Pixverse",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/pixverse-color.svg",
+      "tags": [
+        "pixverse",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/pixverse-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/pixverse-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/pixverse.svg"
+      }
+    },
+    {
+      "name": "player2",
+      "fileName": "player2-color.svg",
+      "variation": "color",
+      "displayName": "Player2",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/player2-color.svg",
+      "tags": [
+        "player2",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/player2-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/player2-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/player2.svg"
+      }
+    },
+    {
+      "name": "poe",
+      "fileName": "poe-color.svg",
+      "variation": "color",
+      "displayName": "Poe",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/poe-color.svg",
+      "tags": [
+        "poe",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/poe-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/poe-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/poe.svg"
+      }
+    },
+    {
+      "name": "pollinations",
+      "fileName": "pollinations-text.svg",
+      "variation": "text",
+      "displayName": "Pollinations",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/pollinations-text.svg",
+      "tags": [
+        "pollinations",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/pollinations-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/pollinations.svg"
+      }
+    },
+    {
+      "name": "ppio",
+      "fileName": "ppio-color.svg",
+      "variation": "color",
+      "displayName": "Ppio",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/ppio-color.svg",
+      "tags": [
+        "ppio",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/ppio-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/ppio-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/ppio.svg"
+      }
+    },
+    {
+      "name": "ppio-text-cn",
+      "fileName": "ppio-text-cn.svg",
+      "variation": "default",
+      "displayName": "Ppio Text Cn",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/ppio-text-cn.svg",
+      "tags": [
+        "ppio-text-cn",
+        "other"
+      ],
+      "variations": [
+        "default"
+      ],
+      "paths": {
+        "default": "lobe-icons/packages/static-svg/icons/ppio-text-cn.svg"
+      }
+    },
+    {
+      "name": "pydanticai",
+      "fileName": "pydanticai-color.svg",
+      "variation": "color",
+      "displayName": "Pydanticai",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/pydanticai-color.svg",
+      "tags": [
+        "pydanticai",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/pydanticai-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/pydanticai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/pydanticai.svg"
+      }
+    },
+    {
+      "name": "qingyan",
+      "fileName": "qingyan-color.svg",
+      "variation": "color",
+      "displayName": "Qingyan",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/qingyan-color.svg",
+      "tags": [
+        "qingyan",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/qingyan-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/qingyan-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/qingyan.svg"
+      }
+    },
+    {
+      "name": "qiniu",
+      "fileName": "qiniu-color.svg",
+      "variation": "color",
+      "displayName": "Qiniu",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/qiniu-color.svg",
+      "tags": [
+        "qiniu",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/qiniu-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/qiniu-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/qiniu.svg"
+      }
+    },
+    {
+      "name": "qwen",
+      "fileName": "qwen-color.svg",
+      "variation": "color",
+      "displayName": "Qwen",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/qwen-color.svg",
+      "tags": [
+        "qwen",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/qwen-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/qwen-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/qwen.svg"
+      }
+    },
+    {
+      "name": "railway",
+      "fileName": "railway-text.svg",
+      "variation": "text",
+      "displayName": "Railway",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/railway-text.svg",
+      "tags": [
+        "railway",
+        "cloud"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/railway-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/railway.svg"
+      }
+    },
+    {
+      "name": "recraft",
+      "fileName": "recraft-text.svg",
+      "variation": "text",
+      "displayName": "Recraft",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/recraft-text.svg",
+      "tags": [
+        "recraft",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/recraft-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/recraft.svg"
+      }
+    },
+    {
+      "name": "relace",
+      "fileName": "relace-text.svg",
+      "variation": "text",
+      "displayName": "Relace",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/relace-text.svg",
+      "tags": [
+        "relace",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/relace-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/relace.svg"
+      }
+    },
+    {
+      "name": "replicate",
+      "fileName": "replicate-brand.svg",
+      "variation": "brand",
+      "displayName": "Replicate",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/replicate-brand.svg",
+      "tags": [
+        "replicate",
+        "ai"
+      ],
+      "variations": [
+        "brand",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/replicate-brand.svg",
+        "text": "lobe-icons/packages/static-svg/icons/replicate-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/replicate.svg"
+      }
+    },
+    {
+      "name": "replit",
+      "fileName": "replit-color.svg",
+      "variation": "color",
+      "displayName": "Replit",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/replit-color.svg",
+      "tags": [
+        "replit",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/replit-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/replit-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/replit.svg"
+      }
+    },
+    {
+      "name": "rsshub",
+      "fileName": "rsshub-color.svg",
+      "variation": "color",
+      "displayName": "Rsshub",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/rsshub-color.svg",
+      "tags": [
+        "rsshub",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/rsshub-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/rsshub-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/rsshub.svg"
+      }
+    },
+    {
+      "name": "runway",
+      "fileName": "runway-text.svg",
+      "variation": "text",
+      "displayName": "Runway",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/runway-text.svg",
+      "tags": [
+        "runway",
+        "ai"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/runway-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/runway.svg"
+      }
+    },
+    {
+      "name": "rwkv",
+      "fileName": "rwkv-color.svg",
+      "variation": "color",
+      "displayName": "Rwkv",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/rwkv-color.svg",
+      "tags": [
+        "rwkv",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/rwkv-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/rwkv-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/rwkv.svg"
+      }
+    },
+    {
+      "name": "sambanova",
+      "fileName": "sambanova-color.svg",
+      "variation": "color",
+      "displayName": "Sambanova",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/sambanova-color.svg",
+      "tags": [
+        "sambanova",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/sambanova-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/sambanova-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/sambanova.svg"
+      }
+    },
+    {
+      "name": "search1api",
+      "fileName": "search1api-color.svg",
+      "variation": "color",
+      "displayName": "Search1api",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/search1api-color.svg",
+      "tags": [
+        "search1api",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/search1api-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/search1api-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/search1api.svg"
+      }
+    },
+    {
+      "name": "searchapi",
+      "fileName": "searchapi-text.svg",
+      "variation": "text",
+      "displayName": "Searchapi",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/searchapi-text.svg",
+      "tags": [
+        "searchapi",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/searchapi-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/searchapi.svg"
+      }
+    },
+    {
+      "name": "sensenova",
+      "fileName": "sensenova-brand.svg",
+      "variation": "brand",
+      "displayName": "Sensenova",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/sensenova-brand.svg",
+      "tags": [
+        "sensenova",
+        "other"
+      ],
+      "variations": [
+        "brand",
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/sensenova-brand.svg",
+        "color": "lobe-icons/packages/static-svg/icons/sensenova-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/sensenova-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/sensenova.svg"
+      }
+    },
+    {
+      "name": "sensenova-brand",
+      "fileName": "sensenova-brand-color.svg",
+      "variation": "color",
+      "displayName": "Sensenova Brand",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/sensenova-brand-color.svg",
+      "tags": [
+        "sensenova-brand",
+        "other"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/sensenova-brand-color.svg"
+      }
+    },
+    {
+      "name": "siliconcloud",
+      "fileName": "siliconcloud-color.svg",
+      "variation": "color",
+      "displayName": "Siliconcloud",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/siliconcloud-color.svg",
+      "tags": [
+        "siliconcloud",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/siliconcloud-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/siliconcloud-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/siliconcloud.svg"
+      }
+    },
+    {
+      "name": "skywork",
+      "fileName": "skywork-color.svg",
+      "variation": "color",
+      "displayName": "Skywork",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/skywork-color.svg",
+      "tags": [
+        "skywork",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/skywork-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/skywork-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/skywork.svg"
+      }
+    },
+    {
+      "name": "smithery",
+      "fileName": "smithery-color.svg",
+      "variation": "color",
+      "displayName": "Smithery",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/smithery-color.svg",
+      "tags": [
+        "smithery",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/smithery-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/smithery-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/smithery.svg"
+      }
+    },
+    {
+      "name": "snowflake",
+      "fileName": "snowflake-color.svg",
+      "variation": "color",
+      "displayName": "Snowflake",
+      "category": "database",
+      "path": "lobe-icons/packages/static-svg/icons/snowflake-color.svg",
+      "tags": [
+        "snowflake",
+        "database"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/snowflake-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/snowflake-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/snowflake.svg"
+      }
+    },
+    {
+      "name": "sophnet",
+      "fileName": "sophnet-color.svg",
+      "variation": "color",
+      "displayName": "Sophnet",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/sophnet-color.svg",
+      "tags": [
+        "sophnet",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/sophnet-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/sophnet-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/sophnet.svg"
+      }
+    },
+    {
+      "name": "sora",
+      "fileName": "sora-color.svg",
+      "variation": "color",
+      "displayName": "Sora",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/sora-color.svg",
+      "tags": [
+        "sora",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/sora-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/sora-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/sora.svg"
+      }
+    },
+    {
+      "name": "spark",
+      "fileName": "spark-color.svg",
+      "variation": "color",
+      "displayName": "Spark",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/spark-color.svg",
+      "tags": [
+        "spark",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/spark-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/spark-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/spark.svg"
+      }
+    },
+    {
+      "name": "stability",
+      "fileName": "stability-brand.svg",
+      "variation": "brand",
+      "displayName": "Stability",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/stability-brand.svg",
+      "tags": [
+        "stability",
+        "ai"
+      ],
+      "variations": [
+        "brand",
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/stability-brand.svg",
+        "color": "lobe-icons/packages/static-svg/icons/stability-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/stability-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/stability.svg"
+      }
+    },
+    {
+      "name": "stability-brand",
+      "fileName": "stability-brand-color.svg",
+      "variation": "color",
+      "displayName": "Stability Brand",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/stability-brand-color.svg",
+      "tags": [
+        "stability-brand",
+        "ai"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/stability-brand-color.svg"
+      }
+    },
+    {
+      "name": "statecloud",
+      "fileName": "statecloud-color.svg",
+      "variation": "color",
+      "displayName": "Statecloud",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/statecloud-color.svg",
+      "tags": [
+        "statecloud",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/statecloud-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/statecloud-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/statecloud.svg"
+      }
+    },
+    {
+      "name": "stepfun",
+      "fileName": "stepfun-color.svg",
+      "variation": "color",
+      "displayName": "Stepfun",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/stepfun-color.svg",
+      "tags": [
+        "stepfun",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/stepfun-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/stepfun-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/stepfun.svg"
+      }
+    },
+    {
+      "name": "straico",
+      "fileName": "straico-color.svg",
+      "variation": "color",
+      "displayName": "Straico",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/straico-color.svg",
+      "tags": [
+        "straico",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/straico-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/straico-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/straico.svg"
+      }
+    },
+    {
+      "name": "streamlake",
+      "fileName": "streamlake-color.svg",
+      "variation": "color",
+      "displayName": "Streamlake",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/streamlake-color.svg",
+      "tags": [
+        "streamlake",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/streamlake-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/streamlake-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/streamlake.svg"
+      }
+    },
+    {
+      "name": "submodel",
+      "fileName": "submodel-color.svg",
+      "variation": "color",
+      "displayName": "Submodel",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/submodel-color.svg",
+      "tags": [
+        "submodel",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/submodel-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/submodel-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/submodel.svg"
+      }
+    },
+    {
+      "name": "suno",
+      "fileName": "suno-text.svg",
+      "variation": "text",
+      "displayName": "Suno",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/suno-text.svg",
+      "tags": [
+        "suno",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/suno-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/suno.svg"
+      }
+    },
+    {
+      "name": "sync",
+      "fileName": "sync-text.svg",
+      "variation": "text",
+      "displayName": "Sync",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/sync-text.svg",
+      "tags": [
+        "sync",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/sync-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/sync.svg"
+      }
+    },
+    {
+      "name": "targon",
+      "fileName": "targon-color.svg",
+      "variation": "color",
+      "displayName": "Targon",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/targon-color.svg",
+      "tags": [
+        "targon",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/targon-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/targon-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/targon.svg"
+      }
+    },
+    {
+      "name": "tavily",
+      "fileName": "tavily-color.svg",
+      "variation": "color",
+      "displayName": "Tavily",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/tavily-color.svg",
+      "tags": [
+        "tavily",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/tavily-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/tavily-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/tavily.svg"
+      }
+    },
+    {
+      "name": "tencent",
+      "fileName": "tencent-brand.svg",
+      "variation": "brand",
+      "displayName": "Tencent",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/tencent-brand.svg",
+      "tags": [
+        "tencent",
+        "cloud"
+      ],
+      "variations": [
+        "brand",
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/tencent-brand.svg",
+        "color": "lobe-icons/packages/static-svg/icons/tencent-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/tencent-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/tencent.svg"
+      }
+    },
+    {
+      "name": "tencent-brand",
+      "fileName": "tencent-brand-color.svg",
+      "variation": "color",
+      "displayName": "Tencent Brand",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/tencent-brand-color.svg",
+      "tags": [
+        "tencent-brand",
+        "cloud"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/tencent-brand-color.svg"
+      }
+    },
+    {
+      "name": "tencent-text-cn",
+      "fileName": "tencent-text-cn.svg",
+      "variation": "default",
+      "displayName": "Tencent Text Cn",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/tencent-text-cn.svg",
+      "tags": [
+        "tencent-text-cn",
+        "cloud"
+      ],
+      "variations": [
+        "default"
+      ],
+      "paths": {
+        "default": "lobe-icons/packages/static-svg/icons/tencent-text-cn.svg"
+      }
+    },
+    {
+      "name": "tencentcloud",
+      "fileName": "tencentcloud-color.svg",
+      "variation": "color",
+      "displayName": "Tencentcloud",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/tencentcloud-color.svg",
+      "tags": [
+        "tencentcloud",
+        "cloud"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/tencentcloud-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/tencentcloud-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/tencentcloud.svg"
+      }
+    },
+    {
+      "name": "tiangong",
+      "fileName": "tiangong-color.svg",
+      "variation": "color",
+      "displayName": "Tiangong",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/tiangong-color.svg",
+      "tags": [
+        "tiangong",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/tiangong-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/tiangong-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/tiangong.svg"
+      }
+    },
+    {
+      "name": "tii",
+      "fileName": "tii-color.svg",
+      "variation": "color",
+      "displayName": "Tii",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/tii-color.svg",
+      "tags": [
+        "tii",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/tii-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/tii-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/tii.svg"
+      }
+    },
+    {
+      "name": "together",
+      "fileName": "together-brand.svg",
+      "variation": "brand",
+      "displayName": "Together",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/together-brand.svg",
+      "tags": [
+        "together",
+        "other"
+      ],
+      "variations": [
+        "brand",
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "brand": "lobe-icons/packages/static-svg/icons/together-brand.svg",
+        "color": "lobe-icons/packages/static-svg/icons/together-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/together-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/together.svg"
+      }
+    },
+    {
+      "name": "together-brand",
+      "fileName": "together-brand-color.svg",
+      "variation": "color",
+      "displayName": "Together Brand",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/together-brand-color.svg",
+      "tags": [
+        "together-brand",
+        "other"
+      ],
+      "variations": [
+        "color"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/together-brand-color.svg"
+      }
+    },
+    {
+      "name": "topazlabs",
+      "fileName": "topazlabs-text.svg",
+      "variation": "text",
+      "displayName": "Topazlabs",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/topazlabs-text.svg",
+      "tags": [
+        "topazlabs",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/topazlabs-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/topazlabs.svg"
+      }
+    },
+    {
+      "name": "trae",
+      "fileName": "trae-color.svg",
+      "variation": "color",
+      "displayName": "Trae",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/trae-color.svg",
+      "tags": [
+        "trae",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/trae-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/trae-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/trae.svg"
+      }
+    },
+    {
+      "name": "tripo",
+      "fileName": "tripo-color.svg",
+      "variation": "color",
+      "displayName": "Tripo",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/tripo-color.svg",
+      "tags": [
+        "tripo",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/tripo-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/tripo-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/tripo.svg"
+      }
+    },
+    {
+      "name": "turix",
+      "fileName": "turix-text.svg",
+      "variation": "text",
+      "displayName": "Turix",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/turix-text.svg",
+      "tags": [
+        "turix",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/turix-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/turix.svg"
+      }
+    },
+    {
+      "name": "udio",
+      "fileName": "udio-color.svg",
+      "variation": "color",
+      "displayName": "Udio",
+      "category": "ai",
+      "path": "lobe-icons/packages/static-svg/icons/udio-color.svg",
+      "tags": [
+        "udio",
+        "ai"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/udio-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/udio-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/udio.svg"
+      }
+    },
+    {
+      "name": "unstructured",
+      "fileName": "unstructured-color.svg",
+      "variation": "color",
+      "displayName": "Unstructured",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/unstructured-color.svg",
+      "tags": [
+        "unstructured",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/unstructured-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/unstructured-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/unstructured.svg"
+      }
+    },
+    {
+      "name": "upstage",
+      "fileName": "upstage-color.svg",
+      "variation": "color",
+      "displayName": "Upstage",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/upstage-color.svg",
+      "tags": [
+        "upstage",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/upstage-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/upstage-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/upstage.svg"
+      }
+    },
+    {
+      "name": "v0",
+      "fileName": "v0.svg",
+      "variation": "default",
+      "displayName": "V0",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/v0.svg",
+      "tags": [
+        "v0",
+        "other"
+      ],
+      "variations": [
+        "default"
+      ],
+      "paths": {
+        "default": "lobe-icons/packages/static-svg/icons/v0.svg"
+      }
+    },
+    {
+      "name": "vectorizerai",
+      "fileName": "vectorizerai-text.svg",
+      "variation": "text",
+      "displayName": "Vectorizerai",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/vectorizerai-text.svg",
+      "tags": [
+        "vectorizerai",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/vectorizerai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/vectorizerai.svg"
+      }
+    },
+    {
+      "name": "vercel",
+      "fileName": "vercel-text.svg",
+      "variation": "text",
+      "displayName": "Vercel",
+      "category": "cloud",
+      "path": "lobe-icons/packages/static-svg/icons/vercel-text.svg",
+      "tags": [
+        "vercel",
+        "cloud"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/vercel-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/vercel.svg"
+      }
+    },
+    {
+      "name": "vertexai",
+      "fileName": "vertexai-color.svg",
+      "variation": "color",
+      "displayName": "Vertexai",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/vertexai-color.svg",
+      "tags": [
+        "vertexai",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/vertexai-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/vertexai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/vertexai.svg"
+      }
+    },
+    {
+      "name": "vidu",
+      "fileName": "vidu-color.svg",
+      "variation": "color",
+      "displayName": "Vidu",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/vidu-color.svg",
+      "tags": [
+        "vidu",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/vidu-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/vidu-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/vidu.svg"
+      }
+    },
+    {
+      "name": "viggle",
+      "fileName": "viggle-text.svg",
+      "variation": "text",
+      "displayName": "Viggle",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/viggle-text.svg",
+      "tags": [
+        "viggle",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/viggle-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/viggle.svg"
+      }
+    },
+    {
+      "name": "vllm",
+      "fileName": "vllm-color.svg",
+      "variation": "color",
+      "displayName": "Vllm",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/vllm-color.svg",
+      "tags": [
+        "vllm",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/vllm-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/vllm-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/vllm.svg"
+      }
+    },
+    {
+      "name": "volcengine",
+      "fileName": "volcengine-color.svg",
+      "variation": "color",
+      "displayName": "Volcengine",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/volcengine-color.svg",
+      "tags": [
+        "volcengine",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/volcengine-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/volcengine-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/volcengine.svg"
+      }
+    },
+    {
+      "name": "voyage",
+      "fileName": "voyage-color.svg",
+      "variation": "color",
+      "displayName": "Voyage",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/voyage-color.svg",
+      "tags": [
+        "voyage",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/voyage-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/voyage-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/voyage.svg"
+      }
+    },
+    {
+      "name": "wenxin",
+      "fileName": "wenxin-color.svg",
+      "variation": "color",
+      "displayName": "Wenxin",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/wenxin-color.svg",
+      "tags": [
+        "wenxin",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/wenxin-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/wenxin-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/wenxin.svg"
+      }
+    },
+    {
+      "name": "windsurf",
+      "fileName": "windsurf-text.svg",
+      "variation": "text",
+      "displayName": "Windsurf",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/windsurf-text.svg",
+      "tags": [
+        "windsurf",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/windsurf-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/windsurf.svg"
+      }
+    },
+    {
+      "name": "workersai",
+      "fileName": "workersai-color.svg",
+      "variation": "color",
+      "displayName": "Workersai",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/workersai-color.svg",
+      "tags": [
+        "workersai",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/workersai-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/workersai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/workersai.svg"
+      }
+    },
+    {
+      "name": "xai",
+      "fileName": "xai-text.svg",
+      "variation": "text",
+      "displayName": "Xai",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/xai-text.svg",
+      "tags": [
+        "xai",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/xai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/xai.svg"
+      }
+    },
+    {
+      "name": "xiaomimimo",
+      "fileName": "xiaomimimo-text.svg",
+      "variation": "text",
+      "displayName": "Xiaomimimo",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/xiaomimimo-text.svg",
+      "tags": [
+        "xiaomimimo",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/xiaomimimo-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/xiaomimimo.svg"
+      }
+    },
+    {
+      "name": "xinference",
+      "fileName": "xinference-color.svg",
+      "variation": "color",
+      "displayName": "Xinference",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/xinference-color.svg",
+      "tags": [
+        "xinference",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/xinference-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/xinference-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/xinference.svg"
+      }
+    },
+    {
+      "name": "xuanyuan",
+      "fileName": "xuanyuan-color.svg",
+      "variation": "color",
+      "displayName": "Xuanyuan",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/xuanyuan-color.svg",
+      "tags": [
+        "xuanyuan",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/xuanyuan-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/xuanyuan-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/xuanyuan.svg"
+      }
+    },
+    {
+      "name": "yandex",
+      "fileName": "yandex-text.svg",
+      "variation": "text",
+      "displayName": "Yandex",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/yandex-text.svg",
+      "tags": [
+        "yandex",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/yandex-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/yandex.svg"
+      }
+    },
+    {
+      "name": "yi",
+      "fileName": "yi-color.svg",
+      "variation": "color",
+      "displayName": "Yi",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/yi-color.svg",
+      "tags": [
+        "yi",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/yi-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/yi-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/yi.svg"
+      }
+    },
+    {
+      "name": "youmind",
+      "fileName": "youmind-text.svg",
+      "variation": "text",
+      "displayName": "Youmind",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/youmind-text.svg",
+      "tags": [
+        "youmind",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/youmind-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/youmind.svg"
+      }
+    },
+    {
+      "name": "yuanbao",
+      "fileName": "yuanbao-color.svg",
+      "variation": "color",
+      "displayName": "Yuanbao",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/yuanbao-color.svg",
+      "tags": [
+        "yuanbao",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/yuanbao-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/yuanbao-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/yuanbao.svg"
+      }
+    },
+    {
+      "name": "zai",
+      "fileName": "zai-text.svg",
+      "variation": "text",
+      "displayName": "Zai",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/zai-text.svg",
+      "tags": [
+        "zai",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/zai-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/zai.svg"
+      }
+    },
+    {
+      "name": "zapier",
+      "fileName": "zapier-color.svg",
+      "variation": "color",
+      "displayName": "Zapier",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/zapier-color.svg",
+      "tags": [
+        "zapier",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/zapier-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/zapier-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/zapier.svg"
+      }
+    },
+    {
+      "name": "zeabur",
+      "fileName": "zeabur-color.svg",
+      "variation": "color",
+      "displayName": "Zeabur",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/zeabur-color.svg",
+      "tags": [
+        "zeabur",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/zeabur-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/zeabur-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/zeabur.svg"
+      }
+    },
+    {
+      "name": "zenmux",
+      "fileName": "zenmux-text.svg",
+      "variation": "text",
+      "displayName": "Zenmux",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/zenmux-text.svg",
+      "tags": [
+        "zenmux",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/zenmux-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/zenmux.svg"
+      }
+    },
+    {
+      "name": "zeroone",
+      "fileName": "zeroone-text.svg",
+      "variation": "text",
+      "displayName": "Zeroone",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/zeroone-text.svg",
+      "tags": [
+        "zeroone",
+        "other"
+      ],
+      "variations": [
+        "text",
+        "default"
+      ],
+      "paths": {
+        "text": "lobe-icons/packages/static-svg/icons/zeroone-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/zeroone.svg"
+      }
+    },
+    {
+      "name": "zhipu",
+      "fileName": "zhipu-color.svg",
+      "variation": "color",
+      "displayName": "Zhipu",
+      "category": "other",
+      "path": "lobe-icons/packages/static-svg/icons/zhipu-color.svg",
+      "tags": [
+        "zhipu",
+        "other"
+      ],
+      "variations": [
+        "color",
+        "text",
+        "default"
+      ],
+      "paths": {
+        "color": "lobe-icons/packages/static-svg/icons/zhipu-color.svg",
+        "text": "lobe-icons/packages/static-svg/icons/zhipu-text.svg",
+        "default": "lobe-icons/packages/static-svg/icons/zhipu.svg"
+      }
+    }
+  ]
+}
