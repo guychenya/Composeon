@@ -13,6 +13,9 @@
     <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
+    <!-- Visual Post Generator -->
+    <script src="visual-post-generator.js"></script>
+
     <style>
         :root {
             /* Modern Dark Theme */
@@ -635,6 +638,153 @@
         .status-dot.offline {
             background: var(--accent-red);
         }
+
+        /* Visual Post Generator Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(4px);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: var(--bg-secondary);
+            border: 1px solid var(--bg-tertiary);
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-xl);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.visible .modal {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-6);
+            padding-bottom: var(--space-4);
+            border-bottom: 1px solid var(--bg-tertiary);
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: var(--space-2);
+            border-radius: var(--radius-md);
+            transition: all 0.2s ease;
+        }
+
+        .modal-close:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        .template-selector {
+            margin-bottom: var(--space-6);
+        }
+
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-4);
+            margin-top: var(--space-4);
+        }
+
+        .template-option {
+            background: var(--bg-card);
+            border: 2px solid var(--bg-tertiary);
+            border-radius: var(--radius-lg);
+            padding: var(--space-4);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .template-option:hover,
+        .template-option.selected {
+            border-color: var(--accent-blue);
+            background: var(--bg-hover);
+        }
+
+        .template-preview {
+            width: 100%;
+            height: 100px;
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .template-name {
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: var(--space-1);
+        }
+
+        .template-description {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .canvas-container {
+            margin: var(--space-6) 0;
+            text-align: center;
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+        }
+
+        .canvas-container canvas {
+            max-width: 100%;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: var(--space-4);
+            justify-content: flex-end;
+            margin-top: var(--space-6);
+            padding-top: var(--space-4);
+            border-top: 1px solid var(--bg-tertiary);
+        }
     </style>
 </head>
 <body>
@@ -776,10 +926,57 @@
             <i class="fas fa-times"></i>
             Clear
         </button>
-        <button class="action-btn" onclick="generatePost()">
-            <i class="fas fa-magic"></i>
-            Generate Post
+        <button class="action-btn secondary" onclick="generatePost()">
+            <i class="fas fa-file-text"></i>
+            Text Post
         </button>
+        <button class="action-btn" onclick="openVisualGenerator()">
+            <i class="fas fa-image"></i>
+            Visual Post
+        </button>
+    </div>
+
+    <!-- Visual Post Generator Modal -->
+    <div class="modal-overlay" id="visualModal">
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i class="fas fa-magic"></i>
+                    Visual Post Generator
+                </div>
+                <button class="modal-close" onclick="closeVisualGenerator()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="template-selector">
+                <h3 style="color: var(--text-primary); margin-bottom: var(--space-4);">Choose Template</h3>
+                <div class="template-grid" id="templateGrid">
+                    <!-- Templates will be loaded here -->
+                </div>
+            </div>
+
+            <div class="canvas-container" id="canvasContainer">
+                <p style="color: var(--text-secondary); margin: var(--space-8) 0;">
+                    Select a template to preview your visual post
+                </p>
+            </div>
+
+            <div class="modal-actions">
+                <button class="action-btn secondary" onclick="closeVisualGenerator()">
+                    <i class="fas fa-times"></i>
+                    Cancel
+                </button>
+                <button class="action-btn" onclick="downloadVisualPost()" id="downloadBtn" disabled>
+                    <i class="fas fa-download"></i>
+                    Download Image
+                </button>
+                <button class="action-btn" onclick="shareVisualPost()" id="shareBtn" disabled>
+                    <i class="fas fa-share"></i>
+                    Share
+                </button>
+            </div>
+        </div>
     </div>
 
     <!-- Toast Notification -->
@@ -799,6 +996,8 @@
         let currentPage = 0;
         let isAIEnabled = false;
         let ollamaConnected = false;
+        let visualGenerator = null;
+        let selectedTemplate = 'modern';
 
         // Categories mapping for better organization
         const categoryMapping = {
@@ -817,6 +1016,7 @@
             await initializeApp();
             setupEventListeners();
             checkOllamaConnection();
+            await initializeVisualGenerator();
         });
 
         async function initializeApp() {
@@ -1421,6 +1621,189 @@ What's your favorite tool from this list? Share your experience in the comments!
 
         // Auto-refresh Ollama connection every 30 seconds
         setInterval(checkOllamaConnection, 30000);
+
+        // Visual Post Generator Functions
+        async function initializeVisualGenerator() {
+            try {
+                visualGenerator = new VisualPostGenerator();
+                await visualGenerator.initialize();
+                setupTemplateGrid();
+                console.log('🎨 Visual Post Generator ready');
+            } catch (error) {
+                console.error('Failed to initialize visual generator:', error);
+            }
+        }
+
+        function setupTemplateGrid() {
+            if (!visualGenerator) return;
+
+            const templateGrid = document.getElementById('templateGrid');
+            const templates = visualGenerator.getAvailableTemplates();
+
+            templateGrid.innerHTML = '';
+            templates.forEach(template => {
+                const templateDiv = document.createElement('div');
+                templateDiv.className = `template-option ${template.id === selectedTemplate ? 'selected' : ''}`;
+                templateDiv.onclick = () => selectTemplate(template.id);
+
+                templateDiv.innerHTML = `
+                    <div class="template-preview">${template.name.split(' ')[0]}</div>
+                    <div class="template-name">${template.name}</div>
+                    <div class="template-description">${template.description}</div>
+                `;
+
+                templateGrid.appendChild(templateDiv);
+            });
+        }
+
+        function selectTemplate(templateId) {
+            selectedTemplate = templateId;
+
+            // Update visual selection
+            document.querySelectorAll('.template-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            document.querySelector(`.template-option:nth-child(${getTemplateIndex(templateId) + 1})`).classList.add('selected');
+
+            // Generate preview if icons are selected
+            if (selectedIcons.size > 0) {
+                generateVisualPreview();
+            }
+        }
+
+        function getTemplateIndex(templateId) {
+            const templates = ['modern', 'gradient', 'minimal', 'tech'];
+            return templates.indexOf(templateId);
+        }
+
+        async function openVisualGenerator() {
+            if (selectedIcons.size === 0) {
+                showToast('⚠️ Select some icons first!', 3000);
+                return;
+            }
+
+            const modal = document.getElementById('visualModal');
+            modal.classList.add('visible');
+            document.body.style.overflow = 'hidden';
+
+            // Generate initial preview
+            await generateVisualPreview();
+        }
+
+        function closeVisualGenerator() {
+            const modal = document.getElementById('visualModal');
+            modal.classList.remove('visible');
+            document.body.style.overflow = 'auto';
+        }
+
+        async function generateVisualPreview() {
+            if (!visualGenerator || selectedIcons.size === 0) return;
+
+            const canvasContainer = document.getElementById('canvasContainer');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const shareBtn = document.getElementById('shareBtn');
+
+            // Show loading
+            canvasContainer.innerHTML = `
+                <div style="padding: var(--space-8); color: var(--text-secondary);">
+                    <div class="loading-spinner" style="display: inline-block; margin-right: var(--space-3);"></div>
+                    Generating visual post...
+                </div>
+            `;
+
+            try {
+                // Get selected icon objects
+                const selectedIconObjects = Array.from(selectedIcons).map(name =>
+                    icons.find(icon => icon.name === name)
+                ).filter(Boolean);
+
+                // Generate visual post
+                const canvas = await visualGenerator.generateVisualPost(selectedIconObjects, selectedTemplate);
+
+                // Display canvas
+                canvasContainer.innerHTML = '';
+                canvasContainer.appendChild(canvas);
+
+                // Enable action buttons
+                downloadBtn.disabled = false;
+                shareBtn.disabled = false;
+
+                showToast('✅ Visual post generated!', 2000);
+            } catch (error) {
+                console.error('Failed to generate visual post:', error);
+                canvasContainer.innerHTML = `
+                    <div style="color: var(--accent-red); padding: var(--space-8);">
+                        <i class="fas fa-exclamation-triangle" style="margin-right: var(--space-2);"></i>
+                        Failed to generate visual post. Please try again.
+                    </div>
+                `;
+                showToast('❌ Failed to generate visual post', 3000);
+            }
+        }
+
+        async function downloadVisualPost() {
+            if (!visualGenerator) return;
+
+            try {
+                const timestamp = new Date().toISOString().slice(0, 10);
+                const filename = `composeon-post-${selectedTemplate}-${timestamp}.png`;
+                visualGenerator.downloadImage(filename);
+                showToast('📥 Image downloaded!', 2000);
+            } catch (error) {
+                console.error('Download failed:', error);
+                showToast('❌ Download failed', 3000);
+            }
+        }
+
+        async function shareVisualPost() {
+            if (!visualGenerator) return;
+
+            try {
+                if (navigator.share) {
+                    // Use Web Share API if available
+                    const blob = await visualGenerator.getImageBlob();
+                    const file = new File([blob], 'composeon-post.png', { type: 'image/png' });
+
+                    await navigator.share({
+                        title: 'My Tech Stack',
+                        text: 'Check out my favorite tech tools!',
+                        files: [file]
+                    });
+
+                    showToast('📤 Shared successfully!', 2000);
+                } else {
+                    // Fallback: copy image to clipboard
+                    const blob = await visualGenerator.getImageBlob();
+                    await navigator.clipboard.write([
+                        new ClipboardItem({ 'image/png': blob })
+                    ]);
+                    showToast('📋 Image copied to clipboard!', 3000);
+                }
+            } catch (error) {
+                console.error('Share failed:', error);
+                // Fallback: download image
+                downloadVisualPost();
+            }
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('visualModal').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                closeVisualGenerator();
+            }
+        });
+
+        // Keyboard shortcuts for modal
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('visualModal');
+            if (modal.classList.contains('visible')) {
+                if (e.key === 'Escape') {
+                    closeVisualGenerator();
+                } else if (e.key === 'Enter' && e.ctrlKey) {
+                    downloadVisualPost();
+                }
+            }
+        });
     </script>
 </body>
 </html>
