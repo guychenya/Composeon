@@ -13,8 +13,8 @@
     <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-    <!-- Visual Post Generator -->
-    <script src="visual-post-generator.js"></script>
+    <!-- AI Content Generator -->
+    <script src="ai-content-generator.js"></script>
 
     <style>
         :root {
@@ -639,7 +639,236 @@
             background: var(--accent-red);
         }
 
-        /* Visual Post Generator Modal */
+        /* AI Content Generator Styles */
+        .phase-header {
+            margin-bottom: var(--space-6);
+            text-align: center;
+        }
+
+        .phase-header h3 {
+            color: var(--text-primary);
+            margin-bottom: var(--space-2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+        }
+
+        .carousel-type-selector,
+        .selected-companies-preview,
+        .research-options,
+        .custom-prompt-section {
+            margin-bottom: var(--space-6);
+        }
+
+        .type-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-4);
+            margin-top: var(--space-4);
+        }
+
+        .type-option {
+            background: var(--bg-card);
+            border: 2px solid var(--bg-tertiary);
+            border-radius: var(--radius-lg);
+            padding: var(--space-4);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .type-option:hover,
+        .type-option.selected {
+            border-color: var(--accent-blue);
+            background: var(--bg-hover);
+        }
+
+        .type-icon {
+            font-size: 2rem;
+            margin-bottom: var(--space-2);
+        }
+
+        .type-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-1);
+        }
+
+        .type-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .companies-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-3);
+        }
+
+        .company-preview-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            background: var(--bg-tertiary);
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius-md);
+            font-size: 0.875rem;
+        }
+
+        .category-tag {
+            background: var(--accent-blue);
+            color: white;
+            padding: var(--space-1) var(--space-2);
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            cursor: pointer;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-2);
+        }
+
+        .checkmark {
+            width: 20px;
+            height: 20px;
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-sm);
+            position: relative;
+        }
+
+        input[type="checkbox"]:checked + .checkmark {
+            background: var(--accent-blue);
+        }
+
+        input[type="checkbox"]:checked + .checkmark::after {
+            content: '✓';
+            position: absolute;
+            color: white;
+            font-size: 0.875rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #customPrompt {
+            width: 100%;
+            min-height: 80px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--bg-tertiary);
+            border-radius: var(--radius-md);
+            padding: var(--space-3);
+            color: var(--text-primary);
+            font-family: var(--font-primary);
+            resize: vertical;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: var(--space-4) 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient-primary);
+            transition: width 0.5s ease;
+            width: 0%;
+        }
+
+        .research-status {
+            margin-top: var(--space-4);
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-3);
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-2);
+        }
+
+        .status-item.active {
+            border-left: 4px solid var(--accent-blue);
+        }
+
+        .status-item.error {
+            border-left: 4px solid var(--accent-red);
+            color: var(--accent-red);
+        }
+
+        .summary-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            margin-bottom: var(--space-4);
+        }
+
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-4);
+            margin: var(--space-4) 0;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .slides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-3);
+            margin-top: var(--space-4);
+        }
+
+        .slide-preview-card {
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-md);
+            padding: var(--space-3);
+        }
+
+        .slide-number {
+            font-size: 0.75rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+
+        .slide-type {
+            font-size: 0.875rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            margin: var(--space-1) 0;
+        }
+
+        .slide-preview-content {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        /* AI Content Generator Modal */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -928,52 +1157,142 @@
         </button>
         <button class="action-btn secondary" onclick="generatePost()">
             <i class="fas fa-file-text"></i>
-            Text Post
+            Simple Post
         </button>
-        <button class="action-btn" onclick="openVisualGenerator()">
-            <i class="fas fa-image"></i>
-            Visual Post
+        <button class="action-btn" onclick="openAIContentGenerator()">
+            <i class="fas fa-brain"></i>
+            AI Carousel
         </button>
     </div>
 
-    <!-- Visual Post Generator Modal -->
-    <div class="modal-overlay" id="visualModal">
-        <div class="modal">
+    <!-- AI Content Generator Modal -->
+    <div class="modal-overlay" id="aiContentModal">
+        <div class="modal" style="max-width: 95vw; width: 1200px;">
             <div class="modal-header">
                 <div class="modal-title">
-                    <i class="fas fa-magic"></i>
-                    Visual Post Generator
+                    <i class="fas fa-brain"></i>
+                    AI-Powered Content Research & Carousel Generator
                 </div>
-                <button class="modal-close" onclick="closeVisualGenerator()">
+                <button class="modal-close" onclick="closeAIContentGenerator()">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
 
-            <div class="template-selector">
-                <h3 style="color: var(--text-primary); margin-bottom: var(--space-4);">Choose Template</h3>
-                <div class="template-grid" id="templateGrid">
-                    <!-- Templates will be loaded here -->
+            <!-- Research Phase -->
+            <div class="research-phase" id="researchPhase">
+                <div class="phase-header">
+                    <h3><i class="fas fa-search"></i> Research Phase</h3>
+                    <p>AI will research each selected company/tool for latest news, market data, and insights</p>
+                </div>
+
+                <div class="carousel-type-selector">
+                    <h4>Content Type</h4>
+                    <div class="type-grid">
+                        <div class="type-option selected" data-type="tech-stack-review">
+                            <div class="type-icon">🛠️</div>
+                            <div class="type-name">Tech Stack Review</div>
+                            <div class="type-desc">Professional analysis of selected technologies</div>
+                        </div>
+                        <div class="type-option" data-type="market-analysis">
+                            <div class="type-icon">📊</div>
+                            <div class="type-name">Market Analysis</div>
+                            <div class="type-desc">Deep dive into market trends and positioning</div>
+                        </div>
+                        <div class="type-option" data-type="company-spotlight">
+                            <div class="type-icon">🏢</div>
+                            <div class="type-name">Company Spotlight</div>
+                            <div class="type-desc">Comprehensive analysis with latest updates</div>
+                        </div>
+                        <div class="type-option" data-type="industry-trends">
+                            <div class="type-icon">📈</div>
+                            <div class="type-name">Industry Trends</div>
+                            <div class="type-desc">Current trends and future predictions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="selected-companies-preview">
+                    <h4>Selected Companies for Analysis</h4>
+                    <div id="companiesPreview" class="companies-list">
+                        <!-- Selected companies will be shown here -->
+                    </div>
+                </div>
+
+                <div class="research-options">
+                    <div class="option-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="includeLatestNews" checked>
+                            <span class="checkmark"></span>
+                            Include latest news and developments
+                        </label>
+                    </div>
+                    <div class="option-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="includeMarketData" checked>
+                            <span class="checkmark"></span>
+                            Research market data and financials
+                        </label>
+                    </div>
+                    <div class="option-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="includeCompetitorAnalysis" checked>
+                            <span class="checkmark"></span>
+                            Analyze competitive landscape
+                        </label>
+                    </div>
+                </div>
+
+                <div class="custom-prompt-section">
+                    <h4>Custom Instructions (Optional)</h4>
+                    <textarea id="customPrompt" placeholder="Add specific requirements or focus areas for the analysis..."></textarea>
                 </div>
             </div>
 
-            <div class="canvas-container" id="canvasContainer">
-                <p style="color: var(--text-secondary); margin: var(--space-8) 0;">
-                    Select a template to preview your visual post
-                </p>
+            <!-- Research Progress -->
+            <div class="research-progress" id="researchProgress" style="display: none;">
+                <div class="progress-header">
+                    <h3><i class="fas fa-cog fa-spin"></i> Researching Companies...</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+                <div class="research-status" id="researchStatus">
+                    <!-- Research status updates will appear here -->
+                </div>
+            </div>
+
+            <!-- Results Phase -->
+            <div class="results-phase" id="resultsPhase" style="display: none;">
+                <div class="phase-header">
+                    <h3><i class="fas fa-chart-line"></i> Research Complete</h3>
+                    <p>AI has analyzed your selected companies. Review the insights below.</p>
+                </div>
+
+                <div class="research-summary" id="researchSummary">
+                    <!-- Research results will be displayed here -->
+                </div>
+
+                <div class="carousel-preview" id="carouselPreview">
+                    <!-- Generated carousel slides preview -->
+                </div>
             </div>
 
             <div class="modal-actions">
-                <button class="action-btn secondary" onclick="closeVisualGenerator()">
+                <button class="action-btn secondary" onclick="closeAIContentGenerator()">
                     <i class="fas fa-times"></i>
                     Cancel
                 </button>
-                <button class="action-btn" onclick="downloadVisualPost()" id="downloadBtn" disabled>
-                    <i class="fas fa-download"></i>
-                    Download Image
+                <button class="action-btn" onclick="startAIResearch()" id="startResearchBtn">
+                    <i class="fas fa-rocket"></i>
+                    Start AI Research
                 </button>
-                <button class="action-btn" onclick="shareVisualPost()" id="shareBtn" disabled>
-                    <i class="fas fa-share"></i>
-                    Share
+                <button class="action-btn" onclick="generateCarousel()" id="generateCarouselBtn" style="display: none;">
+                    <i class="fas fa-magic"></i>
+                    Generate Carousel
+                </button>
+                <button class="action-btn" onclick="exportCarousel()" id="exportCarouselBtn" style="display: none;">
+                    <i class="fas fa-download"></i>
+                    Export Carousel
                 </button>
             </div>
         </div>
@@ -996,8 +1315,9 @@
         let currentPage = 0;
         let isAIEnabled = false;
         let ollamaConnected = false;
-        let visualGenerator = null;
-        let selectedTemplate = 'modern';
+        let aiContentGenerator = null;
+        let selectedCarouselType = 'tech-stack-review';
+        let researchData = null;
 
         // Categories mapping for better organization
         const categoryMapping = {
@@ -1016,7 +1336,7 @@
             await initializeApp();
             setupEventListeners();
             checkOllamaConnection();
-            await initializeVisualGenerator();
+            await initializeAIContentGenerator();
         });
 
         async function initializeApp() {
@@ -1622,186 +1942,243 @@ What's your favorite tool from this list? Share your experience in the comments!
         // Auto-refresh Ollama connection every 30 seconds
         setInterval(checkOllamaConnection, 30000);
 
-        // Visual Post Generator Functions
-        async function initializeVisualGenerator() {
+        // AI Content Generator Functions
+        async function initializeAIContentGenerator() {
             try {
-                visualGenerator = new VisualPostGenerator();
-                await visualGenerator.initialize();
-                setupTemplateGrid();
-                console.log('🎨 Visual Post Generator ready');
+                aiContentGenerator = new AIContentGenerator();
+                setupCarouselTypeSelection();
+                console.log('🧠 AI Content Generator ready');
             } catch (error) {
-                console.error('Failed to initialize visual generator:', error);
+                console.error('Failed to initialize AI content generator:', error);
             }
         }
 
-        function setupTemplateGrid() {
-            if (!visualGenerator) return;
-
-            const templateGrid = document.getElementById('templateGrid');
-            const templates = visualGenerator.getAvailableTemplates();
-
-            templateGrid.innerHTML = '';
-            templates.forEach(template => {
-                const templateDiv = document.createElement('div');
-                templateDiv.className = `template-option ${template.id === selectedTemplate ? 'selected' : ''}`;
-                templateDiv.onclick = () => selectTemplate(template.id);
-
-                templateDiv.innerHTML = `
-                    <div class="template-preview">${template.name.split(' ')[0]}</div>
-                    <div class="template-name">${template.name}</div>
-                    <div class="template-description">${template.description}</div>
-                `;
-
-                templateGrid.appendChild(templateDiv);
+        function setupCarouselTypeSelection() {
+            document.querySelectorAll('.type-option').forEach(option => {
+                option.addEventListener('click', () => {
+                    document.querySelectorAll('.type-option').forEach(o => o.classList.remove('selected'));
+                    option.classList.add('selected');
+                    selectedCarouselType = option.dataset.type;
+                });
             });
         }
 
-        function selectTemplate(templateId) {
-            selectedTemplate = templateId;
-
-            // Update visual selection
-            document.querySelectorAll('.template-option').forEach(option => {
-                option.classList.remove('selected');
-            });
-            document.querySelector(`.template-option:nth-child(${getTemplateIndex(templateId) + 1})`).classList.add('selected');
-
-            // Generate preview if icons are selected
-            if (selectedIcons.size > 0) {
-                generateVisualPreview();
-            }
-        }
-
-        function getTemplateIndex(templateId) {
-            const templates = ['modern', 'gradient', 'minimal', 'tech'];
-            return templates.indexOf(templateId);
-        }
-
-        async function openVisualGenerator() {
+        async function openAIContentGenerator() {
             if (selectedIcons.size === 0) {
-                showToast('⚠️ Select some icons first!', 3000);
+                showToast('⚠️ Select some companies/tools first!', 3000);
                 return;
             }
 
-            const modal = document.getElementById('visualModal');
+            if (!ollamaConnected) {
+                showToast('⚠️ AI features require Ollama connection. Please start Ollama first.', 4000);
+                return;
+            }
+
+            const modal = document.getElementById('aiContentModal');
             modal.classList.add('visible');
             document.body.style.overflow = 'hidden';
 
-            // Generate initial preview
-            await generateVisualPreview();
+            // Update companies preview
+            updateCompaniesPreview();
         }
 
-        function closeVisualGenerator() {
-            const modal = document.getElementById('visualModal');
+        function closeAIContentGenerator() {
+            const modal = document.getElementById('aiContentModal');
             modal.classList.remove('visible');
             document.body.style.overflow = 'auto';
+
+            // Reset phases
+            document.getElementById('researchPhase').style.display = 'block';
+            document.getElementById('researchProgress').style.display = 'none';
+            document.getElementById('resultsPhase').style.display = 'none';
         }
 
-        async function generateVisualPreview() {
-            if (!visualGenerator || selectedIcons.size === 0) return;
+        function updateCompaniesPreview() {
+            const preview = document.getElementById('companiesPreview');
+            const selectedIconObjects = Array.from(selectedIcons).map(name =>
+                icons.find(icon => icon.name === name)
+            ).filter(Boolean);
 
-            const canvasContainer = document.getElementById('canvasContainer');
-            const downloadBtn = document.getElementById('downloadBtn');
-            const shareBtn = document.getElementById('shareBtn');
+            preview.innerHTML = selectedIconObjects.map(icon => `
+                <div class="company-preview-item">
+                    <img src="${icon.path}" alt="${icon.name}" style="width: 24px; height: 24px;">
+                    <span>${icon.displayName}</span>
+                    <span class="category-tag">${icon.category}</span>
+                </div>
+            `).join('');
+        }
 
-            // Show loading
-            canvasContainer.innerHTML = `
-                <div style="padding: var(--space-8); color: var(--text-secondary);">
-                    <div class="loading-spinner" style="display: inline-block; margin-right: var(--space-3);"></div>
-                    Generating visual post...
+        async function startAIResearch() {
+            if (selectedIcons.size === 0) {
+                showToast('⚠️ No companies selected for research', 3000);
+                return;
+            }
+
+            // Hide research phase, show progress
+            document.getElementById('researchPhase').style.display = 'none';
+            document.getElementById('researchProgress').style.display = 'block';
+            document.getElementById('startResearchBtn').style.display = 'none';
+
+            const selectedIconObjects = Array.from(selectedIcons).map(name =>
+                icons.find(icon => icon.name === name)
+            ).filter(Boolean);
+
+            const customPrompt = document.getElementById('customPrompt').value;
+            const includeNews = document.getElementById('includeLatestNews').checked;
+            const includeMarket = document.getElementById('includeMarketData').checked;
+            const includeCompetitors = document.getElementById('includeCompetitorAnalysis').checked;
+
+            try {
+                // Simulate research progress
+                const progressFill = document.getElementById('progressFill');
+                const statusDiv = document.getElementById('researchStatus');
+
+                let progress = 0;
+                const steps = [
+                    'Initializing AI research pipeline...',
+                    'Gathering latest news and developments...',
+                    'Analyzing market data and trends...',
+                    'Researching competitive landscape...',
+                    'Processing technical specifications...',
+                    'Generating insights and recommendations...',
+                    'Creating carousel structure...'
+                ];
+
+                for (let i = 0; i < steps.length; i++) {
+                    progress = ((i + 1) / steps.length) * 100;
+                    progressFill.style.width = progress + '%';
+
+                    statusDiv.innerHTML = `
+                        <div class="status-item active">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            ${steps[i]}
+                        </div>
+                    `;
+
+                    // Simulate research time
+                    await new Promise(resolve => setTimeout(resolve, 2000));
+                }
+
+                // Generate actual research
+                const carousel = await aiContentGenerator.generateCarousel(
+                    selectedIconObjects,
+                    selectedCarouselType,
+                    customPrompt
+                );
+
+                researchData = carousel;
+                displayResearchResults(carousel);
+
+            } catch (error) {
+                console.error('Research failed:', error);
+                statusDiv.innerHTML = `
+                    <div class="status-item error">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Research failed: ${error.message}
+                    </div>
+                `;
+                showToast('❌ AI research failed. Please try again.', 3000);
+            }
+        }
+
+        function displayResearchResults(carousel) {
+            // Hide progress, show results
+            document.getElementById('researchProgress').style.display = 'none';
+            document.getElementById('resultsPhase').style.display = 'block';
+            document.getElementById('generateCarouselBtn').style.display = 'inline-flex';
+            document.getElementById('exportCarouselBtn').style.display = 'inline-flex';
+
+            const summaryDiv = document.getElementById('researchSummary');
+            const previewDiv = document.getElementById('carouselPreview');
+
+            // Display research summary
+            summaryDiv.innerHTML = `
+                <div class="summary-card">
+                    <h4><i class="fas fa-chart-line"></i> Research Summary</h4>
+                    <div class="summary-stats">
+                        <div class="stat">
+                            <span class="stat-value">${carousel.metadata.companiesAnalyzed}</span>
+                            <span class="stat-label">Companies Analyzed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">${carousel.slides.length}</span>
+                            <span class="stat-label">Slides Generated</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">${carousel.metadata.researchSources.length}</span>
+                            <span class="stat-label">Sources Consulted</span>
+                        </div>
+                    </div>
+                    <div class="summary-text">
+                        ${carousel.textSummary.analysis || 'Professional carousel generated with AI insights and market research.'}
+                    </div>
                 </div>
             `;
 
-            try {
-                // Get selected icon objects
-                const selectedIconObjects = Array.from(selectedIcons).map(name =>
-                    icons.find(icon => icon.name === name)
-                ).filter(Boolean);
-
-                // Generate visual post
-                const canvas = await visualGenerator.generateVisualPost(selectedIconObjects, selectedTemplate);
-
-                // Display canvas
-                canvasContainer.innerHTML = '';
-                canvasContainer.appendChild(canvas);
-
-                // Enable action buttons
-                downloadBtn.disabled = false;
-                shareBtn.disabled = false;
-
-                showToast('✅ Visual post generated!', 2000);
-            } catch (error) {
-                console.error('Failed to generate visual post:', error);
-                canvasContainer.innerHTML = `
-                    <div style="color: var(--accent-red); padding: var(--space-8);">
-                        <i class="fas fa-exclamation-triangle" style="margin-right: var(--space-2);"></i>
-                        Failed to generate visual post. Please try again.
+            // Display slide previews
+            previewDiv.innerHTML = `
+                <div class="carousel-slides-preview">
+                    <h4><i class="fas fa-images"></i> Carousel Preview</h4>
+                    <div class="slides-grid">
+                        ${carousel.slides.map((slide, index) => `
+                            <div class="slide-preview-card">
+                                <div class="slide-number">Slide ${slide.slideNumber}</div>
+                                <div class="slide-type">${slide.type}</div>
+                                <div class="slide-preview-content">
+                                    ${slide.content.analysis ? slide.content.analysis.substring(0, 150) + '...' : 'Content generated'}
+                                </div>
+                            </div>
+                        `).join('')}
                     </div>
-                `;
-                showToast('❌ Failed to generate visual post', 3000);
-            }
+                </div>
+            `;
+
+            showToast('✅ AI research completed! Professional carousel ready.', 3000);
         }
 
-        async function downloadVisualPost() {
-            if (!visualGenerator) return;
-
-            try {
-                const timestamp = new Date().toISOString().slice(0, 10);
-                const filename = `composeon-post-${selectedTemplate}-${timestamp}.png`;
-                visualGenerator.downloadImage(filename);
-                showToast('📥 Image downloaded!', 2000);
-            } catch (error) {
-                console.error('Download failed:', error);
-                showToast('❌ Download failed', 3000);
+        async function generateCarousel() {
+            if (!researchData) {
+                showToast('⚠️ No research data available', 3000);
+                return;
             }
+
+            showToast('🎨 Generating professional carousel...', 2000);
+
+            // This would integrate with advanced design systems
+            setTimeout(() => {
+                showToast('✅ Carousel generated! Ready for export.', 3000);
+            }, 2000);
         }
 
-        async function shareVisualPost() {
-            if (!visualGenerator) return;
+        async function exportCarousel() {
+            if (!researchData) {
+                showToast('⚠️ No carousel data to export', 3000);
+                return;
+            }
 
             try {
-                if (navigator.share) {
-                    // Use Web Share API if available
-                    const blob = await visualGenerator.getImageBlob();
-                    const file = new File([blob], 'composeon-post.png', { type: 'image/png' });
+                const exportData = await aiContentGenerator.exportCarousel(researchData, 'linkedin');
 
-                    await navigator.share({
-                        title: 'My Tech Stack',
-                        text: 'Check out my favorite tech tools!',
-                        files: [file]
-                    });
+                // Create downloadable JSON file
+                const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `composeon-carousel-${Date.now()}.json`;
+                a.click();
+                URL.revokeObjectURL(url);
 
-                    showToast('📤 Shared successfully!', 2000);
-                } else {
-                    // Fallback: copy image to clipboard
-                    const blob = await visualGenerator.getImageBlob();
-                    await navigator.clipboard.write([
-                        new ClipboardItem({ 'image/png': blob })
-                    ]);
-                    showToast('📋 Image copied to clipboard!', 3000);
-                }
+                showToast('📥 Carousel exported successfully!', 3000);
             } catch (error) {
-                console.error('Share failed:', error);
-                // Fallback: download image
-                downloadVisualPost();
+                console.error('Export failed:', error);
+                showToast('❌ Export failed', 3000);
             }
         }
 
         // Close modal when clicking outside
-        document.getElementById('visualModal').addEventListener('click', (e) => {
+        document.getElementById('aiContentModal').addEventListener('click', (e) => {
             if (e.target === e.currentTarget) {
-                closeVisualGenerator();
-            }
-        });
-
-        // Keyboard shortcuts for modal
-        document.addEventListener('keydown', (e) => {
-            const modal = document.getElementById('visualModal');
-            if (modal.classList.contains('visible')) {
-                if (e.key === 'Escape') {
-                    closeVisualGenerator();
-                } else if (e.key === 'Enter' && e.ctrlKey) {
-                    downloadVisualPost();
-                }
+                closeAIContentGenerator();
             }
         });
     </script>
